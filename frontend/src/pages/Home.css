@@ -1,0 +1,59 @@
+.home {
+    font-family: Arial, sans-serif; /* Use a standard font */
+}
+
+.navbar {
+    background-color: #ad7f6f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Full height to align with other elements */
+}
+
+.nav-links a, .nav-links form {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links form {
+    margin: 0; /* Remove default form margin */
+}
+
+.search-form {
+    display: flex;
+    align-items: center; /* This will align the input and button within the form */
+}
+
+.search-form input, .search-form button {
+    margin: 0 5px; /* Reduced margin */
+}
+
+/* Ensure inputs and buttons are not expanding beyond expected */
+input, button {
+    height: 30px; /* Example height, adjust as needed */
+    padding: 0 10px;
+}
+
+.search-form button {
+    background-color: #5A4C49;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.search-form button:hover {
+    background-color: #4A3C39;
+}
+
