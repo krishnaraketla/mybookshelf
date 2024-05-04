@@ -1,59 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #32281D; /* Set the desired background color */
+}
+
 .home {
-    font-family: Arial, sans-serif; /* Use a standard font */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.home-content {
+    flex: 1;
 }
 
 .navbar {
-    background-color: #ad7f6f;
+    background-color: transparent;
     color: white;
-    padding: 10px 20px;
+    padding: 58px 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
 }
 
-.nav-links {
+.company-logo {
+    flex: 1;
     display: flex;
-    align-items: center;
-    height: 100%; /* Full height to align with other elements */
+    justify-content: flex-start;
+    max-width: 200px; /* Adjust maximum width as needed */
+    padding-right: 10px; /* Add padding to prevent it sticking to the edge */
+    box-sizing: border-box;
+    color:white;
+}
+.company-logo a {
+    color: inherit; /* Inherits the parent element's text color */
+    text-decoration: none; /* Removes the underline */
 }
 
-.nav-links a, .nav-links form {
+.company-logo a:visited {
+    color: inherit; /* Keeps the color the same for visited links */
+    text-decoration: none; /* Keeps the underline removed for visited links */
+}
+
+
+.search-bar-nav {
+    flex: 1;
     display: flex;
-    align-items: center;
-    margin: 0 15px;
+    justify-content: center;
+}
+
+/*#32281D*/
+.right-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 200px; /* Adjust maximum width as needed */
+    padding-left: 10px; /* Add padding to prevent it sticking to the edge */
+    box-sizing: border-box;
+    color:white;
+}
+
+.right-links a {
+    margin-left: 15px;
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-.nav-links form {
-    margin: 0; /* Remove default form margin */
-}
-
 .search-form {
     display: flex;
-    align-items: center; /* This will align the input and button within the form */
-}
-
-.search-form input, .search-form button {
-    margin: 0 5px; /* Reduced margin */
+    align-items: center;
+    width:100%;
+    position: relative;
 }
 
 /* Ensure inputs and buttons are not expanding beyond expected */
-input, button {
+.search-form input {
     height: 30px; /* Example height, adjust as needed */
     padding: 0 10px;
+    width: 100%;
 }
 
-.search-form button {
-    background-color: #5A4C49;
-    border: none;
-    border-radius: 4px;
+
+
+/****************** DROPDOWN ******************/
+
+.dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dropdown-list {
+    position: absolute;
+    width: 100%;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
     cursor: pointer;
-    color: white;
 }
 
-.search-form button:hover {
-    background-color: #4A3C39;
+.dropdown-list li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover; /* This will ensure images are nicely fitted */
 }
 
+.dropdown-list li span {
+    flex-grow: 1;
+}
+
+.search-bar-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-results-dropdown {
+    position: absolute;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin-top: 2px;
+    color: #333; 
+}
+
+.search-results-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-results-dropdown li:hover {
+    background-color: #f8f8f8;
+}

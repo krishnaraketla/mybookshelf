@@ -11,14 +11,18 @@ const NavBar = () => {
 
     return (
         <nav className="navbar">
-            <div className="nav-links">
+            <div className="company-logo">
                 <Link to="/">My Bookshelf</Link>
-                {/* Only render SearchBar if the current route is not /login */}
+            </div>
+            <div className='search-bar-nav'>
                 {location.pathname !== '/login' && <SearchBar onSearch={handleSearch} />}
+            </div>
+            <div className="right-links">
                 <Link to="/about">About</Link>
                 <Link to="/contact">Contact Us</Link>
             </div>
         </nav>
+
     );
 }
 
