@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import './Login.css'; // Ensure you have a CSS file for styling
+import '../styles/Login.css'; // Ensure you have a CSS file for styling
 
 const Login = () => {
     return (

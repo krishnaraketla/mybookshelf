@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import SearchBar from './SearchBar';
-// import './NavBar.css';
 
 const NavBar = () => {
     const location = useLocation();  // This hook gives us access to the location object
