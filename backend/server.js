@@ -1,11 +1,13 @@
 require('dotenv').config()
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors');
 const shelvesRoutes = require("./routes/shelves");
 const allBooksRoutes = require("./routes/search_all_books");
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.use(express.json());
 

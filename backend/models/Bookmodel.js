@@ -1,16 +1,20 @@
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
-    title: String,
+    title: { type: String, required: true },
     description: String,
-    authors: [String], // Array of authors
-    image: String,
-    previewLink: String,
     publisher: String,
-    publishedDate: String,
-    infoLink: String,
-    categories: [String], // Array of categories
-    ratingsCount: Number
+    yearPublished: Number,
+    authors: [String],
+    image: String,
+    category: String,
+    ISBN: String,
+    language: String,
+    pages: Number,
+    format: String,
+    price: Number,
+    dateAdded: { type: Date, default: Date.now },
+    averageRating: Number
 });
 
 bookSchema.index({ title: 'text' });
