@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-const GOOGLE_BOOKS_API_KEY = 'AIzaSyCrq_JxAEC9Iilk4_YPxEAntdsaZExQjW8';
+// const GOOGLE_BOOKS_API_KEY = 'AIzaSyCrq_JxAEC9Iilk4_YPxEAntdsaZExQjW8';
+// const GOOGLE_BOOKS_API_KEY = 'AIzaSyCOV84YnFqPgh06jBIroRXPcUsZEjBwm8k';
+const GOOGLE_BOOKS_API_KEY = '<dummy>';
 const GOOGLE_BOOKS_API_BASE_URL = 'https://www.googleapis.com/books/v1';
 
 async function fetchGoogleBooks(url) {
@@ -43,13 +45,13 @@ router.get('/title', async (req, res) => {
         const data = await fetchGoogleBooks(`${GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:${encodeURIComponent(query)}&key=${GOOGLE_BOOKS_API_KEY}`);
         
         // Log the full data object
-        //fs.writeFileSync('full_data.json', JSON.stringify(data, null, 2));
-        //console.log("Full data from Google Books API saved to full_data.json");
+        // fs.writeFileSync('full_data.json', JSON.stringify(data, null, 2));
+        // console.log("Full data from Google Books API saved to full_data.json");
 
         const books = data.items.map(item => {
             // Log each item individually
-            //fs.writeFileSync(`book_item_${item.id}.json`, JSON.stringify(item, null, 2));
-            //console.log(`Book item saved to book_item_${item.id}.json`);
+            // fs.writeFileSync(`book_item_${item.id}.json`, JSON.stringify(item, null, 2));
+            // console.log(`Book item saved to book_item_${item.id}.json`);
 
             return mapToBookSchema(item);
         });

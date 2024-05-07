@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import BookDetail from './pages/BookDetail';
-
+import './App.css'
 function App() {
   return (
     <div className="App">

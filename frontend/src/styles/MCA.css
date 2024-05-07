@@ -1,0 +1,13 @@
+.mca {
+    border: 1px solid white;
+    /* margin: 0;
+    padding: 0; */
+    overflow:auto;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    gap: 10px;
+}

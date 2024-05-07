@@ -20,7 +20,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 435px;
+    max-height: 664px;
+
 }
 
 .book-detail-info {
@@ -36,7 +38,7 @@
 
 .book-author {
     font-size: 1.2rem;
-    color: #ddd;
+    color: #E5C99F;
     margin: 0 0 10px;
 }
 

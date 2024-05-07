@@ -1,0 +1,12 @@
+.book-slot {
+    border: 1px solid red;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.book-slot img{
+    flex: 1;
+    display: block;
+}

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import debounce from 'lodash.debounce';
 import { useNavigate } from 'react-router-dom';
+import '../styles/SearchBar.css'; 
 
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [showDropdown, setShowDropdown] = useState(false);
     const [results, setResults] = useState([]);
     const navigate = useNavigate();
+    const wrapperRef = useRef(null);
 
     // Debounce function to limit API calls
     const debouncedSearch = debounce(async (query) => {
@@ -17,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
                 if (response.ok) {
                     const data = await response.json();
                     console.log(`Received ${data.length} results`); // For debugging
-                    setResults(data.slice(0, 10)); // Limit to top 10 results
+                    setResults(data.slice(0, 5)); // Limit to top 5 results
                     setShowDropdown(true);
                 } else {
                     console.error("Error fetching search results:", response.statusText);
@@ -28,14 +30,32 @@ const SearchBar = ({ onSearch }) => {
         } else {
             setShowDropdown(false);
         }
-    }, 500); // Adjusted debounce time to 500ms
+    }, 2000);
 
     useEffect(() => {
         debouncedSearch(searchTerm);
     }, [searchTerm]);
 
+    useEffect(() => {
+        // Close the dropdown when clicking outside
+        const handleClickOutside = (event) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                setShowDropdown(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [wrapperRef]);
+
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
+        if (e.target.value) {
+            setShowDropdown(true);
+        } else {
+            setShowDropdown(false);
+        }
     };
 
     const handleSelect = (result) => {
@@ -47,17 +67,31 @@ const SearchBar = ({ onSearch }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         onSearch(searchTerm);
-        setShowDropdown(false); // Hide dropdown when search is submitted
+        setShowDropdown(false);
+    };
+
+    const handleFocus = () => {
+        if (searchTerm) {
+            setShowDropdown(true);
+        }
+    };
+
+    const handleBlur = () => {
+        setTimeout(() => {
+            setShowDropdown(false);
+        }, 100);
     };
 
     return (
-        <div className="search-bar-container">
+        <div className="search-bar-container" ref={wrapperRef}>
             <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"
                     placeholder="Search books by title..."
                     value={searchTerm}
                     onChange={handleChange}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
                 />
             </form>
             {showDropdown && (
@@ -65,9 +99,17 @@ const SearchBar = ({ onSearch }) => {
                     {results.map(result => (
                         <li key={result._id} onClick={() => handleSelect(result)} className="dropdown-item">
                             <img src={result.image} alt={result.title} className="dropdown-item-image" />
-                            <span>{result.title}</span>
+                            <div className="dropdown-item-info">
+                                <span className="dropdown-item-title">{result.title}</span>
+                                <span className="dropdown-item-author">{result.authors.join(', ')}</span>
+                            </div>
                         </li>
                     ))}
+                    <li>
+                        <div className='dropdown-view-more'>
+                            <h5>See more.</h5>
+                        </div>
+                    </li>
                 </ul>
             )}
         </div>
