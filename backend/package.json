@@ -19,6 +19,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "react-query": "^3.39.3"
   }
 }

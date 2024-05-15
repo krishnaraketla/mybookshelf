@@ -3,34 +3,40 @@ import { useParams } from 'react-router-dom';
 import '../styles/BookDetail.css'; 
 import NavBar from '../components/NavBar';
 
+let didInit = false;
+
 const BookDetail = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchBook = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch(`http://localhost:4000/search/books/${id}`, { cache: "no-store" });
-                if (response.ok) {
-                    const data = await response.json();
-                    setBook(data);
-                } else {
-                    setError("Book not found");
-                }
-            } catch (error) {
-                setError("Error fetching book details");
+    const fetchBook = async (id) => {
+        setLoading(true);
+        try {
+            const response = await fetch(`http://localhost:4000/search/books/${id}`, { cache: "no-store" });
+            if (response.ok) {
+                const data = await response.json();
+                setBook(data);
+            } else {
+                setError("Book not found");
             }
-            setLoading(false);
-        };
+        } catch (error) {
+            setError("Error fetching book details");
+        }
+        setLoading(false);
+    };
 
-        fetchBook();
+    useEffect(() => {
+        if (!didInit) {
+            console.log("Component re-rendered!");
+            fetchBook(id);
+            didInit = true;
+        }
     }, [id]);
 
     if (loading) {
-        return <div className="book-detail-loading">Loading...</div>;
+        return(<div><NavBar /> <div className="book-detail-loading">Loading...</div></div>);
     }
 
     if (error) {
