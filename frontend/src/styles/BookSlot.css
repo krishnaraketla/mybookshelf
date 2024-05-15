@@ -1,17 +1,18 @@
 .book-slot {
-    flex: 1;
+    /* border: 1px solid red; */
+    flex: none;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    height: 150px;
-    width: 80px;
+    height: 132px;
+    width: 88px;
     transition: transform 0.1s ease;
+    border-radius: 0px 7px 8px 0px;
 }
 
 /* Correct the hover selector to target the whole slot */
 .book-slot:hover {
     transform: translateY(-5px);  /* Applies the scaling to the whole slot */
-    cursor: pointer;  /* If you want the cursor to change for the whole slot */
 }
 
 .book-slot img {
@@ -22,8 +23,12 @@
     gap: 0px;
     opacity: 0px;  /* Note: This sets images to be invisible unless hovered */
     transition: opacity 0.3s ease;  /* Smooth transition for the opacity */
+    height: inherit;
+    width: inherit;
 }
 
 .book-slot img:hover {
-    opacity: 1;  /* Makes the image fully visible on hover */
+    opacity: 1;
+    cursor: grabbing;
+
 }

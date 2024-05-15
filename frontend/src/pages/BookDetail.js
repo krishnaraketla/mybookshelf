@@ -34,7 +34,30 @@ const BookDetail = () => {
     }
 
     if (error) {
-        return <div className="book-detail-error">{error}</div>;
+        // return <div className="book-detail-error">{error}</div>;
+        return (
+            <div>
+                <NavBar />
+                <div className="book-detail-container">
+                    <div className="book-detail-image">
+                        <img src={'https://via.placeholder.com/150'} alt="text" />
+                    </div>
+                    <div className="book-detail-info">
+                        <h1 className="book-title">Title</h1>
+                        <h2 className="book-author">Author</h2>
+                        <p className="book-detail-rating">
+                            <span>★</span> Avg Rating
+                        </p>
+                        <div className="book-description" />
+                        <div className="book-detail-actions">
+                            <button>Currently Reading</button>
+                            <button>To Be Read</button>
+                            <button>Finished Reading</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (

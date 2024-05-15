@@ -2,9 +2,11 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import '../styles/NavBar.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
-    const location = useLocation();  // This hook gives us access to the location object
+    const location = useLocation();
     const handleSearch = (searchTerm) => {
         console.log("Search for:", searchTerm);
     };
@@ -18,8 +20,10 @@ const NavBar = () => {
                 {location.pathname !== '/login' && <SearchBar onSearch={handleSearch} />}
             </div>
             <div className="right-links">
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/">About</Link>
+                <Link to="/">
+                    <FontAwesomeIcon icon={faUser} />
+                </Link>
             </div>
         </nav>
 

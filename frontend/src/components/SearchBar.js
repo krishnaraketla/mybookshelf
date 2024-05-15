@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SearchBar.css'; 
@@ -10,31 +10,34 @@ const SearchBar = ({ onSearch }) => {
     const navigate = useNavigate();
     const wrapperRef = useRef(null);
 
-    // Debounce function to limit API calls
-    const debouncedSearch = debounce(async (query) => {
-        if (query) {
-            try {
-                console.log(query)
-                const response = await fetch(`http://localhost:4000/search/books/title?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log(`Received ${data.length} results`); // For debugging
-                    setResults(data.slice(0, 5)); // Limit to top 5 results
-                    setShowDropdown(true);
-                } else {
-                    console.error("Error fetching search results:", response.statusText);
+    // Debounce function to limit API calls, wrapped in useCallback to maintain reference
+    const debouncedSearch = useCallback(
+        debounce(async (query) => {
+            if (query) {
+                try {
+                    console.log(query);
+                    const response = await fetch(`http://localhost:4000/search/books/title?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log(`Received ${data.length} results`); // For debugging
+                        setResults(data.slice(0, 5)); // Limit to top 5 results
+                        setShowDropdown(true);
+                    } else {
+                        console.error("Error fetching search results:", response.statusText);
+                    }
+                } catch (error) {
+                    console.error("Error fetching search results:", error);
                 }
-            } catch (error) {
-                console.error("Error fetching search results:", error);
+            } else {
+                setShowDropdown(false);
             }
-        } else {
-            setShowDropdown(false);
-        }
-    }, 2000);
+        }, 5000),
+        [] // Empty dependencies array means the function is created only once
+    );
 
     useEffect(() => {
         debouncedSearch(searchTerm);
-    }, [searchTerm]);
+    }, [searchTerm, debouncedSearch]);
 
     useEffect(() => {
         // Close the dropdown when clicking outside
@@ -47,15 +50,10 @@ const SearchBar = ({ onSearch }) => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [wrapperRef]);
+    }, []);
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
-        if (e.target.value) {
-            setShowDropdown(true);
-        } else {
-            setShowDropdown(false);
-        }
     };
 
     const handleSelect = (result) => {

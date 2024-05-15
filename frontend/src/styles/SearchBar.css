@@ -99,7 +99,7 @@
 }
 
 .dropdown-item:hover {
-    background-color: rgb(140, 157, 158);
+    background-color: rgba(56, 113, 115, 1)
 }
 
 .dropdown-item-image {
@@ -143,5 +143,5 @@
 }
 
 .dropdown-view-more:hover {
-    background-color: rgb(140, 157, 158);
+    background-color: rgba(56, 113, 115, 1)
 }

@@ -55,6 +55,8 @@
     padding-left: 10px; /* Add padding to prevent it sticking to the edge */
     box-sizing: border-box;
     color:white;
+    gap: 30px;
+    padding-right: 30px;
 }
 
 .right-links a {

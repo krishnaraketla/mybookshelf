@@ -5,7 +5,7 @@ const BookSlot = ({ book }) => {
 
     return (
         <div className='book-slot'>
-            {book && book.src ? <img src={book.src} alt="Book Cover" onClick={()=>{console.log("clicked!")}}/> : null}
+            {book && book.src ? <img src={book.src} alt="Book Cover" onClick={()=>{console.log("clicked!")}} onError={(e)=>{console.log(e)}}/> : null}
         </div>
     );
 }
