@@ -1,12 +1,12 @@
 body, html, #root {
-    margin: 0;
-    padding: 0;
-    background-color: #321E18; /* Set the desired background color */
+    background: rgba(120, 179, 181, 1);
     font-family: kai;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    height: 100vh; /* This sets the height to be exactly the viewport height */
+    width: 100vw; /* This sets the width to be exactly the viewport width */
+    box-sizing: border-box; /* This ensures padding does not affect the overall dimensions */
+    min-height: 100vh;
 }
 
 .pages {
@@ -16,72 +16,11 @@ body, html, #root {
 }
 
 .home {
+    /* border: 0.5px solid red; */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content:center;
+    flex: 1;
+    box-sizing: border-box;
     height: 100%;
-    width: 100%;
-    flex: 1;
-}
-
-.home-content {
-    flex: 1;
-    
-}
-
-.navbar {
-    background-color: transparent;
-    color: white;
-    padding: 58px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box; /* Include padding and border in the element's width and height */
-}
-
-.company-logo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    max-width: 200px; /* Adjust maximum width as needed */
-    padding-right: 10px; /* Add padding to prevent it sticking to the edge */
-    box-sizing: border-box;
-    color:white;
-}
-.company-logo a {
-    color: inherit; /* Inherits the parent element's text color */
-    text-decoration: none; /* Removes the underline */
-}
-
-.company-logo a:visited {
-    color: inherit; /* Keeps the color the same for visited links */
-    text-decoration: none; /* Keeps the underline removed for visited links */
-}
-
-
-.search-bar-nav {
-    /* flex: 1; */
-    display: flex;
-    justify-content: center;
-    width: 50%;
-}
-
-/*#32281D*/
-.right-links {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    max-width: 200px; /* Adjust maximum width as needed */
-    padding-left: 10px; /* Add padding to prevent it sticking to the edge */
-    box-sizing: border-box;
-    color:white;
-}
-
-.right-links a {
-    margin-left: 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
 }

@@ -6,9 +6,9 @@ import BookShelf from './BookShelf';
 const MCA = () => {
     return (
         <div className='mca'>
-            <BookShelf />
-            <BookShelf />
-            <BookShelf />
+            <BookShelf shelfName="Currently Reading" /> 
+            <BookShelf shelfName="To be read" />
+            <BookShelf shelfName="Finished Reading" />
         </div>
 
     );

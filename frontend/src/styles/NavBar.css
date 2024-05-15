@@ -1,0 +1,65 @@
+.navbar {
+    /* border: 1px solid black; */
+    background-color: transparent;
+    color: white;
+    padding: 2% 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+.company-logo {
+    /* border: 1px solid red; */
+    height: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 200px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    color:white;
+    margin-left: 10px;
+}
+.company-logo a {
+    color: inherit; /* Inherits the parent element's text color */
+    text-decoration: none; /* Removes the underline */
+}
+
+.company-logo img {
+    max-width: 100%;  /* Ensures image does not exceed the container width */
+    max-height: 100%;  /* Ensures image does not exceed the container height */
+    display: block;  /* Removes bottom margin/gap */
+}
+
+.company-logo a:visited {
+    color: inherit; /* Keeps the color the same for visited links */
+    text-decoration: none; /* Keeps the underline removed for visited links */
+}
+
+
+.search-bar-nav {
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+/*#32281D*/
+.right-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 200px; /* Adjust maximum width as needed */
+    padding-left: 10px; /* Add padding to prevent it sticking to the edge */
+    box-sizing: border-box;
+    color:white;
+}
+
+.right-links a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}

@@ -1,16 +1,45 @@
 .book-shelf {
-    border: 1px solid yellow;
+    /* border: 1px solid black; */
+    /* flex: 1; */
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
     flex-direction: column;
-    flex-grow: 1;
-    gap: 10px;
-    background-image: url("/Users/krishna/Desktop/shelf.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%; /* Take full height of parent */
-    width: 100%; /* Take full width of parent */
+    justify-content: center;
+    /* height: 80%; */
+    width: 30%;
+    gap: 30px;
+    height: calc(80% + 100px)
+}
+
+.book-shelf h1{
+    align-self: center;
+    color: rgba(250, 237, 221, 1);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34.18px;
+    text-align: left;
+
+}
+
+.navigation-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+.bi {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+navigation-arrows svg {
+    fill: rgba(255, 255, 255, 0.99); /* Set the fill color for the SVG icons */
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Optional: Add hover effect to change color or opacity */
+.navigation-arrows svg:hover {
+    fill: rgba(237, 238, 213, 0.9); /* Slightly change color on hover */
 }

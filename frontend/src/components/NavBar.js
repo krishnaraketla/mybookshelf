@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import '../styles/NavBar.css'; 
 
 const NavBar = () => {
     const location = useLocation();  // This hook gives us access to the location object
@@ -11,7 +12,7 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <div className="company-logo">
-                <Link to="/">My Bookshelf</Link>
+                <Link to="/"><img src="/logo.png" alt='logo'></img></Link>
             </div>
             <div className='search-bar-nav'>
                 {location.pathname !== '/login' && <SearchBar onSearch={handleSearch} />}
