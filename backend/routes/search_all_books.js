@@ -1,60 +1,61 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
+let fetch;
 
-const GOOGLE_BOOKS_API_KEY = 'AIzaSyCrq_JxAEC9Iilk4_YPxEAntdsaZExQjW8';
-// const GOOGLE_BOOKS_API_KEY = 'AIzaSyCOV84YnFqPgh06jBIroRXPcUsZEjBwm8k';
-// const GOOGLE_BOOKS_API_KEY = '<dummy>';
-const GOOGLE_BOOKS_API_BASE_URL = 'https://www.googleapis.com/books/v1';
+async function loadFetch() {
+    if (!fetch) {
+        fetch = (await import('node-fetch')).default;
+    }
+}
+const Book = require('../models/book.model');  // Adjust the path as necessary
 
+// Helper function to fetch data from Google Books API
 async function fetchGoogleBooks(url) {
-    const fetch = (await import('node-fetch')).default;
+    await loadFetch();
     const response = await fetch(url);
     return response.json();
 }
 
-// Mapping function to convert Google Books API response to Book schema
+// Function to map Google Books API response to Book schema
 function mapToBookSchema(item) {
     const volumeInfo = item.volumeInfo;
     const imageLinks = volumeInfo.imageLinks || {};
-    const book = {
-        _id: item.id,
+    return {
+        googleId: item.id,  // Store Google's ID for potential future reference
         title: volumeInfo.title,
         authors: volumeInfo.authors || [],
         description: volumeInfo.description || '',
         image: imageLinks.large || imageLinks.medium || imageLinks.small || imageLinks.thumbnail,
         publisher: volumeInfo.publisher || '',
-        yearPublished: volumeInfo.publishedDate ? parseInt(volumeInfo.publishedDate.split("-")[0]) : null,
+        yearPublished: volumeInfo.publishedDate ? parseInt(volumeInfo.publishedDate.split("-")[0], 10) : null,
         category: volumeInfo.categories ? volumeInfo.categories[0] : '',
         ISBN: volumeInfo.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || '',
         language: volumeInfo.language,
         pages: volumeInfo.pageCount || 0,
         format: volumeInfo.printType,
-        price: volumeInfo.listPrice?.amount || 0,
         averageRating: volumeInfo.averageRating || 0
     };
-    return book;
 }
 
+// Endpoint to search books by title
 router.get('/title', async (req, res) => {
     const { query } = req.query;
     if (!query) {
         return res.status(400).json({ message: "Query parameter is required for searching with title." });
     }
     try {
-        const data = await fetchGoogleBooks(`${GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:${encodeURIComponent(query)}&key=${GOOGLE_BOOKS_API_KEY}`);
-        
-        // Log the full data object
-        // fs.writeFileSync('full_data.json', JSON.stringify(data, null, 2));
-        // console.log("Full data from Google Books API saved to full_data.json");
+        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
+        const data = await fetchGoogleBooks(url);
 
-        const books = data.items.map(item => {
-            // Log each item individually
-            // fs.writeFileSync(`book_item_${item.id}.json`, JSON.stringify(item, null, 2));
-            // console.log(`Book item saved to book_item_${item.id}.json`);
-
-            return mapToBookSchema(item);
-        });
+        const books = await Promise.all(data.items.map(async (item) => {
+            const mappedBook = mapToBookSchema(item);
+            let book = await Book.findOne({ ISBN: mappedBook.ISBN });
+            if (!book) {
+                book = new Book(mappedBook);
+                await book.save();
+            }
+            return book;
+        }));
 
         res.json(books);
     } catch (error) {
@@ -62,44 +63,44 @@ router.get('/title', async (req, res) => {
     }
 });
 
+// Endpoint to search books by author
 router.get('/author', async (req, res) => {
     const { query } = req.query;
     if (!query) {
         return res.status(400).json({ message: "Query parameter is required for searching with author." });
     }
     try {
-        const data = await fetchGoogleBooks(`${GOOGLE_BOOKS_API_BASE_URL}/volumes?q=inauthor:${encodeURIComponent(query)}&key=${GOOGLE_BOOKS_API_KEY}`);
-        
-        // Log the full data object
-        //fs.writeFileSync('full_data.json', JSON.stringify(data, null, 2));
-        console.log("Full data from Google Books API saved to full_data.json");
+        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=inauthor:${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
+        const data = await fetchGoogleBooks(url);
 
-        const books = data.items.map(item => {
-            // Log each item individually
-            //fs.writeFileSync(`book_item_${item.id}.json`, JSON.stringify(item, null, 2));
-            console.log(`Book item saved to book_item_${item.id}.json`);
-
-            return mapToBookSchema(item);
-        });
+        const books = data.items.map(mapToBookSchema);
 
         res.json(books);
     } catch (error) {
-        res.status(500).json({ message: "Error searching for books by title", error: error.message });
+        res.status(500).json({ message: "Error searching for books by author", error: error.message });
     }
 });
 
-// Get book by ID
+// Get a specific book by Google Books API ID
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const data = await fetchGoogleBooks(`${GOOGLE_BOOKS_API_BASE_URL}/volumes/${id}?key=${GOOGLE_BOOKS_API_KEY}`);
+        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes/${id}?key=${process.env.GOOGLE_BOOKS_API_KEY}`;
+        const data = await fetchGoogleBooks(url);
+
         if (!data || data.error) {
             return res.status(404).json({ message: "Book not found" });
         }
 
-        const book = mapToBookSchema(data);
+        let book = await Book.findOne({ googleId: id });
+        if (!book) {
+            book = new Book(mapToBookSchema(data));
+            await book.save();
+        }
+
         res.json(book);
     } catch (error) {
+        console.log(error.message)
         res.status(500).json({ message: "Error retrieving the book", error: error.message });
     }
 });

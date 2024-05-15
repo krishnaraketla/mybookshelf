@@ -12,7 +12,6 @@ const bookSchema = new mongoose.Schema({
     language: String,
     pages: Number,
     format: String,
-    price: Number,
     dateAdded: { type: Date, default: Date.now },
     averageRating: Number
 });
