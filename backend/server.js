@@ -14,7 +14,7 @@ app.use(express.json());
 // Routes
 app.use('/shelves', shelvesRoutes);
 app.use('/search/books', allBooksRoutes);
-app.use('/auth', authRoutes);  // Updated to have a base path for all auth related routes
+app.use('/auth', authRoutes);
 
 mongoose.connect(process.env.MONGO_URI_LIBRARY)
     .then(() => {

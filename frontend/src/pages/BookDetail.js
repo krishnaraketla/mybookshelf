@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/BookDetail.css'; 
 import NavBar from '../components/NavBar';
-
-let didInit = false;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const BookDetail = () => {
     const { id } = useParams();
@@ -28,11 +28,8 @@ const BookDetail = () => {
     };
 
     useEffect(() => {
-        if (!didInit) {
             console.log("Component re-rendered!");
             fetchBook(id);
-            didInit = true;
-        }
     }, [id]);
 
     if (loading) {
@@ -42,24 +39,20 @@ const BookDetail = () => {
     if (error) {
         // return <div className="book-detail-error">{error}</div>;
         return (
-            <div>
+            <div className='book-detail-page'>
                 <NavBar />
                 <div className="book-detail-container">
                     <div className="book-detail-image">
                         <img src={'https://via.placeholder.com/150'} alt="text" />
+                        <div className='book-row-base-full' />
                     </div>
                     <div className="book-detail-info">
-                        <h1 className="book-title">Title</h1>
-                        <h2 className="book-author">Author</h2>
-                        <p className="book-detail-rating">
+                    <div className="book-title">Title <span className='shelves-icon'><FontAwesomeIcon icon={faBookmark} /> </span> </div>
+                        <div className="book-author">Author</div>
+                        <div className="book-detail-rating">
                             <span>★</span> Avg Rating
-                        </p>
-                        <div className="book-description" />
-                        <div className="book-detail-actions">
-                            <button>Currently Reading</button>
-                            <button>To Be Read</button>
-                            <button>Finished Reading</button>
                         </div>
+                        <div className="book-description" />
                     </div>
                 </div>
             </div>
@@ -67,24 +60,20 @@ const BookDetail = () => {
     }
 
     return (
-        <div>
+        <div className='book-detail-page'>
             <NavBar />
             <div className="book-detail-container">
                 <div className="book-detail-image">
                     <img src={book.image || 'https://via.placeholder.com/150'} alt={book.title} />
+                    <div className='book-row-base-full' />
                 </div>
                 <div className="book-detail-info">
-                    <h1 className="book-title">{book.title}</h1>
-                    <h2 className="book-author">{book.authors.join(', ')}</h2>
-                    <p className="book-detail-rating">
+                    <div className="book-title">{book.title} <span className='shelves-icon'><FontAwesomeIcon icon={faBookmark} /> </span> </div>
+                    <div className="book-author">{book.authors.join(', ')}</div>
+                    <div className="book-detail-rating">
                         <span>★</span> {book.averageRating}
-                    </p>
-                    <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
-                    <div className="book-detail-actions">
-                        <button>Currently Reading</button>
-                        <button>To Be Read</button>
-                        <button>Finished Reading</button>
                     </div>
+                    <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
                 </div>
             </div>
         </div>

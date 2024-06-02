@@ -16,7 +16,6 @@ const bookSchema = new mongoose.Schema({
     averageRating: Number
 });
 
-bookSchema.index({ title: 'text' });
-bookSchema.index({ authors: 'text' });
+bookSchema.index({ title: 'text', authors: 'text' });
 
 module.exports = mongoose.model('Book', bookSchema);
