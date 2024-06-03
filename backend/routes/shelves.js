@@ -9,7 +9,7 @@ const auth = require('../middleware/auth');
 router.get('/', auth, async (req, res) => {
     try {
         // Fetch the user and populate the shelves field
-        const user = await User.findById(req.user.userId).populate('shelves', '_id name owner books');
+        const user = await User.findById(req.user.userId).populate('shelves', '_id name owner link');
 
         if (!user) {
             return res.status(404).json({ message: "User not found" });
@@ -75,12 +75,14 @@ router.delete('/:name', auth, async (req, res) => {
     }
 });
 
+
+
 // Books Routes (nested within shelves)
 
 // GET all books in a shelf
 router.get('/:name/books', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.name, owner: req.user.userId }).populate('books');
+        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId }).populate('books');
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -154,7 +156,7 @@ router.put('/:name/books/:bookId', auth, async (req, res) => {
 // Delete a book from a shelf
 router.delete('/:name/books/:bookId', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.name, owner: req.user.userId });
+        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }

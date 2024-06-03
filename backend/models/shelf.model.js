@@ -6,4 +6,13 @@ const shelfSchema = new mongoose.Schema({
     books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book' }]
 });
 
+// Virtual field for dynamic link
+shelfSchema.virtual('link').get(function() {
+    return `/shelves/${this.name}/books`;
+});
+
+// Ensure virtual fields are serialized
+shelfSchema.set('toJSON', { virtuals: true });
+shelfSchema.set('toObject', { virtuals: true });
+
 module.exports = mongoose.model('Shelf', shelfSchema);
