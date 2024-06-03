@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
+    googleId: String,
     title: { type: String, required: true },
     description: String,
     publisher: String,
@@ -12,7 +13,6 @@ const bookSchema = new mongoose.Schema({
     language: String,
     pages: Number,
     format: String,
-    dateAdded: { type: Date, default: Date.now },
     averageRating: Number
 });
 

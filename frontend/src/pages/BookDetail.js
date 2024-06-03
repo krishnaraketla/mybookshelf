@@ -21,6 +21,7 @@ const BookDetail = () => {
                 const data = await response.json();
                 setBook(data);
             } else {
+                console.log("Book not found")
                 setError("Book not found");
             }
         } catch (error) {

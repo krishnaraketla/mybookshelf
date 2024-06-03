@@ -46,10 +46,10 @@ router.post('/', auth, async (req, res) => {
 });
 
 // Update a shelf
-router.put('/:shelfId', auth, async (req, res) => {
+router.put('/:name', auth, async (req, res) => {
     try {
         const updatedShelf = await Shelf.findOneAndUpdate(
-            { _id: req.params.shelfId, owner: req.user.userId },
+            { _id: req.params.name, owner: req.user.userId },
             req.body,
             { new: true }
         );
@@ -63,9 +63,9 @@ router.put('/:shelfId', auth, async (req, res) => {
 });
 
 // Delete a shelf
-router.delete('/:shelfId', auth, async (req, res) => {
+router.delete('/:name', auth, async (req, res) => {
     try {
-        const deletedShelf = await Shelf.findOneAndDelete({ _id: req.params.shelfId, owner: req.user.userId });
+        const deletedShelf = await Shelf.findOneAndDelete({ _id: req.params.name, owner: req.user.userId });
         if (!deletedShelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -78,9 +78,9 @@ router.delete('/:shelfId', auth, async (req, res) => {
 // Books Routes (nested within shelves)
 
 // GET all books in a shelf
-router.get('/:shelfId/books', auth, async (req, res) => {
+router.get('/:name/books', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.shelfId, owner: req.user.userId }).populate('books');
+        const shelf = await Shelf.findOne({ _id: req.params.name, owner: req.user.userId }).populate('books');
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -91,7 +91,7 @@ router.get('/:shelfId/books', auth, async (req, res) => {
 });
 
 // GET a single book in a shelf
-router.get('/:shelfId/books/:bookId', auth, async (req, res) => {
+router.get('/:name/books/:bookId', auth, async (req, res) => {
     try {
         const book = await Book.findOne({ _id: req.params.bookId, owner: req.user.userId });
         if (!book) {
@@ -104,21 +104,34 @@ router.get('/:shelfId/books/:bookId', auth, async (req, res) => {
 });
 
 // Add a book to a shelf
-router.post('/:shelfId/books', auth, async (req, res) => {
-    try {
-        const { title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating } = req.body;
-        const newBook = new Book({ title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating });
+router.post('/:name/books', auth, async (req, res) => {
+    const { googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating } = req.body;
 
+    // Basic validation
+    if (!title) {
+        return res.status(400).json({ message: "Title is required" });
+    }
+
+    try {
+        // Create a new book
+        const newBook = new Book({
+            googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
+        });
+
+        // Save the new book
         const savedBook = await newBook.save();
 
-        const shelf = await Shelf.findOne({ _id: req.params.shelfId, owner: req.user.userId });
+        // Find the shelf by ID and owner
+        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
 
+        // Add the new book to the shelf
         shelf.books.push(savedBook._id);
         await shelf.save();
 
+        // Return the saved book in the response
         res.status(201).json(savedBook);
     } catch (error) {
         res.status(500).json({ message: "Error adding book to shelf", error: error.message });
@@ -126,7 +139,7 @@ router.post('/:shelfId/books', auth, async (req, res) => {
 });
 
 // Update a book in a shelf
-router.put('/:shelfId/books/:bookId', auth, async (req, res) => {
+router.put('/:name/books/:bookId', auth, async (req, res) => {
     try {
         const updatedBook = await Book.findByIdAndUpdate(req.params.bookId, req.body, { new: true });
         if (!updatedBook) {
@@ -139,9 +152,9 @@ router.put('/:shelfId/books/:bookId', auth, async (req, res) => {
 });
 
 // Delete a book from a shelf
-router.delete('/:shelfId/books/:bookId', auth, async (req, res) => {
+router.delete('/:name/books/:bookId', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.shelfId, owner: req.user.userId });
+        const shelf = await Shelf.findOne({ _id: req.params.name, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }

@@ -27,6 +27,16 @@ router.post('/register', async (req, res) => {
         const user = new User({ username, password: hashedPassword });
         await user.save();
 
+        // Create default shelves
+        const shelves = ['tbr', 'reading', 'finished'];
+        for (const shelfName of shelves) {
+            const shelf = new Shelf({ name: shelfName, owner: user._id });
+            await shelf.save();
+            user.shelves.push(shelf._id);
+        }
+
+        await user.save(); // Save user with updated shelves
+
         // Generate a token
         const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1d' });
 

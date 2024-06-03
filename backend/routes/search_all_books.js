@@ -47,15 +47,9 @@ router.get('/title', async (req, res) => {
         const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
         const data = await fetchGoogleBooks(url);
 
-        const books = await Promise.all(data.items.map(async (item) => {
-            const mappedBook = mapToBookSchema(item);
-            let book = await Book.findOne({ ISBN: mappedBook.ISBN });
-            if (!book) {
-                book = new Book(mappedBook);
-                await book.save();
-            }
-            return book;
-        }));
+        const books = data.items.map((item) => {
+            return mapToBookSchema(item);
+        });
 
         res.json(books);
     } catch (error) {
@@ -92,11 +86,7 @@ router.get('/:id', async (req, res) => {
             return res.status(404).json({ message: "Book not found" });
         }
 
-        let book = await Book.findOne({ googleId: id });
-        if (!book) {
-            book = new Book(mapToBookSchema(data));
-            await book.save();
-        }
+        book = new Book(mapToBookSchema(data));
 
         res.json(book);
     } catch (error) {
