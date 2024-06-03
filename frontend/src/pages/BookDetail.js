@@ -10,6 +10,8 @@ const BookDetail = () => {
     const [book, setBook] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [shelves, setShelves] = useState([]);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const fetchBook = async (id) => {
         setLoading(true);
@@ -27,17 +29,40 @@ const BookDetail = () => {
         setLoading(false);
     };
 
+    const fetchShelves = async () => {
+        try {
+            const response = await fetch('http://localhost:4000/shelves', { cache: 'no-store' });
+            if (response.ok) {
+                const data = await response.json();
+                setShelves(data);
+                console.log(shelves)
+            } else {
+                setError("Error fetching shelves");
+            }
+        } catch (error) {
+            setError("Error fetching shelves");
+        }
+    };
+
     useEffect(() => {
-            console.log("Component re-rendered!");
-            fetchBook(id);
+        console.log("Component re-rendered!");
+        fetchBook(id);
+        fetchShelves();
     }, [id]);
+
+    const handleMouseEnter = () => {
+        setDropdownVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+        setDropdownVisible(false);
+    };
 
     if (loading) {
         return(<div><NavBar /> <div className="book-detail-loading">Loading...</div></div>);
     }
 
     if (error) {
-        // return <div className="book-detail-error">{error}</div>;
         return (
             <div className='book-detail-page'>
                 <NavBar />
@@ -47,7 +72,7 @@ const BookDetail = () => {
                         <div className='book-row-base-full' />
                     </div>
                     <div className="book-detail-info">
-                    <div className="book-title">Title <span className='shelves-icon'><FontAwesomeIcon icon={faBookmark} /> </span> </div>
+                        <div className="book-title">Title <span className='shelves-icon'><FontAwesomeIcon icon={faBookmark} /> </span> </div>
                         <div className="book-author">Author</div>
                         <div className="book-detail-rating">
                             <span>★</span> Avg Rating
@@ -68,7 +93,23 @@ const BookDetail = () => {
                     <div className='book-row-base-full' />
                 </div>
                 <div className="book-detail-info">
-                    <div className="book-title">{book.title} <span className='shelves-icon'><FontAwesomeIcon icon={faBookmark} /> </span> </div>
+                    <div className="book-title">
+                        {book.title} 
+                        <span 
+                            className='shelves-icon' 
+                            onMouseEnter={handleMouseEnter} 
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <FontAwesomeIcon icon={faBookmark} /> 
+                            {dropdownVisible && (
+                                <div className="shelves-dropdown">
+                                    {shelves.map(shelf => (
+                                        <div key={shelf._id} className="shelf-item">{shelf.name}</div>
+                                    ))}
+                                </div>
+                            )}
+                        </span> 
+                    </div>
                     <div className="book-author">{book.authors.join(', ')}</div>
                     <div className="book-detail-rating">
                         <span>★</span> {book.averageRating}

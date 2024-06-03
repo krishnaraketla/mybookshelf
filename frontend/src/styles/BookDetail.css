@@ -121,6 +121,33 @@
 }
 
 .shelves-icon {
+    position: relative;
+    cursor: pointer;
     height: 100%;
     padding: 10px;
+}
+
+.shelves-dropdown {
+    position: absolute;
+    top: 20px; /* Adjust based on your layout */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px; /* Adjust as needed */
+}
+
+.shelf-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.shelf-item:last-child {
+    border-bottom: none;
+}
+
+.shelf-item:hover {
+    background-color: #f0f0f0;
 }

@@ -42,6 +42,7 @@ const SearchBar = ({ onSearch }) => {
     useEffect(() => {
         // Close the dropdown when clicking outside
         const handleClickOutside = (event) => {
+            console.log("click outside dropdown")
             if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
@@ -57,6 +58,7 @@ const SearchBar = ({ onSearch }) => {
     };
 
     const handleSelect = (result) => {
+        console.log("book selected!")
         setSearchTerm(result.title);
         setShowDropdown(false);
         navigate(`/books/${result._id}`);
@@ -115,3 +117,5 @@ const SearchBar = ({ onSearch }) => {
 };
 
 export default SearchBar;
+
+//http://localhost:3000/books/665cb66c205c922a22f0837d

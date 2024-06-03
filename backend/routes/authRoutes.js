@@ -1,16 +1,16 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const User = require('../models/user.model'); // Make sure the path to your User model is correct
+const bcrypt = require('bcryptjs');
+const User = require('../models/user.model');
+require('dotenv').config();
 
 const router = express.Router();
-
-// Environment variable for JWT_SECRET
-require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
 // Register new user
 router.post('/register', async (req, res) => {
     try {
+        console.log(req.body)
         const { username, password } = req.body;
         if (!username || !password) {
             return res.status(400).json({ message: "Username and password are required." });
@@ -23,11 +23,15 @@ router.post('/register', async (req, res) => {
         }
 
         // Create and save the new user
-        const user = new User({ username, password });
+        const hashedPassword = await bcrypt.hash(password, 8);
+        const user = new User({ username, password: hashedPassword });
         await user.save();
 
-        // Respond with success (optionally, you could also create a token here and send it back)
-        res.status(201).json({ message: "User registered successfully" });
+        // Generate a token
+        const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1d' });
+
+        // Respond with success and token
+        res.status(201).json({ message: "User registered successfully", token });
     } catch (error) {
         res.status(500).json({ message: "Error registering new user", error: error.message });
     }
@@ -44,11 +48,14 @@ router.post('/login', async (req, res) => {
         // Check if user exists
         const user = await User.findOne({ username });
         if (!user) {
+            console.log('User not found:', username);
             return res.status(404).json({ message: "User not found" });
         }
 
+        console.log('Stored Hashed Password:', user.password);  // Log the hashed password from the database
+        console.log('Provided Password:', password);  
         // Check if the password is correct
-        const isMatch = await user.comparePassword(password);
+        const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(401).json({ message: "Invalid password" });
         }
