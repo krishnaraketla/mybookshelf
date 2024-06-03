@@ -21,10 +21,9 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-// GET a single shelf
-router.get('/:shelfId', auth, async (req, res) => {
+router.get('/:name', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.shelfId, owner: req.user.userId }).populate('books');
+        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId }).populate('books');
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
