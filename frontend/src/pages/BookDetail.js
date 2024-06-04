@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import '../styles/BookDetail.css'; 
 import NavBar from '../components/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faRegularBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const BookDetail = () => {
@@ -57,8 +59,6 @@ const BookDetail = () => {
             if (response.ok) {
                 const data = await response.json();
                 setShelves(data);
-                console.log("==== shelves ====")
-                console.log(shelves)
             } else {
                 setError("Error fetching shelves");
             }
@@ -67,11 +67,57 @@ const BookDetail = () => {
         }
     };
 
+    const checkBookInShelves = async (data) => {
+        try {
+            const token = localStorage.getItem('token');
+            console.log("===checking===")
+            console.log(data)
+            for (const shelf of data) {
+                console.log(`http://localhost:4000${shelf.link}`)
+                const response = await fetch(`http://localhost:4000${shelf.link}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                    cache: 'no-store',
+                });
+
+                if (response.ok) {
+                    const books = await response.json();
+                    console.log(response)
+                    if (books.some(b => b.googleId === book.googleId)) {
+                        setisBookInShelf(true);
+                        console.log("Book found in shelf!")
+                        return;
+                    }
+                } else {
+                    setisBookInShelf(false);
+                    setError(`Error fetching books for shelf ${shelf.name}`);
+                }
+            }
+        } catch (error) {
+            console.log(error)
+            setError("Error checking book in shelves");
+        }
+    };
+
     useEffect(() => {
         console.log("Component re-rendered!");
         fetchBook(id);
         fetchShelves();
     }, [id]);
+
+    useEffect(() => {
+        console.log("==== shelves ====");
+        console.log(shelves);
+    }, [shelves]);
+
+    useEffect(() => {
+        if (shelves.length > 0 && book) {
+            checkBookInShelves(shelves);
+        }
+    }, [shelves, book]);
 
     const handleMouseEnter = () => {
         setDropdownVisible(true);
@@ -124,7 +170,10 @@ const BookDetail = () => {
                             onMouseLeave={handleMouseLeave}
                             style={{ position: 'relative' }} /* Ensure relative positioning */
                         >
-                            <FontAwesomeIcon icon={faBookmark} /> 
+                            <FontAwesomeIcon 
+                                icon={isBookInShelf ? faSolidBookmark : faRegularBookmark} 
+                                style={{ color: isBookInShelf ? 'gray' : 'white' }} 
+                            />
                             {dropdownVisible && (
                                 <div className="shelves-dropdown">
                                     {shelves.map(shelf => (
