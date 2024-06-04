@@ -80,9 +80,9 @@ router.delete('/:name', auth, async (req, res) => {
 // Books Routes (nested within shelves)
 
 // GET all books in a shelf
-router.get('/:name/books', auth, async (req, res) => {
+router.get('/:id/books', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId }).populate('books');
+        const shelf = await Shelf.findOne({ googleId: req.params.googleId, owner: req.user.userId }).populate('books');
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -93,9 +93,9 @@ router.get('/:name/books', auth, async (req, res) => {
 });
 
 // GET a single book in a shelf
-router.get('/:name/books/:bookId', auth, async (req, res) => {
+router.get('/:id/books/:bookId', auth, async (req, res) => {
     try {
-        const book = await Book.findOne({ _id: req.params.bookId, owner: req.user.userId });
+        const book = await Book.findOne({ googleId: req.params.googleId, owner: req.user.userId });
         if (!book) {
             return res.status(404).json({ message: "Book not found" });
         }
@@ -106,7 +106,7 @@ router.get('/:name/books/:bookId', auth, async (req, res) => {
 });
 
 // Add a book to a shelf
-router.post('/:name/books', auth, async (req, res) => {
+router.post('/:id/books', auth, async (req, res) => {
     const { googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating } = req.body;
 
     // Basic validation
@@ -124,7 +124,7 @@ router.post('/:name/books', auth, async (req, res) => {
         const savedBook = await newBook.save();
 
         // Find the shelf by ID and owner
-        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId });
+        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }

@@ -12,11 +12,24 @@ const BookDetail = () => {
     const [loading, setLoading] = useState(true);
     const [shelves, setShelves] = useState([]);
     const [dropdownVisible, setDropdownVisible] = useState(false);
+    const [isBookInShelf, setisBookInShelf] = useState(false);
 
     const fetchBook = async (id) => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:4000/search/books/${id}`, { cache: "no-store" });
+
+            const token = localStorage.getItem('token');
+            console.log(token)
+            // Make the fetch request with the token in the Authorization header
+            const response = await fetch(`http://localhost:4000/search/books/${id}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-store',
+            });
+
             if (response.ok) {
                 const data = await response.json();
                 setBook(data);
@@ -32,10 +45,19 @@ const BookDetail = () => {
 
     const fetchShelves = async () => {
         try {
-            const response = await fetch('http://localhost:4000/shelves', { cache: 'no-store' });
+            const token = localStorage.getItem('token');
+            const response = await fetch('http://localhost:4000/shelves', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-store',
+            });
             if (response.ok) {
                 const data = await response.json();
                 setShelves(data);
+                console.log("==== shelves ====")
                 console.log(shelves)
             } else {
                 setError("Error fetching shelves");
@@ -100,6 +122,7 @@ const BookDetail = () => {
                             className='shelves-icon' 
                             onMouseEnter={handleMouseEnter} 
                             onMouseLeave={handleMouseLeave}
+                            style={{ position: 'relative' }} /* Ensure relative positioning */
                         >
                             <FontAwesomeIcon icon={faBookmark} /> 
                             {dropdownVisible && (
@@ -119,6 +142,7 @@ const BookDetail = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

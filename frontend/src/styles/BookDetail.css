@@ -128,20 +128,30 @@
 }
 
 .shelves-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     position: absolute;
-    top: 20px; /* Adjust based on your layout */
-    right: 0;
-    background-color: white;
+    top: 0;
+    left: 90%;
+    background-color: rgba(105, 157, 159, 1);
     border: 1px solid #ddd;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    width: 150px; /* Adjust as needed */
+    width: 100px;
+    height: 150px;
+    font-size: 14px;
 }
 
 .shelf-item {
-    padding: 10px;
+    flex: 1;
     cursor: pointer;
+    border: 1px solid red;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
 }
 
 .shelf-item:last-child {
@@ -149,5 +159,5 @@
 }
 
 .shelf-item:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(2, 78, 81);
 }
