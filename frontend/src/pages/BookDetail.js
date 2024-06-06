@@ -14,30 +14,36 @@ const BookDetail = () => {
     const [loading, setLoading] = useState(true);
     const [shelves, setShelves] = useState([]);
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const [isBookInShelf, setisBookInShelf] = useState(false);
+    const [isBookInShelf, setisBookInShelf] = useState(String);
 
     const fetchBook = async (id) => {
         setLoading(true);
         try {
 
             const token = localStorage.getItem('token');
-            console.log(token)
             // Make the fetch request with the token in the Authorization header
-            const response = await fetch(`http://localhost:4000/search/books/${id}`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-                cache: 'no-store',
-            });
+            const bookDetail = localStorage.getItem("bookDetail")
 
-            if (response.ok) {
-                const data = await response.json();
-                setBook(data);
-            } else {
-                console.log("Book not found")
-                setError("Book not found");
+            if(bookDetail){
+                setBook(JSON.parse(bookDetail))
+            }
+            else{
+                const response = await fetch(`http://localhost:4000/search/books/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                    cache: 'no-store',
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setBook(data);
+                } else {
+                    console.log("Book not found")
+                    setError("Book not found");
+                }
             }
         } catch (error) {
             setError("Error fetching book details");
@@ -70,10 +76,7 @@ const BookDetail = () => {
     const checkBookInShelves = async (data) => {
         try {
             const token = localStorage.getItem('token');
-            console.log("===checking===")
-            console.log(data)
             for (const shelf of data) {
-                console.log(`http://localhost:4000${shelf.link}`)
                 const response = await fetch(`http://localhost:4000${shelf.link}`, {
                     method: 'GET',
                     headers: {
@@ -85,14 +88,13 @@ const BookDetail = () => {
 
                 if (response.ok) {
                     const books = await response.json();
-                    console.log(response)
                     if (books.some(b => b.googleId === book.googleId)) {
-                        setisBookInShelf(true);
+                        setisBookInShelf(shelf.id);
                         console.log("Book found in shelf!")
                         return;
                     }
                 } else {
-                    setisBookInShelf(false);
+                    setisBookInShelf("");
                     setError(`Error fetching books for shelf ${shelf.name}`);
                 }
             }
@@ -101,6 +103,46 @@ const BookDetail = () => {
             setError("Error checking book in shelves");
         }
     };
+
+    const toggleShelf = async(shelf) => {
+        if ( isBookInShelf === "")
+            {
+                console.log("Book not in any shelf")
+                // ADD book to shelf
+                addBookToShelf(shelf)
+            }
+            else
+            {
+                console.log("Book in shelf", isBookInShelf)
+                // Remove book from shelf if selected shelf contains book, else -> remove and add to new shelf
+            }
+    }
+
+    const addBookToShelf = async (shelf) => {
+        const token = localStorage.getItem('token');
+        const bookDetail = localStorage.getItem("bookDetail")
+        try{
+            const response = await fetch(`http://localhost:4000${shelf.link}`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-store',
+                body: bookDetail
+            });
+
+            if (response.ok) {
+                setisBookInShelf(shelf.id)
+            } else {
+                console.log("Error adding book to shelf")
+            }
+        }
+        catch(error){
+            console.log(error)
+            setError("Error adding book in shelf");
+        }
+    }
 
     useEffect(() => {
         console.log("Component re-rendered!");
@@ -177,7 +219,7 @@ const BookDetail = () => {
                             {dropdownVisible && (
                                 <div className="shelves-dropdown">
                                     {shelves.map(shelf => (
-                                        <div key={shelf._id} className="shelf-item">{shelf.name}</div>
+                                        <div key={shelf._id} className="shelf-item" onClick={() => toggleShelf(shelf)}><p>{shelf.name}</p></div>
                                     ))}
                                 </div>
                             )}

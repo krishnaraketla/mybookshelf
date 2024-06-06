@@ -15,7 +15,6 @@ const SearchBar = ({ onSearch }) => {
         debounce(async (query) => {
             if (query) {
                 try {
-                    console.log(query);
                     const response = await fetch(`http://localhost:4000/search/books/title?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
                     if (response.ok) {
                         const data = await response.json();
@@ -42,7 +41,6 @@ const SearchBar = ({ onSearch }) => {
     useEffect(() => {
         // Close the dropdown when clicking outside
         const handleClickOutside = (event) => {
-            console.log("click outside dropdown")
             if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
@@ -58,10 +56,10 @@ const SearchBar = ({ onSearch }) => {
     };
 
     const handleSelect = (result) => {
-        console.log("book selected!")
         setSearchTerm(result.title);
         setShowDropdown(false);
-        navigate(`/books/${result._id}`);
+        navigate(`/books/${result.googleId}`);
+        localStorage.setItem("bookDetail", JSON.stringify(result))
     };
 
     const handleSubmit = (event) => {
@@ -97,7 +95,7 @@ const SearchBar = ({ onSearch }) => {
             {showDropdown && (
                 <ul className="search-results-dropdown">
                     {results.map(result => (
-                        <li key={result._id} onClick={() => handleSelect(result)} className="dropdown-item">
+                        <li key={result.googleId} onClick={() => handleSelect(result)} className="dropdown-item">
                             <img src={result.image} alt={result.title} className="dropdown-item-image" />
                             <div className="dropdown-item-info">
                                 <span className="dropdown-item-title">{result.title}</span>

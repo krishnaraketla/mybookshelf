@@ -86,6 +86,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     top: calc(100% - 1px);
     left: 0;
+    z-index: 1000;
 }
 
 .dropdown-item {

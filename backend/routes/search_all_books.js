@@ -25,7 +25,7 @@ function mapToBookSchema(item) {
         title: volumeInfo.title,
         authors: volumeInfo.authors || [],
         description: volumeInfo.description || '',
-        image: imageLinks.large || imageLinks.medium || imageLinks.small || imageLinks.thumbnail,
+        image: "https://books.google.com/books/content?id=" + item.id + "&printsec=frontcover&img=1&zoom=4&edge=curl&source=gbs_api" || imageLinks.large || imageLinks.medium || imageLinks.small || imageLinks.thumbnail,
         publisher: volumeInfo.publisher || '',
         yearPublished: volumeInfo.publishedDate ? parseInt(volumeInfo.publishedDate.split("-")[0], 10) : null,
         category: volumeInfo.categories ? volumeInfo.categories[0] : '',
