@@ -154,9 +154,9 @@ router.put('/:name/books/:bookId', auth, async (req, res) => {
 });
 
 // Delete a book from a shelf
-router.delete('/:name/books/:bookId', auth, async (req, res) => {
+router.delete('/:id/books/:bookId', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ name: req.params.name, owner: req.user.userId });
+        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -171,7 +171,6 @@ router.delete('/:name/books/:bookId', auth, async (req, res) => {
         if (!deletedBook) {
             return res.status(404).json({ message: "Book not found" });
         }
-
         res.json({ message: "Book deleted successfully from shelf" });
     } catch (error) {
         res.status(500).json({ message: "Error deleting book from shelf", error: error.message });

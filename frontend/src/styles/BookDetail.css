@@ -165,3 +165,7 @@
 .shelf-item:hover {
     background-color: rgb(2, 78, 81);
 }
+
+.shelf-item.bookInShelf {
+    background-color: rgb(2, 78, 81);
+}

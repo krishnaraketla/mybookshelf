@@ -112,9 +112,21 @@ const BookDetail = () => {
                 addBookToShelf(shelf)
             }
             else
-            {
+            {   
                 console.log("Book in shelf", isBookInShelf)
                 // Remove book from shelf if selected shelf contains book, else -> remove and add to new shelf
+                if(shelf._id === isBookInShelf)
+                {   
+                    removeBookToShelf(shelf)
+                }
+                else
+                {   
+                    console.log("Shelf selected does not contain book, removing from existing shelf")
+                    await removeBookToShelf(null)
+                    console.log("Adding book to selected shelf")
+                    addBookToShelf(shelf)
+                }
+                
             }
     }
 
@@ -141,6 +153,67 @@ const BookDetail = () => {
         catch(error){
             console.log(error)
             setError("Error adding book in shelf");
+        }
+    }
+
+    const removeBookToShelf = async (shelfSelected) => {
+        const token = localStorage.getItem('token');
+        let foundBook = null
+        let foundShelf = null
+
+        try {
+            const token = localStorage.getItem('token');
+            for (const shelf of shelves) {
+                const response = await fetch(`http://localhost:4000${shelf.link}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                    cache: 'no-store',
+                });
+
+                if (response.ok) {
+                    const books = await response.json();
+                    const bookInShelf = books.find(b => b.googleId === book.googleId);
+                    if (bookInShelf) {
+                        foundBook = bookInShelf; // Capture the found book
+                        foundShelf = shelf;
+                        break; // Exit the loop if the book is found
+                    }
+                } else {
+                    setError(`Error fetching books for shelf ${shelf.name}`);
+                }
+            }
+        } catch (error) {
+            console.log(error)
+            setError("Error checking book in shelves");
+        }
+
+        if(!shelfSelected)
+        {
+            shelfSelected = foundShelf
+        }
+        try{
+            const response = await fetch(`http://localhost:4000${shelfSelected.link}/${foundBook._id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-store'
+            });
+
+            if (response.ok) {
+                console.log("Book successfully removed!")
+                setisBookInShelf("")
+            } else {
+                console.log("Error removing book to shelf")
+            }
+        }
+        catch(error){
+            console.log(error)
+            setError("Error removing book in shelf");
         }
     }
 
@@ -219,7 +292,7 @@ const BookDetail = () => {
                             {dropdownVisible && (
                                 <div className="shelves-dropdown">
                                     {shelves.map(shelf => (
-                                        <div key={shelf._id} className="shelf-item" onClick={() => toggleShelf(shelf)}><p>{shelf.name}</p></div>
+                                        <div key={shelf._id} className={`shelf-item ${isBookInShelf === shelf._id? 'bookInShelf' : ''}`} onClick={() => toggleShelf(shelf)}><p>{shelf.name}</p></div>
                                     ))}
                                 </div>
                             )}
