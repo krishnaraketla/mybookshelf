@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/BookRow.css'; 
 import BookSlot from './BookSlot';
 
-const BookRow = () => {
-    const book1 = {
-        src: "http://books.google.com/books/content?id=JN-1EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-    };
+const BookRow = (books) => {
+
+    const [book1, setBook1] = useState([]);
+    const [book2, setBook2] = useState([]);
+    const [book3, setBook3] = useState([]);
+
+    useEffect(() => {
+        setBook1(books[0]);
+        setBook2(books[1]);
+        setBook3(books[2]);
+    }, []);
+
+    useEffect(() => {
+        console.log("Book Row")
+        console.log(books)
+    }, [books]);
+
     return (
         <div>   
             <div className='book-row'>
             <BookSlot book={book1} />
-            <BookSlot />
-            <BookSlot />
+            <BookSlot book={book2}/>
+            <BookSlot book={book3}/>
         </div>
             <div className='book-row-base'>
 

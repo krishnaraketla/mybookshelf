@@ -92,18 +92,18 @@ router.get('/:id/books', auth, async (req, res) => {
     }
 });
 
-// GET a single book in a shelf
-router.get('/:id/books/:bookId', auth, async (req, res) => {
-    try {
-        const book = await Book.findOne({ googleId: req.params.googleId, owner: req.user.userId });
-        if (!book) {
-            return res.status(404).json({ message: "Book not found" });
-        }
-        res.json(book);
-    } catch (error) {
-        res.status(500).json({ message: "Error fetching book", error: error.message });
-    }
-});
+// // GET a single book in a shelf
+// router.get('/:id/books/:bookId', auth, async (req, res) => {
+//     try {
+//         const book = await Book.findOne({ googleId: req.params.bookId });
+//         if (!book) {
+//             return res.status(404).json({ message: "Book not found" });
+//         }
+//         res.json(book);
+//     } catch (error) {
+//         res.status(500).json({ message: "Error fetching book", error: error.message });
+//     }
+// });
 
 // Add a book to a shelf
 router.post('/:id/books', auth, async (req, res) => {

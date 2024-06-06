@@ -21,6 +21,7 @@ const BookDetail = () => {
         try {
 
             const token = localStorage.getItem('token');
+            console.log(token)
             // Make the fetch request with the token in the Authorization header
             const bookDetail = localStorage.getItem("bookDetail")
 
