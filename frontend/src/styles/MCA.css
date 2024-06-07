@@ -11,3 +11,9 @@
     width: 100vw;
     padding: 20px;
 }
+
+.user-info-section {
+    /* border: 1px solid white; */
+    padding: 100px;
+    height: 100vh;
+  }

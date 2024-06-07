@@ -45,7 +45,6 @@ const BookShelf = ({ shelfName }) => {
                 if(shelf.name === "reading")
                 {
                     shelfUrl = shelf.url;
-                    console.log(shelfUrl)
                     break;
                 }
             }
@@ -54,7 +53,6 @@ const BookShelf = ({ shelfName }) => {
                 if(shelf.name === "finished")
                 {
                     shelfUrl = shelf.url;
-                    console.log(shelfUrl)
                     break;
                 }
             }
@@ -63,7 +61,6 @@ const BookShelf = ({ shelfName }) => {
                 if(shelf.name === "tbr")
                 {
                     shelfUrl = shelf.url;
-                    console.log(shelfUrl)
                     break;
                 }
             }
@@ -77,7 +74,6 @@ const BookShelf = ({ shelfName }) => {
                 response = null
             }
             else{
-                console.log(`http://localhost:4000${shelfUrl}`)
                 response = await fetch(`http://localhost:4000${shelfUrl}`, {
                     method: 'GET',
                     headers: {
@@ -92,7 +88,7 @@ const BookShelf = ({ shelfName }) => {
                 const data = await response.json();
                 setBooks(data);
             } else {
-                console.log("Book not found");
+
             }
         } catch (error) {
             console.error("Error fetching books:", error);
