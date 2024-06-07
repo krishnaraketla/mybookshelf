@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import { useNavigate } from 'react-router-dom';
+import { faSearch, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/SearchBar.css'; 
 
 const SearchBar = ({ onSearch }) => {
@@ -83,6 +85,8 @@ const SearchBar = ({ onSearch }) => {
 
     return (
         <div className="search-bar-container" ref={wrapperRef}>
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            <FontAwesomeIcon icon={faChevronDown} className="chevron-icon" />
             <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"

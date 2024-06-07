@@ -1,7 +1,7 @@
 .search-bar-container {
     border: 1px solid white;
     position: relative;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,8 +9,20 @@
 
 .search-form {
     border: 1px solid red;
-    width:60%;
+    width:1000%;
     position: relative;
+}
+
+.search-icon {
+    color: rgba(237, 238, 213, 0.9); 
+}
+
+.chevron-icon {
+    color: rgba(237, 238, 213, 0.9); 
+}
+
+.chevron-icon :hover{
+    color: rgba(255, 255, 255, 0.99);
 }
 
 .search-form input {
