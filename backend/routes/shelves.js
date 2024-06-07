@@ -82,7 +82,7 @@ router.delete('/:name', auth, async (req, res) => {
 // GET all books in a shelf
 router.get('/:id/books', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ googleId: req.params.googleId, owner: req.user.userId }).populate('books');
+        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -120,9 +120,6 @@ router.post('/:id/books', auth, async (req, res) => {
             googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
         });
 
-        // Save the new book
-        const savedBook = await newBook.save();
-
         // Find the shelf by ID and owner
         const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
         if (!shelf) {
@@ -130,11 +127,11 @@ router.post('/:id/books', auth, async (req, res) => {
         }
 
         // Add the new book to the shelf
-        shelf.books.push(savedBook._id);
+        shelf.books.push(newBook);
         await shelf.save();
 
         // Return the saved book in the response
-        res.status(201).json(savedBook);
+        res.status(201).json(newBook);
     } catch (error) {
         res.status(500).json({ message: "Error adding book to shelf", error: error.message });
     }
@@ -153,24 +150,24 @@ router.put('/:name/books/:bookId', auth, async (req, res) => {
     }
 });
 
-// Delete a book from a shelf
+// Delete bok from a shelf
 router.delete('/:id/books/:bookId', auth, async (req, res) => {
     try {
+        // Find the shelf by ID and owner
         const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
 
-        const bookIndex = shelf.books.indexOf(req.params.bookId);
+        // Remove the book by its ID from the shelf's books array
+        const bookIndex = shelf.books.findIndex(book => book._id.toString() === req.params.bookId);
         if (bookIndex > -1) {
             shelf.books.splice(bookIndex, 1);
             await shelf.save();
+        } else {
+            return res.status(404).json({ message: "Book not found in shelf" });
         }
 
-        const deletedBook = await Book.findByIdAndDelete(req.params.bookId);
-        if (!deletedBook) {
-            return res.status(404).json({ message: "Book not found" });
-        }
         res.json({ message: "Book deleted successfully from shelf" });
     } catch (error) {
         res.status(500).json({ message: "Error deleting book from shelf", error: error.message });

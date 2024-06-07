@@ -48,9 +48,9 @@ const BookShelf = ({ shelfName }) => {
                     break;
                 }
             }
-            if(shelfName === "Finsihed Reading")
+            if(shelfName === "Finished Reading")
             {
-                if(shelf.name === "finshed")
+                if(shelf.name === "finished")
                 {
                     shelfUrl = shelf.url;
                     console.log(shelfUrl)
