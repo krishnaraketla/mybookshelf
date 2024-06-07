@@ -11,6 +11,7 @@ const SearchBar = ({ onSearch }) => {
     const [results, setResults] = useState([]);
     const navigate = useNavigate();
     const wrapperRef = useRef(null);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
 
     // Debounce function to limit API calls, wrapped in useCallback to maintain reference
     const debouncedSearch = useCallback(
@@ -83,14 +84,36 @@ const SearchBar = ({ onSearch }) => {
         }, 100);
     };
 
+    const handleMouseEnter = () => {
+        setDropdownVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+        setDropdownVisible(false);
+    };
+
+
     return (
         <div className="search-bar-container" ref={wrapperRef}>
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            <FontAwesomeIcon icon={faChevronDown} className="chevron-icon" />
+            <span className='chevron-icon' onMouseEnter={handleMouseEnter} 
+                            onMouseLeave={handleMouseLeave}>
+            <FontAwesomeIcon icon={faChevronDown} onClick={() => {setDropdownVisible(!dropdownVisible)}}/>
+            {dropdownVisible && (
+                                <div className="search-options-dropdown">
+                                    <div className='search-options'>
+                                        <p>title</p>
+                                    </div>
+                                    <div className='search-options'>
+                                        <p>author</p>
+                                    </div>
+                                </div>
+                            )}
+            </span>
             <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"
-                    placeholder="Search books by title..."
+                    placeholder="Search books by title"
                     value={searchTerm}
                     onChange={handleChange}
                     onFocus={handleFocus}

@@ -56,7 +56,7 @@ const BookShelf = ({ shelfName }) => {
                     break;
                 }
             }
-            if(shelfName === "To be read")
+            if(shelfName === "To Be Read")
             {
                 if(shelf.name === "tbr")
                 {

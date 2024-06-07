@@ -12,13 +12,12 @@
 
 /* Correct the hover selector to target the whole slot */
 .book-slot:hover {
-    transform: translateY(-5px);  /* Applies the scaling to the whole slot */
+    transform: translateY(-5px);
 }
 
 .book-slot img {
     flex: 1;
     display: block;
-    /* box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.25); */
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
     border-radius: 0px 7px 8px 0px;
     gap: 0px;
@@ -31,5 +30,17 @@
 .book-slot img:hover {
     opacity: 1;
     cursor: grabbing;
-
+    transition: transform 0.2s;
 }
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .book-slot.wobble {
+    animation: wobble 0.5s infinite;
+  }

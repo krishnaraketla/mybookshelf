@@ -26,7 +26,7 @@ const MCA = () => {
         <div>
       <div id="mca-section" className='mca'>
         <BookShelf shelfName="Currently Reading" /> 
-        <BookShelf shelfName="To be read" />
+        <BookShelf shelfName="To Be Read" />
         <BookShelf shelfName="Finished Reading" />
       </div>
       <div id="user-info-section" className='user-info-section'>

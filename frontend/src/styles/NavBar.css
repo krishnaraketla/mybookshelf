@@ -54,14 +54,14 @@
     max-width: 200px; /* Adjust maximum width as needed */
     padding-left: 10px; /* Add padding to prevent it sticking to the edge */
     box-sizing: border-box;
-    color:white;
+    color: rgba(250, 237, 221, 1);
     gap: 30px;
     padding-right: 30px;
 }
 
 .right-links a {
     margin-left: 15px;
-    color: white;
+    color: rgba(250, 237, 221, 1);
     text-decoration: none;
     font-size: 1.2rem;
 }

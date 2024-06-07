@@ -1,5 +1,5 @@
 .search-bar-container {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: relative;
     width: 70%;
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 .search-form {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width:1000%;
     position: relative;
 }
@@ -18,11 +18,44 @@
 }
 
 .chevron-icon {
+    cursor: pointer;
     color: rgba(237, 238, 213, 0.9); 
 }
 
 .chevron-icon :hover{
+    cursor: pointer;
     color: rgba(255, 255, 255, 0.99);
+}
+
+.search-options-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    background-color: rgba(105, 157, 159, 1);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 150px;
+    font-size: 14px;
+}
+
+.search-options:last-child {
+    border-bottom: none;
+}
+
+.search-options:hover {
+    background-color: rgb(2, 78, 81);
+}
+
+.search-options.bookInShelf {
+    background-color: rgb(2, 78, 81);
+}
+
+.search-options {
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
 }
 
 .search-form input {
@@ -36,10 +69,12 @@
     outline: none;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
     background-color: inherit;
+    color: rgba(250, 237, 221, 1);
 }
 .search-form input::placeholder {
     color: white;
     padding: 35%;
+    color: rgba(250, 237, 221, 1);
 }
 .search-form input:focus::placeholder {
     color: transparent;
