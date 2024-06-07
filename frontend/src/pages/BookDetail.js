@@ -24,7 +24,6 @@ const BookDetail = () => {
             console.log(token)
             // Make the fetch request with the token in the Authorization header
             const bookDetail = localStorage.getItem("bookDetail")
-
             if(bookDetail){
                 setBook(JSON.parse(bookDetail))
             }
@@ -78,7 +77,7 @@ const BookDetail = () => {
         try {
             const token = localStorage.getItem('token');
             for (const shelf of data) {
-                const response = await fetch(`http://localhost:4000${shelf.link}`, {
+                const response = await fetch(`http://localhost:4000${shelf.url}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -91,7 +90,6 @@ const BookDetail = () => {
                     const books = await response.json();
                     if (books.some(b => b.googleId === book.googleId)) {
                         setisBookInShelf(shelf.id);
-                        console.log("Book found in shelf!")
                         return;
                     }
                 } else {
@@ -108,13 +106,11 @@ const BookDetail = () => {
     const toggleShelf = async(shelf) => {
         if ( isBookInShelf === "")
             {
-                console.log("Book not in any shelf")
                 // ADD book to shelf
                 addBookToShelf(shelf)
             }
             else
             {   
-                console.log("Book in shelf", isBookInShelf)
                 // Remove book from shelf if selected shelf contains book, else -> remove and add to new shelf
                 if(shelf._id === isBookInShelf)
                 {   
@@ -122,9 +118,7 @@ const BookDetail = () => {
                 }
                 else
                 {   
-                    console.log("Shelf selected does not contain book, removing from existing shelf")
                     await removeBookToShelf(null)
-                    console.log("Adding book to selected shelf")
                     addBookToShelf(shelf)
                 }
                 
@@ -135,7 +129,7 @@ const BookDetail = () => {
         const token = localStorage.getItem('token');
         const bookDetail = localStorage.getItem("bookDetail")
         try{
-            const response = await fetch(`http://localhost:4000${shelf.link}`, {
+            const response = await fetch(`http://localhost:4000${shelf.url}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -165,7 +159,7 @@ const BookDetail = () => {
         try {
             const token = localStorage.getItem('token');
             for (const shelf of shelves) {
-                const response = await fetch(`http://localhost:4000${shelf.link}`, {
+                const response = await fetch(`http://localhost:4000${shelf.url}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -196,7 +190,7 @@ const BookDetail = () => {
             shelfSelected = foundShelf
         }
         try{
-            const response = await fetch(`http://localhost:4000${shelfSelected.link}/${foundBook._id}`, {
+            const response = await fetch(`http://localhost:4000${shelfSelected.url}/${foundBook._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -206,7 +200,6 @@ const BookDetail = () => {
             });
 
             if (response.ok) {
-                console.log("Book successfully removed!")
                 setisBookInShelf("")
             } else {
                 console.log("Error removing book to shelf")
@@ -219,14 +212,11 @@ const BookDetail = () => {
     }
 
     useEffect(() => {
-        console.log("Component re-rendered!");
         fetchBook(id);
         fetchShelves();
     }, [id]);
 
     useEffect(() => {
-        console.log("==== shelves ====");
-        console.log(shelves);
     }, [shelves]);
 
     useEffect(() => {

@@ -9,7 +9,7 @@ const auth = require('../middleware/auth');
 router.get('/', auth, async (req, res) => {
     try {
         // Fetch the user and populate the shelves field
-        const user = await User.findById(req.user.userId).populate('shelves', '_id name owner link');
+        const user = await User.findById(req.user.userId).populate('shelves', '_id name owner url');
 
         if (!user) {
             return res.status(404).json({ message: "User not found" });

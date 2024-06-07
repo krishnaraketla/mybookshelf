@@ -7,7 +7,7 @@ const shelfSchema = new mongoose.Schema({
 });
 
 // Virtual field for dynamic link
-shelfSchema.virtual('link').get(function() {
+shelfSchema.virtual('url').get(function() {
     return `/shelves/${this._id}/books`;
 });
 

@@ -4,14 +4,15 @@ import BookRow from './BookRow';
 
 const BookShelf = ({ shelfName }) => {
     const [books, setBooks] = useState([]);
+    const [shelves, setShelves] = useState([])
     const [row1, setRow1] = useState([]);
     const [row2, setRow2] = useState([]);
     const [row3, setRow3] = useState([]);
 
-    const fetchAllBooks = async () => {
+    const fetchShelves = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:4000/shelves/665d2ee5bcf374e52c9178a6/books`, {
+            const response = await fetch('http://localhost:4000/shelves', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -19,8 +20,74 @@ const BookShelf = ({ shelfName }) => {
                 },
                 cache: 'no-store',
             });
-
             if (response.ok) {
+                const data = await response.json();
+                setShelves(data);
+            } else {
+                console.log("Error fetching shelves");
+            }
+        } catch (error) {
+            console.log("Error fetching shelves");
+        }
+    };
+
+    useEffect(() => {
+        fetchAllBooks();
+    },[shelves])
+
+    const fetchAllBooks = async () => {
+        let shelfUrl = ""
+        for(let shelf of shelves)
+        {   
+            if(shelfName === "Currently Reading")
+            {
+                if(shelf.name === "reading")
+                {
+                    shelfUrl = shelf.url;
+                    console.log(shelfUrl)
+                    break;
+                }
+            }
+            if(shelfName === "Finsihed Reading")
+            {
+                if(shelf.name === "finshed")
+                {
+                    shelfUrl = shelf.url;
+                    console.log(shelfUrl)
+                    break;
+                }
+            }
+            if(shelfName === "To be read")
+            {
+                if(shelf.name === "tbr")
+                {
+                    shelfUrl = shelf.url;
+                    console.log(shelfUrl)
+                    break;
+                }
+            }
+        }
+        try {
+            const token = localStorage.getItem('token');
+            let response = null
+            // `http://localhost:4000/shelves/665d2ee5bcf374e52c9178a6/books`
+            if(shelfUrl === "")
+            {
+                response = null
+            }
+            else{
+                console.log(`http://localhost:4000${shelfUrl}`)
+                response = await fetch(`http://localhost:4000${shelfUrl}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                    cache: 'no-store',
+                });
+            }
+
+            if (response && response.ok) {
                 const data = await response.json();
                 setBooks(data);
             } else {
@@ -32,8 +99,8 @@ const BookShelf = ({ shelfName }) => {
     };
 
     useEffect(() => {
-        fetchAllBooks();
-    }, []);
+        fetchShelves();
+    }, [shelfName]);
 
     useEffect(() => {
         const row1Books = [];
