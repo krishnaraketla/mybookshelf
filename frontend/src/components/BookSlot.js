@@ -3,12 +3,20 @@ import '../styles/BookSlot.css';
 
 const BookSlot = ({ book }) => {
 
-    useEffect(() => {
-        console.log(book)
-    }, []);
+    // useEffect(() => {
+    //     // console.log(book)
+    // }, [book]);
+
+    if (!book) {
+        return (
+            <div className='book-slot'>
+                {/* Add any content or styling for an empty slot */}
+            </div>
+        );
+    }
     return (
         <div className='book-slot'>
-            {book && book.src ? <img src={book.src} alt="Book Cover" onClick={()=>{console.log("clicked!")}} onError={(e)=>{console.log(e)}}/> : null}
+            {book && book.googleId ? <img src={book.image} alt="Book Cover" onClick={()=>{console.log("clicked!")}} onError={(e)=>{console.log(e)}}/> : null}
         </div>
     );
 }
