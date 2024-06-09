@@ -12,13 +12,15 @@ const SearchBar = ({ onSearch }) => {
     const navigate = useNavigate();
     const wrapperRef = useRef(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
+    const [placeholderText, setPlaceHolderText] = useState("Search books by title")
+    const [searchParam, setSearchParam] = useState("title")
 
     // Debounce function to limit API calls, wrapped in useCallback to maintain reference
     const debouncedSearch = useCallback(
         debounce(async (query) => {
             if (query) {
                 try {
-                    const response = await fetch(`http://localhost:4000/search/books/title?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
+                    const response = await fetch(`http://localhost:4000/search/books/${searchParam}?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
                     if (response.ok) {
                         const data = await response.json();
                         console.log(`Received ${data.length} results`); // For debugging
@@ -33,7 +35,7 @@ const SearchBar = ({ onSearch }) => {
             } else {
                 setShowDropdown(false);
             }
-        }, 5000),
+        }, 800),
         [] // Empty dependencies array means the function is created only once
     );
 
@@ -101,10 +103,10 @@ const SearchBar = ({ onSearch }) => {
             {dropdownVisible && (
                                 <div className="search-options-dropdown" onMouseEnter={handleMouseEnter} 
                                 onMouseLeave={handleMouseLeave}>
-                                    <div className='search-options'>
+                                    <div className='search-options' onClick={() => {setPlaceHolderText("Search books by title"); setSearchParam("title");}}>
                                         <p>title</p>
                                     </div>
-                                    <div className='search-options'>
+                                    <div className='search-options' onClick={() => {setPlaceHolderText("Search books by author"); setSearchParam("author");}}>
                                         <p>author</p>
                                     </div>
                                 </div>
@@ -113,7 +115,7 @@ const SearchBar = ({ onSearch }) => {
             <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"
-                    placeholder="Search books by title"
+                    placeholder = {placeholderText}
                     value={searchTerm}
                     onChange={handleChange}
                     onFocus={handleFocus}
