@@ -23,16 +23,16 @@ const MCA = () => {
       }, []);
 
     return (
-        <div>
-      <div id="mca-section" className='mca'>
-        <BookShelf shelfName="Currently Reading" /> 
-        <BookShelf shelfName="To Be Read" />
-        <BookShelf shelfName="Finished Reading" />
-      </div>
-      <div id="user-info-section" className='user-info-section'>
-        <h1>scroll for more</h1>
-        <p>Details about the user...</p>
-      </div>
+    <div>
+          <div id="mca-section" className='mca'>
+            <BookShelf shelfName="Currently Reading" /> 
+            <BookShelf shelfName="To Be Read" />
+            <BookShelf shelfName="Finished Reading" />
+          </div>
+          <div id="user-info-section" className='user-info-section'>
+            <h1>scroll for more</h1>
+            <p>Details about the user...</p>
+          </div>
     </div>
 
     );

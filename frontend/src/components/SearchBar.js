@@ -96,11 +96,11 @@ const SearchBar = ({ onSearch }) => {
     return (
         <div className="search-bar-container" ref={wrapperRef}>
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            <span className='chevron-icon' onMouseEnter={handleMouseEnter} 
-                            onMouseLeave={handleMouseLeave}>
+            <span className='chevron-icon'>
             <FontAwesomeIcon icon={faChevronDown} onClick={() => {setDropdownVisible(!dropdownVisible)}}/>
             {dropdownVisible && (
-                                <div className="search-options-dropdown">
+                                <div className="search-options-dropdown" onMouseEnter={handleMouseEnter} 
+                                onMouseLeave={handleMouseLeave}>
                                     <div className='search-options'>
                                         <p>title</p>
                                     </div>
