@@ -1,5 +1,4 @@
 .book-shelf {
-    border: 1px solid black;
     /* flex: 1; */
     box-sizing: border-box;
     display: flex;
@@ -8,7 +7,8 @@
     /* height: 80%; */
     width: 30%;
     gap: 30px;
-    height: calc(80% + 100px)
+    height: calc(80% + 100px);
+    min-width: 400px; 
 }
 
 .book-shelf h1{
