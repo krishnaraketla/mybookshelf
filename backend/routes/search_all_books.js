@@ -16,6 +16,16 @@ async function fetchGoogleBooks(url) {
     return response.json();
 }
 
+async function fetchNYTBooks(url) {
+    await loadFetch();
+    const response = await fetch(url);
+    console.log(response)
+    if (!response.ok) {
+        throw new Error(`Failed to fetch data from NYT API: ${response.statusText}`);
+    }
+    return response.json();
+}
+
 // Function to map Google Books API response to Book schema
 function mapToBookSchema(item) {
     const volumeInfo = item.volumeInfo;
@@ -72,6 +82,25 @@ router.get('/author', async (req, res) => {
         res.json(books);
     } catch (error) {
         res.status(500).json({ message: "Error searching for books by author", error: error.message });
+    }
+});
+
+router.get('/bestsellers', async (req, res) => {
+    const { list } = req.query;
+    if (!list) {
+        return res.status(400).json({ message: "List parameter is required to get bestsellers." });
+    }
+    try {
+        const url = `${process.env.NYT_API_BASE_URL}/current/${encodeURIComponent(list)}.json?api-key=${process.env.NYT_API_KEY}`;
+        // const url = `${process.env.NYT_API_BASE_URL}/names.json?api-key=${process.env.NYT_API_KEY}`;
+        const data = await fetchNYTBooks(url);
+        // const books = data.results.books.map((item) => {
+        //     return mapToBookSchema(item);
+        // });
+
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching bestsellers", error: error.message });
     }
 });
 

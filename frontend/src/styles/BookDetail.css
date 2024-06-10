@@ -4,9 +4,11 @@
     flex: 1;
     box-sizing: border-box;
     height: 100%;
+    padding-top: calc(2% + 1% + 105px);
 }
 
 .book-detail-container {
+    /* border: 1px solid red; */
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;

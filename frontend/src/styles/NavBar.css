@@ -1,6 +1,6 @@
 .navbar {
     /* border: 1px solid black; */
-    background-color: transparent;
+    background: rgba(120, 179, 181, 1);
     color: white;
     padding: 2% 1%;
     display: flex;
@@ -8,6 +8,9 @@
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box; /* Include padding and border in the element's width and height */
+    position: fixed; /* Make the navbar fixed to the top */
+    top: 0; /* Align it to the top of the viewport */
+    z-index: 1000; /* Ensure it is on top of other elements */
 }
 
 .company-logo {

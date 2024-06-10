@@ -35,7 +35,7 @@ const SearchBar = ({ onSearch }) => {
             } else {
                 setShowDropdown(false);
             }
-        }, 800),
+        }, 1000),
         [] // Empty dependencies array means the function is created only once
     );
 
@@ -145,5 +145,3 @@ const SearchBar = ({ onSearch }) => {
 };
 
 export default SearchBar;
-
-//http://localhost:3000/books/665cb66c205c922a22f0837d

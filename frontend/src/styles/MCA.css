@@ -10,9 +10,11 @@
     box-sizing: border-box;
     width: 100vw;
     padding: 20px;
+    /* margin-top: 155px; */
 }
 
 .user-info-section {
+    /* display: flex; */
     /* border: 1px solid white; */
     padding: 100px;
     height: 100vh;

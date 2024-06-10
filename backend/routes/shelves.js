@@ -82,7 +82,7 @@ router.delete('/:name', auth, async (req, res) => {
 // GET all books in a shelf
 router.get('/:id/books', auth, async (req, res) => {
     try {
-        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
+        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId }).populate("books");
         if (!shelf) {
             return res.status(404).json({ message: "Shelf not found" });
         }
@@ -116,22 +116,44 @@ router.post('/:id/books', auth, async (req, res) => {
 
     try {
         // Create a new book
-        const newBook = new Book({
-            googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
-        });
+        const existingBook = await Book.findOne({ $or: [{ googleId }, { ISBN }] });
+        
+        if(!existingBook){
 
-        // Find the shelf by ID and owner
-        const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
-        if (!shelf) {
-            return res.status(404).json({ message: "Shelf not found" });
+            const newBook = new Book({
+                googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
+            });
+
+            newBook.save();
+
+            // Find the shelf by ID and owner
+            const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
+            if (!shelf) {
+                return res.status(404).json({ message: "Shelf not found" });
+            }
+
+            // Add the new book to the shelf
+            shelf.books.push(newBook);
+            await shelf.save();
+
+            // Return the saved book in the response
+            res.status(201).json(existingBook);
+        }
+        else{
+            // Find the shelf by ID and owner
+            const shelf = await Shelf.findOne({ _id: req.params.id, owner: req.user.userId });
+            if (!shelf) {
+                return res.status(404).json({ message: "Shelf not found" });
+            }
+
+            // Add the new book to the shelf
+            shelf.books.push(existingBook);
+            await shelf.save();
+
+            // Return the saved book in the response
+            res.status(201).json(existingBook);
         }
 
-        // Add the new book to the shelf
-        shelf.books.push(newBook);
-        await shelf.save();
-
-        // Return the saved book in the response
-        res.status(201).json(newBook);
     } catch (error) {
         res.status(500).json({ message: "Error adding book to shelf", error: error.message });
     }
