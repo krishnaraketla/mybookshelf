@@ -1,7 +1,6 @@
-/* src/Carousel.css */
 .carousel {
     position: relative;
-    width: 40%;
+    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
   }
@@ -24,12 +23,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: transparent;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1;
+    color: rgba(237, 238, 213, 0.9);
+  }
+
+  .carousel-button :hover{
+    color: rgba(255, 255, 255, 0.99);
   }
   
   .carousel-button:first-of-type {

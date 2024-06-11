@@ -91,8 +91,8 @@ router.get('/bestsellers', async (req, res) => {
         return res.status(400).json({ message: "List parameter is required to get bestsellers." });
     }
     try {
-        const url = `${process.env.NYT_API_BASE_URL}/current/${encodeURIComponent(list)}.json?api-key=${process.env.NYT_API_KEY}`;
-        // const url = `${process.env.NYT_API_BASE_URL}/names.json?api-key=${process.env.NYT_API_KEY}`;
+        // const url = `${process.env.NYT_API_BASE_URL}/current/${encodeURIComponent(list)}.json?api-key=${process.env.NYT_API_KEY}`;
+        const url = `${process.env.NYT_API_BASE_URL}/names.json?api-key=${process.env.NYT_API_KEY}`;
         const data = await fetchNYTBooks(url);
         // const books = data.results.books.map((item) => {
         //     return mapToBookSchema(item);
