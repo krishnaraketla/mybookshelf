@@ -1,24 +1,28 @@
 .book-detail-page {
+    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
     height: 100%;
     padding-top: calc(2% + 1% + 105px);
+    overflow: hidden;
+    align-items: center;
 }
 
 .book-detail-container {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
     gap: 0px;
     margin: 0 auto;
     color: white;
-    flex:1;
+    width: 90%;
 }
 
 .book-detail-image {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +33,7 @@
 }
 
 .book-detail-image img {
+    border: 1px solid blueviolet;
     object-fit: cover;
     border-radius: 10px;
     width: 381px;
@@ -53,6 +58,7 @@
 }
 
 .book-detail-info {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: top;
