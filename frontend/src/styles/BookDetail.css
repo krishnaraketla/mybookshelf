@@ -1,5 +1,4 @@
 .book-detail-page {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -11,7 +10,6 @@
 }
 
 .book-detail-container {
-    border: 1px solid red;
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -22,7 +20,6 @@
 }
 
 .book-detail-image {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +30,6 @@
 }
 
 .book-detail-image img {
-    border: 1px solid blueviolet;
     object-fit: cover;
     border-radius: 10px;
     width: 381px;
