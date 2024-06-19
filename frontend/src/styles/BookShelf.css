@@ -1,10 +1,8 @@
 .book-shelf {
-    /* flex: 1; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 80%; */
     width: 30%;
     gap: 30px;
     height: calc(80% + 100px);
@@ -13,7 +11,7 @@
 
 .book-shelf h1{
     align-self: center;
-    color: rgba(250, 237, 221, 1);
+    color: var(--title-text-color);
     font-size: 24px;
     font-weight: 400;
     line-height: 34.18px;
@@ -25,7 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
 }
 
 .bi {
@@ -33,13 +30,13 @@
     margin: 0 10px;
 }
 
-navigation-arrows svg {
-    fill: rgba(255, 255, 255, 0.99); /* Set the fill color for the SVG icons */
+.navigation-arrows svg {
+    fill: var(--nav-arrows);
     cursor: pointer;
     margin: 0 10px;
 }
 
 /* Optional: Add hover effect to change color or opacity */
 .navigation-arrows svg:hover {
-    fill: rgba(237, 238, 213, 0.9); /* Slightly change color on hover */
+    fill: var(--nav-arrows-hover); /* Slightly change color on hover */
 }

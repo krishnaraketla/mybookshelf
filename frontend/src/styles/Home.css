@@ -1,5 +1,5 @@
 body, html, #root {
-    background: rgba(120, 179, 181, 1);
+    background: var(--background-color);
     font-family: kai;
     display: flex;
     flex-direction: column;

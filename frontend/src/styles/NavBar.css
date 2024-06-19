@@ -1,7 +1,6 @@
 .navbar {
     /* border: 1px solid black; */
-    background: rgba(120, 179, 181, 1);
-    color: white;
+    background: var(--background-color);
     padding: 2% 1%;
     display: flex;
     align-items: center;
@@ -22,9 +21,9 @@
     max-width: 200px;
     padding-right: 10px;
     box-sizing: border-box;
-    color:white;
     margin-left: 10px;
 }
+
 .company-logo a {
     color: inherit; /* Inherits the parent element's text color */
     text-decoration: none; /* Removes the underline */
@@ -34,6 +33,8 @@
     max-width: 100%;  /* Ensures image does not exceed the container width */
     max-height: 100%;  /* Ensures image does not exceed the container height */
     display: block;  /* Removes bottom margin/gap */
+    opacity: 60%;
+    mix-blend-mode: difference;
 }
 
 .company-logo a:visited {
@@ -57,14 +58,13 @@
     max-width: 200px; /* Adjust maximum width as needed */
     padding-left: 10px; /* Add padding to prevent it sticking to the edge */
     box-sizing: border-box;
-    color: rgba(250, 237, 221, 1);
     gap: 30px;
     padding-right: 30px;
 }
 
 .right-links a {
     margin-left: 15px;
-    color: rgba(250, 237, 221, 1);
+    color: var(--title-text-color);
     text-decoration: none;
     font-size: 1.2rem;
 }

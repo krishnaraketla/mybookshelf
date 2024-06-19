@@ -6,10 +6,10 @@
     flex-direction: row;
     align-items: center;
     justify-content:center;
-    gap: 50px;
+    gap: 150px;
     box-sizing: border-box;
     width: 100vw;
-    padding: 20px;
+    padding: 50px;
     /* margin-top: 155px; */
 }
 
