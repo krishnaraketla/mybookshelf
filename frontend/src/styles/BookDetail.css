@@ -5,11 +5,12 @@
     box-sizing: border-box;
     height: 100%;
     padding-top: calc(2% + 1% + 105px);
-    overflow: hidden;
+    overflow: scroll;
     align-items: center;
 }
 
 .book-detail-container {
+    border: 1px solid red;
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -19,23 +20,20 @@
 }
 
 .book-detail-image {
+    border: 1px solid blue;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-self: center;
-    height: 100%;
-
+    padding-top: 15%;
 }
 
 .book-detail-image img {
     object-fit: cover;
     border-radius: 10px;
-    width: 381px;
-    height: 578px;
+    max-width: 381px;
+    max-height: 578px;
     gap: 0px;
     border-radius: 0px 40px 40px 0px;
-
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
