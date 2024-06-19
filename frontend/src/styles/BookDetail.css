@@ -10,7 +10,6 @@
 }
 
 .book-detail-container {
-    border: 1px solid red;
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -20,7 +19,6 @@
 }
 
 .book-detail-image {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +49,6 @@
 }
 
 .book-detail-info {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -91,7 +88,6 @@
 .book-description {
     max-width: 800px;
     height: fit-content;
-    border: 1px solid red;
     font-family: Malayalam MN;
     font-size: 20px;
     font-weight: 400;
