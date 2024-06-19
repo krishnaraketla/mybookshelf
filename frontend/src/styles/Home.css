@@ -3,9 +3,8 @@ body, html, #root {
     font-family: kai;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* This sets the height to be exactly the viewport height */
-    width: 100vw; /* This sets the width to be exactly the viewport width */
-    box-sizing: border-box; /* This ensures padding does not affect the overall dimensions */
+    height: 100vh;
+    width: 100vw;
     min-height: 100vh;
 }
 
@@ -16,7 +15,6 @@ body, html, #root {
 }
 
 .home {
-    /* border: 0.5px solid red; */
     display: flex;
     flex-direction: column;
     justify-content:center;

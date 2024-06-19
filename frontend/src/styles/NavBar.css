@@ -57,7 +57,6 @@
     justify-content: flex-end;
     max-width: 200px; /* Adjust maximum width as needed */
     padding-left: 10px; /* Add padding to prevent it sticking to the edge */
-    box-sizing: border-box;
     gap: 30px;
     padding-right: 30px;
 }
