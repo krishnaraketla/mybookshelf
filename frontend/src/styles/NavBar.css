@@ -22,6 +22,8 @@
     padding-right: 10px;
     box-sizing: border-box;
     margin-left: 10px;
+    opacity: 60%;
+    mix-blend-mode: difference;
 }
 
 .company-logo a {
@@ -30,11 +32,9 @@
 }
 
 .company-logo img {
-    max-width: 100%;  /* Ensures image does not exceed the container width */
-    max-height: 100%;  /* Ensures image does not exceed the container height */
+    max-width: 100%;
+    max-height: 100%;
     display: block;  /* Removes bottom margin/gap */
-    opacity: 60%;
-    mix-blend-mode: plus-darker;
 }
 
 .company-logo a:visited {

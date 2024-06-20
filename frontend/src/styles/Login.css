@@ -1,63 +1,96 @@
-.login-page-container{
+.login-page-container {
     background: var(--background-color);
     display: flex;
     flex-direction: row;
     height: 95vh;
     background-image: url("../../public/genres_illust.png");
     background-size: cover;
-    background-position:left;
+    background-position: left;
     background-repeat: no-repeat;
-
-    
-}
-.company-logo {
-    /* border: 1px solid red; */
-    height: 80%;
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    max-width: 200px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    margin-left: 10px;
-    z-index: 1000;
 }
 
-.company-logo a {
-    color: inherit;
-    text-decoration: none; 
-}
-
-.company-logo img{
-    max-width: 100%;
-    max-height: 100%;
-    display: block; 
-    opacity: 100%;
-    mix-blend-mode:difference;
-}
-
-.form-card{
+.form-card {
     width: 568px;
-    height: 771px;
+    height: fit-content;
     margin: 100px;
-    top: 174px;
-    left: 1003px;
-    gap: 0px;
-    border-radius: 39px 39px 39px 39px;
-    opacity: 0px;
-
+    margin-top: 20%;
+    padding: 20px;
+    border-radius: 39px;
     background: rgba(247, 243, 233, 1);
     box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.app-intro{
+.form-card h2 {
+    margin-bottom: 20px;
+    color: var(--title-text-color);
+    font-family: Malayalam MN;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 51.28px;
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--title-text-color);
+    font-family: Malayalam MN;
+}
+
+.form-group input {
+    width: 432px;
+    height: 61px;
+    top: 400px;
+    left: 1071px;
+    gap: 0px;
+    border-radius: 40px 40px 40px 40px;
+    opacity: 0px;
+    background: rgba(230, 221, 204, 1);
+    border: 0px;
+}
+
+.sign-in-button {
+    width: 432px;
+    height: 61px;
+    top: 805px;
+    left: 1068px;
+    gap: 0px;
+    border-radius: 40px 40px 40px 40px;
+    opacity: 0px;
+    border: 0px;
+    background: rgba(134, 178, 185, 1);
+    cursor: pointer;
+    color: rgba(255, 250, 250, 1);
+}
+
+.sign-up-link {
+    margin-top: 10px;
+    color: #888;
+    text-align: center;
+}
+
+.sign-up-link a {
+    color: #888;
+    text-decoration: underline;
+}
+
+.app-intro {
     margin: 100px;
     height: 771px;
-    border-radius: 39px 39px 39px 39px;
+    border-radius: 39px;
     flex: 1;
 }
 
-.about-section{
+.about-section {
     height: 100vh;
     background-color: var(--background-hover-color);
 }
