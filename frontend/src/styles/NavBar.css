@@ -34,7 +34,7 @@
     max-height: 100%;  /* Ensures image does not exceed the container height */
     display: block;  /* Removes bottom margin/gap */
     opacity: 60%;
-    mix-blend-mode: difference;
+    mix-blend-mode: plus-darker;
 }
 
 .company-logo a:visited {

@@ -234,13 +234,13 @@ const BookDetail = () => {
     };
 
     if (loading) {
-        return(<div><NavBar /> <div className="book-detail-loading">Loading...</div></div>);
+        return(<div><NavBar showRightLinks="true"/> <div className="book-detail-loading">Loading...</div></div>);
     }
 
     if (error) {
         return (
             <div className='book-detail-page'>
-                <NavBar />
+                <NavBar showRightLinks="true"/>
                 <div className="book-detail-container">
                     <div className="book-detail-image">
                         <img src={'https://via.placeholder.com/150'} alt="text" />
@@ -261,7 +261,7 @@ const BookDetail = () => {
 
     return (
         <div className='book-detail-page'>
-            <NavBar />
+            <NavBar showRightLinks="true"/>
             <div className="book-detail-container">
                 <div className="book-detail-image">
                     <img src={book.image || 'https://via.placeholder.com/150'} alt={book.title} />

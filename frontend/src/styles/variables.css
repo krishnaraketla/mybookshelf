@@ -10,5 +10,11 @@
     --nav-arrows: var(--title-text-color);
     --nav-arrows-hover: var(--title-text-hover);
 
+    --alt-background-color: rgba(220, 220, 220, 1);
+    --alt-title-text-color: rgba(131, 110, 100, 1);
+    --alt-title-text-hover: rgba(84, 73, 63, 1);
+    --alt-body-text-color: rgba(89, 80, 76, 1);
+    --alt-caption-text-color: rgba(140, 130, 125, 1);
+    --alt-background-hover-color: rgba(200, 190, 180, 1);
   }
   

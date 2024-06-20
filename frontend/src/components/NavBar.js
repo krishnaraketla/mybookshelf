@@ -5,7 +5,7 @@ import '../styles/NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-const NavBar = () => {
+const NavBar = (props) => {
     const location = useLocation();
     const handleSearch = (searchTerm) => {
         console.log("Search for:", searchTerm);
@@ -20,10 +20,10 @@ const NavBar = () => {
                 {location.pathname !== '/login' && <SearchBar onSearch={handleSearch} />}
             </div>
             <div className="right-links">
-                <Link to="/">About</Link>
-                <Link to="/">
+                {props.showRightLinks && <Link to="/">About</Link> }
+                {props.showRightLinks && <Link to="/">
                     <FontAwesomeIcon icon={faUser} />
-                </Link>
+                </Link> }
             </div>
         </nav>
 

@@ -5,7 +5,7 @@ import MCA from '../components/MCA';
 const Home = () => {
     return (
         <div className="home">
-            <NavBar />
+            <NavBar showRightLinks="true" />
             <MCA />
         </div>
     );

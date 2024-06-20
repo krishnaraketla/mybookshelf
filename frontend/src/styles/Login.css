@@ -1,51 +1,63 @@
-.login-container {
+.login-page-container{
+    background: var(--background-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    height: 95vh;
+    background-image: url("../../public/genres_illust.png");
+    background-size: cover;
+    background-position:left;
+    background-repeat: no-repeat;
+
+    
+}
+.company-logo {
+    /* border: 1px solid red; */
+    height: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 200px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+.company-logo a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+.company-logo img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+    opacity: 100%;
+    mix-blend-mode:difference;
+}
+
+.form-card{
+    width: 568px;
+    height: 771px;
+    margin: 100px;
+    top: 174px;
+    left: 1003px;
+    gap: 0px;
+    border-radius: 39px 39px 39px 39px;
+    opacity: 0px;
+
+    background: rgba(247, 243, 233, 1);
+    box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-intro{
+    margin: 100px;
+    height: 771px;
+    border-radius: 39px 39px 39px 39px;
+    flex: 1;
+}
+
+.about-section{
     height: 100vh;
-    background-color: #814d40; /* Adjust the background color */
-}
-
-.form-container {
-    background-color: #84746E; /* Adjust the form background color */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-form input[type="text"],
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-}
-
-.login-form button {
-    background-color: #5A4C49; /* Adjust the button color */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.login-form button:hover {
-    background-color: #4A3C39; /* Darker shade for hover */
-}
-
-.login-link {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.login-link a {
-    color: #D3C1BC; /* Adjust the link color */
+    background-color: var(--background-hover-color);
 }

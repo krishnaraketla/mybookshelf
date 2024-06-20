@@ -1,24 +1,26 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import '../styles/Login.css'; // Ensure you have a CSS file for styling
+import { Link } from 'react-router-dom';
+import '../styles/Login.css';
 
 const Login = () => {
     return (
-        <div>
-            <NavBar />
-            <div className="login-container">
-                <div className="form-container">
-                    <h2>CREATE NEW ACCOUNT</h2>
-                    <form className="login-form">
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <button type="submit">SIGN UP</button>
-                        <p className="login-link">Already registered? <a href="login">Login</a></p>
-                    </form>
+        <div className='LandingPage'>
+            <div className='login-page-container'>
+                <div className='company-logo'>
+                    <Link to="/"><img src="/logo.png" alt='logo'></img></Link>
+                </div>
+                <div className='app-intro'>
+                    
+                </div>
+                <div className='form-card'>
+
                 </div>
             </div>
+            <div className='about-section'>
+
+            </div>
         </div>
+        
         
     );
 }
