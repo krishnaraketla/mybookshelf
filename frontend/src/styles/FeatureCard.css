@@ -1,0 +1,43 @@
+.feature-card{
+    display:flex;
+    height: 60vh;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.feature-card:nth-child(odd){
+    background-color: var(--background-hover-color);
+    flex-direction: row-reverse;
+}
+
+.feature-card:nth-child(even){
+    background-color: var(--background-color);
+    flex-direction: row;
+}
+
+.illustration-box{
+    display: flex;
+    flex:1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.feature-description-box{
+    display: flex;
+    flex:1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.illustration{
+    border: 1px solid red;
+    height: 200px;
+    width: 200px;
+}
+.feature-description{
+    border:1px solid black;
+    width: 500px;
+    height: 80%;
+}
