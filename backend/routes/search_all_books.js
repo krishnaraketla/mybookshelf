@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 let fetch;
 
 async function loadFetch() {
@@ -47,6 +48,13 @@ function mapToBookSchema(item) {
     };
 }
 
+const fetchRelatedBooks = async (volumeId) => {
+    const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes/${volumeId}/associated?key=${process.env.GOOGLE_BOOKS_API_KEY}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+};
+
 // Endpoint to search books by title
 router.get('/title', async (req, res) => {
     const { query } = req.query;
@@ -54,11 +62,21 @@ router.get('/title', async (req, res) => {
         return res.status(400).json({ message: "Query parameter is required for searching with title." });
     }
     try {
-        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
+        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:"${encodeURIComponent(query)}"&orderBy=relevance&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
         const data = await fetchGoogleBooks(url);
 
+        // Process the books
         const books = data.items.map((item) => {
             return mapToBookSchema(item);
+        });
+
+        // Save the data to a file
+        fs.writeFile('books.json', JSON.stringify(books, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing to file', err);
+            } else {
+                console.log('Data written to file successfully');
+            }
         });
 
         res.json(books);
@@ -82,6 +100,21 @@ router.get('/author', async (req, res) => {
         res.json(books);
     } catch (error) {
         res.status(500).json({ message: "Error searching for books by author", error: error.message });
+    }
+});
+
+// Route to get associated books by volume ID
+router.get('/associated/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const relatedBooks = await fetchRelatedBooks(id);
+
+        // Process the other editions
+        const associatedBooks = relatedBooks.items ? relatedBooks.items.map(mapToBookSchema) : [];
+
+        res.json(associatedBooks);
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching associated books", error: error.message });
     }
 });
 
