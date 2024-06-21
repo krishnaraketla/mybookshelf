@@ -3,9 +3,14 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user.model');
 require('dotenv').config();
+const auth = require('../middleware/auth');
 
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET;
+
+router.post('/validate', auth, (req, res) => {
+    res.status(200).json({ message: 'Token is valid' });
+});
 
 // Register new user
 router.post('/register', async (req, res) => {
