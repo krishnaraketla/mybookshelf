@@ -33,7 +33,10 @@ def build_user_item_matrix(interactions):
     
     user_item_matrix = user_item_matrix.fillna(0)
     
-    user_item_csr = csr_matrix(user_item_matrix.values)
+    # Normalize the ratings by dividing by the book rating counts
+    normalized_user_item_matrix = user_item_matrix.div(book_rating_counts, axis=1).fillna(0)
+    
+    user_item_csr = csr_matrix(normalized_user_item_matrix.values)
     
     return user_item_csr, book_rating_counts, user_item_matrix.columns
 
@@ -92,7 +95,9 @@ if __name__ == "__main__":
     
     new_user_matrix = new_user_matrix.fillna(0)
     
-    new_user_csr = csr_matrix(new_user_matrix.values)
+    normalized_new_user_item_matrix = new_user_matrix.div(book_rating_counts, axis=1).fillna(0)
+    
+    new_user_csr = csr_matrix(normalized_new_user_item_matrix.values)
     
     # Compute cosine similarity
     similarities = cosine_similarity(new_user_csr, user_item_csr)
@@ -108,9 +113,18 @@ if __name__ == "__main__":
     print("Top N Book IDs: ", top_n_book_ids)
     print("Top N Denormalized Ratings: ", top_n_ratings_denormalized)
     
-    for book_id in top_n_book_ids:
+    # Display results
+    print("Books you have rated:")
+    for idx, row in new_user_ratings.iterrows():
+        work_id = get_work_id(row['book_id'])
+        title = get_original_title_by_book_id(work_id, book_works_df)
+        print(f"Book ID: {row['book_id']}, Title: {title}, Rating: {row['rating']}")
+    
+    print("\nBooks we recommend:")
+    for book_id, rating in zip(top_n_book_ids, top_n_ratings_denormalized):
         work_id = get_work_id(book_id)
-        print(get_original_title_by_book_id(work_id, book_works_df))
+        title = get_original_title_by_book_id(work_id, book_works_df)
+        print(f"Book ID: {book_id}, Title: {title}, Predicted Rating: {rating:.2f}")
     
     
     
