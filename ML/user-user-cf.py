@@ -95,9 +95,7 @@ if __name__ == "__main__":
     
     new_user_matrix = new_user_matrix.fillna(0)
     
-    normalized_new_user_item_matrix = new_user_matrix.div(book_rating_counts, axis=1).fillna(0)
-    
-    new_user_csr = csr_matrix(normalized_new_user_item_matrix.values)
+    new_user_csr = csr_matrix(new_user_matrix.values)
     
     # Compute cosine similarity
     similarities = cosine_similarity(new_user_csr, user_item_csr)
