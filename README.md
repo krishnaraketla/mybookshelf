@@ -81,7 +81,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Instagram:** [@MyBookShelf](https://instagram.com/MyBookShelf)
 
 Join us in building a vibrant community of book enthusiasts! Happy reading! 📖
-
----
-
-Feel free to customize this markdown to better suit your project's specifics and requirements.
