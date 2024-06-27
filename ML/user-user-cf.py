@@ -68,6 +68,12 @@ def get_top_n_predictions(new_user_csr, user_item_csr, similarities, n=10):
     
     predicted_ratings = predicted_ratings.flatten()
     
+    # Get the indices of books the new user has already rated
+    rated_indices = new_user_csr.nonzero()[1]
+    
+    # Mask the ratings of books the new user has already rated
+    predicted_ratings[rated_indices] = -np.inf
+    
     top_n_indices = np.argsort(predicted_ratings)[-n:][::-1]
     
     top_n_ratings = predicted_ratings[top_n_indices]
@@ -83,7 +89,7 @@ if __name__ == "__main__":
     new_user_ratings = pd.DataFrame({
     'user_id': 9999999999,
     'book_id': [7300, 1201, 100385, 530615, 48625, 14870, 7170, 19782, 1146577],
-    'rating': [5, 4, 3, 5, 1, 3, 2, 5, 1]
+    'rating': [1, 1, 3, 2, 1, 3, 2, 5, 5]
     })
     
     new_user_matrix = new_user_ratings.pivot(index='user_id', columns='book_id', values='rating')
