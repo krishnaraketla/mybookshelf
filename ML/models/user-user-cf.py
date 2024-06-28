@@ -33,7 +33,7 @@ class UserUserCF:
         user_item_matrix = user_item_matrix.sub(user_means, axis=0)
         
         # Count number of ratings a book has received
-        book_rating_counts = user_item_matrix.notna().sum(axis=0)
+        book_rating_counts = ((user_item_matrix != 0) & (user_item_matrix.notna())).sum(axis=0)
         
         user_item_matrix = user_item_matrix.fillna(0)
         
@@ -122,8 +122,8 @@ if __name__ == "__main__":
     new_user_ratings = pd.DataFrame({
         'user_id': [9999999999] * 9,
         'book_id': [7300, 1201, 100385, 530615, 48625, 14870, 7170, 19782, 1146577],
-        'rating': [4, 3, 3, 2, 4, 3, 2, 5, 5]
+        'rating': [2, 3, 1, 5, 1, 3, 2, 4, 5]
     })
     
     # Get recommendations for the new user
-    recommender.recommend_books(new_user_ratings, n=20)
+    recommender.recommend_books(new_user_ratings, n=10)
