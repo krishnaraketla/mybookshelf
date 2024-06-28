@@ -30,7 +30,11 @@ class UserUserCF:
         user_item_matrix = interactions.pivot(index='user_id', columns='book_id', values='rating')
         
         user_means = user_item_matrix.mean(axis=1)
+        user_std_d = user_item_matrix.std(axis=1)
+        user_std_d_replaced = user_std_d.replace(0, 1e-10)
+        
         user_item_matrix = user_item_matrix.sub(user_means, axis=0)
+        user_item_matrix = user_item_matrix.div(user_std_d_replaced, axis=0)
         
         # Count number of ratings a book has received
         book_rating_counts = ((user_item_matrix != 0) & (user_item_matrix.notna())).sum(axis=0)
