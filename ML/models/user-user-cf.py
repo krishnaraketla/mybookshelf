@@ -58,8 +58,13 @@ class UserUserCF:
             if new_user_dense[0, book_idx] == 0:
                 book_ratings = user_item_dense[:, book_idx]
                 
-                weighted_sum = np.dot(similarities, book_ratings)
-                sum_of_weights = np.sum(np.abs(similarities))
+                user_similarities = similarities[0]
+                
+                valid_similarities = user_similarities[user_similarities >= 0]
+                valid_book_ratings = book_ratings[user_similarities >= 0]
+                
+                weighted_sum = np.dot(valid_similarities, valid_book_ratings)
+                sum_of_weights = np.sum(np.abs(valid_similarities))
                 
                 if sum_of_weights != 0:
                     predicted_rating = weighted_sum / sum_of_weights
