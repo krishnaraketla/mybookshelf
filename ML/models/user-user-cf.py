@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.model_selection import train_test_split
 
 class UserUserCF:
     def __init__(self, interactions_path, book_id_map_path, book_works_path):
@@ -121,6 +122,56 @@ class UserUserCF:
             work_id = self.get_work_id(book_id)
             title = self.get_original_title_by_book_id(work_id)
             print(f"Book ID: {book_id}, Title: {title}, Predicted Rating: {rating:.2f}")
+            
+    def split_data(self):
+        # Splitting the interactions data into training and testing sets
+        train, test = train_test_split(self.interactions, test_size=0.2, random_state=42)
+        return train, test
+
+    def train_model(self, train_data):
+        # Use the train data to build the user-item matrix
+        self.user_item_csr, self.book_rating_counts, self.columns = self.build_user_item_matrix(train_data)
+
+    def evaluate(self):
+        # Split the data
+        train, test = self.split_data()
+        
+        # Train the model with the training set
+        self.train_model(train)
+
+        # Prepare the test data
+        test_user_item_matrix = test.pivot(index='user_id', columns='book_id', values='rating')
+        # Ensure the test matrix has the same columns as the training matrix
+        test_user_item_matrix = test_user_item_matrix.reindex(columns=self.columns)
+        
+        test_user_means = test_user_item_matrix.mean(axis=1)
+        test_user_item_matrix = test_user_item_matrix.sub(test_user_means, axis=0)
+        
+        test_user_item_matrix = test_user_item_matrix.fillna(0)
+        
+        test_csr = csr_matrix(test_user_item_matrix.values)
+        
+        # Get cosine similarity
+        similarities = cosine_similarity(test_csr, self.user_item_csr)
+        
+        # Predict the ratings
+        hit_count = 0
+        total = 0
+        
+        for idx in range(test_csr.shape[0]):
+            top_n_indices, top_n_ratings = self.get_top_n_predictions(test_csr[idx], similarities, n=100)
+            true_books = test_csr[idx].nonzero()[1]
+                        
+            # Calculate the hit rate
+            hits = len(set(top_n_indices) & set(true_books))
+            if len(true_books) > 0:
+                print("yes, ",hits)
+                hit_count += hits
+                total += len(true_books)
+        
+        # Calculating the hit rate
+        hit_rate = hit_count
+        return hit_rate
 
 # Example usage:
 if __name__ == "__main__":
@@ -135,4 +186,6 @@ if __name__ == "__main__":
     })
     
     # Get recommendations for the new user
-    recommender.recommend_books(new_user_ratings, n=10)
+    recommender.recommend_books(new_user_ratings, n=100)
+    hit_rate = recommender.evaluate()
+    print(f"Hit Rate: {hit_rate:.2f}")
