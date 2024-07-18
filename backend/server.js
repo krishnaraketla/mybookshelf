@@ -65,3 +65,11 @@ mongoose.connect(process.env.MONGO_URI_LIBRARY)
         console.log(error);
     });
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// Route to serve the frontend
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
