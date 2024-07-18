@@ -186,6 +186,6 @@ if __name__ == "__main__":
     })
     
     # Get recommendations for the new user
-    recommender.recommend_books(new_user_ratings, n=100)
-    hit_rate = recommender.evaluate()
-    print(f"Hit Rate: {hit_rate:.2f}")
+    recommender.recommend_books(new_user_ratings, n=20)
+    # hit_rate = recommender.evaluate()
+    # print(f"Hit Rate: {hit_rate:.2f}")
