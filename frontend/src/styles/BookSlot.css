@@ -25,6 +25,7 @@
     transition: opacity 0.3s ease;  /* Smooth transition for the opacity */
     height: inherit;
     width: inherit;
+    visibility: visible;
 }
 
 .book-slot img:hover {
