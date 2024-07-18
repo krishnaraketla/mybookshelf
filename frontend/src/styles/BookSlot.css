@@ -21,7 +21,7 @@
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
     border-radius: 0px 7px 8px 0px;
     gap: 0px;
-    opacity: 0px;  /* Note: This sets images to be invisible unless hovered */
+    /* opacity: 0px;  Note: This sets images to be invisible unless hovered */
     transition: opacity 0.3s ease;  /* Smooth transition for the opacity */
     height: inherit;
     width: inherit;
