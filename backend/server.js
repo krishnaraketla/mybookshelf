@@ -14,7 +14,7 @@ const app = express();
 
 const corsOptions = {
     origin: function (origin, callback) {
-        const allowedOrigins = ['http://localhost:3000', 'https://dry-chamber-11355-49a79aec1802.herokuapp.com'];
+        const allowedOrigins = ['http://localhost:3000', 'https://dry-chamber-11355-49a79aec1802.herokuapp.com', 'https://www.my-book-shelf.com'];
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
