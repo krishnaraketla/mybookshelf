@@ -8,6 +8,7 @@ const allBooksRoutes = require("./routes/search_all_books");
 const authRoutes = require("./routes/authRoutes");
 const User = require("./models/user.model")
 const Shelf = require('./models/shelf.model');
+const path = require('path');
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
@@ -71,5 +72,10 @@ app.use(express.static(path.join(__dirname, '../frontend/build')));
 // Route to serve the frontend
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
+// Define a simple route
+app.get('/api', (req, res) => {
+    // res.send('Hello, World!');
 });
 
