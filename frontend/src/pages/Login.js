@@ -51,7 +51,7 @@ const Login = ({setIsAuthenticated}) => {
                             <input type='password' id='password' name='password' onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div className='form-group'>
-                            <button type='submit' className='sign-in-button'>SIGN IN</button>
+                            <button type='submit'>SIGN IN</button>
                         </div>
                         <p className='sign-up-link'>Don't have an account? <Link to="/signup">Sign up</Link></p>
                     </form>
