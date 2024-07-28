@@ -28,7 +28,8 @@ const BookDetail = () => {
                 setBook(JSON.parse(bookDetail))
             }
             else{
-                const response = await fetch(`http://localhost:4000/search/books/${id}`, {
+                
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/search/books/${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -54,7 +55,7 @@ const BookDetail = () => {
     const fetchShelves = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:4000/shelves', {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/shelves`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -77,7 +78,7 @@ const BookDetail = () => {
         try {
             const token = localStorage.getItem('token');
             for (const shelf of data) {
-                const response = await fetch(`http://localhost:4000${shelf.url}`, {
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}${shelf.url}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -129,7 +130,7 @@ const BookDetail = () => {
         const token = localStorage.getItem('token');
         const bookDetail = localStorage.getItem("bookDetail")
         try{
-            const response = await fetch(`http://localhost:4000${shelf.url}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}${shelf.url}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -159,7 +160,7 @@ const BookDetail = () => {
         try {
             const token = localStorage.getItem('token');
             for (const shelf of shelves) {
-                const response = await fetch(`http://localhost:4000${shelf.url}`, {
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}${shelf.url}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -190,7 +191,7 @@ const BookDetail = () => {
             shelfSelected = foundShelf
         }
         try{
-            const response = await fetch(`http://localhost:4000${shelfSelected.url}/${foundBook._id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}${shelfSelected.url}/${foundBook._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

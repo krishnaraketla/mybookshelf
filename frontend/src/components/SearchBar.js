@@ -20,7 +20,7 @@ const SearchBar = ({ onSearch }) => {
         debounce(async (query) => {
             if (query) {
                 try {
-                    const response = await fetch(`http://localhost:4000/search/books/${searchParam}?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
+                    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/search/books/${searchParam}?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
                     if (response.ok) {
                         const data = await response.json();
                         console.log(`Received ${data.length} results`); // For debugging

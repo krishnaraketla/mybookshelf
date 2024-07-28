@@ -13,7 +13,7 @@ const BookShelf = ({ shelfName }) => {
     const fetchShelves = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:4000/shelves', {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/shelves`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -74,7 +74,7 @@ const BookShelf = ({ shelfName }) => {
                 response = null
             }
             else{
-                response = await fetch(`http://localhost:4000${shelfUrl}`, {
+                response = await fetch(`${process.env.REACT_APP_API_BASE_URL}${shelfUrl}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
