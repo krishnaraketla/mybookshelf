@@ -73,8 +73,8 @@ mongoose.connect(process.env.MONGO_URI_LIBRARY)
     .then( async() => {
         console.log("db connected!");
         await createDefaultUser();
-        app.listen(process.env.PORT || 4000, () => { // Ensure PORT fallback if env variable isn't set
-            console.log("Listening on port " + (process.env.PORT || 4000));
+        app.listen(4000, () => { // Ensure PORT fallback if env variable isn't set
+            console.log("Listening on port " + (4000));
         });
     })
     .catch((error) => {
