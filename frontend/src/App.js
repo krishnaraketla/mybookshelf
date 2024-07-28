@@ -12,7 +12,7 @@ function App() {
 
   const validateToken = async (token) => {
     try {
-      const response = await fetch('http://localhost:4000/auth/validate', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/validate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

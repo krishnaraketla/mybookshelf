@@ -11,12 +11,13 @@ const Login = ({setIsAuthenticated}) => {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        const response = await fetch(`http://localhost:${process.env.PORT}/auth/login` , {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/auth/login` , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ username, password }),
+          credentials: 'include'
         });
     
         if (response.ok) {
