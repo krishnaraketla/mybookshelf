@@ -11,7 +11,7 @@ const Login = ({setIsAuthenticated}) => {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        const response = await fetch('https://dry-chamber-11355.herokuapp.com/auth/login', {
+        const response = await fetch(`http://localhost:${process.env.PORT}/auth/login` , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
