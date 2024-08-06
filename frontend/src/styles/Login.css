@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     height: 95vh;
-    background-image: url("../../public/genres_illust.png");
+    background-image: url("../../public/genres_illust-min.png");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
