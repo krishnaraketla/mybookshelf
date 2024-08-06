@@ -38,6 +38,7 @@ Welcome to **MyBookShelf**, your ultimate book management and reading companion!
     ```
 4. **Run the Application:**
     ```bash
+    cd frontend
     npm start
     ```
 
