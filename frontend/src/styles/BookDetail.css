@@ -3,15 +3,12 @@
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
     padding-top: calc(2% + 1% + 105px);
-    overflow: scroll;
-    align-items: center;
 }
 
 .book-detail-container {
     display: grid;
-    width: 100%;
     grid-template-columns: 1fr 1fr;
     gap: 0px;
     margin: 0 auto;
@@ -51,9 +48,10 @@
 .book-detail-info {
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-start;
     padding-top: 15%;
     gap: 20px;
+    overflow: auto;
 }
 
 .book-title {
@@ -94,7 +92,7 @@
     line-height: 28.49px;
     text-align: left;
     justify-content: center;
-    text-justify:newspaper;
+    text-justify:kashida;
     align-items: center;
     color: var(--body-text-color);
 }

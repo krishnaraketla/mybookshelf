@@ -5,9 +5,6 @@ import '../styles/Login.css';
 import About from '../components/About';
 
 const Login = ({setIsAuthenticated}) => {
-    
-
-
     return (
         <div className='LandingPage'>
             <div className='login-page-container'>
