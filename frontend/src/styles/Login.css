@@ -2,19 +2,25 @@
     background: var(--background-color);
     display: flex;
     flex-direction: row;
-    height: 95vh;
+    height: 100vh;
     background-image: url("../../public/genres_illust-min.png");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    align-content: center;
+    justify-content: left;
+}
+
+.company-logo{
+    /* border: 1px solid red; */
 }
 
 .form-card {
+    position: absolute;
+    top: 30%;
+    right: 5%;
     width: 568px;
     height: fit-content;
-    margin: 100px;
-    margin-top: 20%;
-    padding: 20px;
     border-radius: 39px;
     background: rgba(247, 243, 233, 1);
     box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1);
@@ -85,16 +91,4 @@
 .sign-up-link a {
     color: #888;
     text-decoration: underline;
-}
-
-.app-intro {
-    margin: 100px;
-    height: 771px;
-    border-radius: 39px;
-    flex: 1;
-}
-
-.about-section {
-    height: 100vh;
-    background-color: var(--background-hover-color);
 }

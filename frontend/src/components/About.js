@@ -5,8 +5,6 @@ const About = () => {
         <div className="about">
             <FeatureCard />
             <FeatureCard />
-            <FeatureCard />
-            <FeatureCard />
         </div>
     );
 }
