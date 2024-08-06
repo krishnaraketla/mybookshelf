@@ -75,7 +75,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Connect with Us
 
-- **Website:** [my-book-shelf.com](https://my-book-shelf.com)
+- **Website:** [my-book-shelf.com](my-book-shelf.com)
 - **Twitter:** [@MyBookShelf](https://twitter.com/MyBookShelf)
 - **Facebook:** [MyBookShelf](https://facebook.com/MyBookShelf)
 - **Instagram:** [@MyBookShelf](https://instagram.com/MyBookShelf)
