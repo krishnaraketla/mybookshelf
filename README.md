@@ -82,3 +82,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Instagram:** [@MyBookShelf](https://instagram.com/MyBookShelf)
 
 Join us in building a vibrant community of book enthusiasts! Happy reading! 📖
+
+## Citations
+
+Mengting Wan, Julian McAuley, "Item Recommendation on Monotonic Behavior Chains", in RecSys'18. [bibtex]
+Mengting Wan, Rishabh Misra, Ndapa Nakashole, Julian McAuley, "Fine-Grained Spoiler Detection from Large-Scale Review Corpora", in ACL'19. [bibtex]
