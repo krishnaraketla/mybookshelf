@@ -114,8 +114,10 @@ const BookShelf = ({ shelfName }) => {
         const booksPerPage = 9;
         const startIndex = (page - 1) * booksPerPage;
         const endIndex = startIndex + booksPerPage;
-    
-        const pageBooks = books.slice(startIndex, endIndex);
+        // Reverse the books array
+        const reversedBooks = [...books].reverse();
+
+        const pageBooks = reversedBooks.slice(startIndex, endIndex);
     
         const row1Books = [];
         const row2Books = [];
