@@ -1,0 +1,114 @@
+.card {
+    perspective: 1000px;
+    width: 568px;
+    height: 500px; /* Adjust as needed */
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-face-back {
+    transform: rotateY(180deg);
+}
+
+.form-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 39px;
+    background: var(--background-color);
+    box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ... (keep your existing styles for form elements) */
+
+.form-card h2 {
+    margin-bottom: 20px;
+    color: var(--title-text-color);
+    font-family: Malayalam MN;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 51.28px;
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--title-text-color);
+    font-family: Malayalam MN;
+}
+
+.form-group input {
+    width: 100%;
+    height: 61px;
+    padding: 0 20px;
+    border-radius: 40px;
+    background: rgba(230, 221, 204, 1);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #9bc2d5;
+    box-shadow: 0 0 5px rgba(155, 194, 213, 0.5);
+}
+
+.form-group button {
+    width: 432px;
+    height: 61px;
+    top: 805px;
+    left: 1068px;
+    gap: 0px;
+    border-radius: 40px 40px 40px 40px;
+    border: 0px;
+    background: rgba(134, 178, 185, 1);
+    cursor: pointer;
+    color: rgba(255, 250, 250, 1);
+}
+
+.sign-up-link {
+    margin-top: 10px;
+    color: #888;
+    text-align: center;
+}
+
+.sign-up-link a {
+    color: #888;
+    text-decoration: underline;
+}
