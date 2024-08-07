@@ -297,6 +297,9 @@ const BookDetail = () => {
                     <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
                 </div>
             </div>
+            <div className='book-review-section'>
+                
+            </div>
         </div>
 
     );

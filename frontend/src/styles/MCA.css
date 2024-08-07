@@ -9,6 +9,8 @@
     width: 100vw;
     height: calc(100vh - (2% + 1% + 105px));
     padding: 50px;
+    position: absolute;
+    bottom: 10px;
 }
 
 .user-info-section {
