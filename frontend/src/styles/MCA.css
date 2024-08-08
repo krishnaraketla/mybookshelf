@@ -13,7 +13,7 @@
 }
 
 .user-info-section {
-    /* border: 1px solid white; */
-    padding: 100px;
+    border: 1px solid red;
+    /* padding: 100px; */
     height: 100vh;
   }
