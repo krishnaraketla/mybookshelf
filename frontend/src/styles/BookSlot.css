@@ -1,5 +1,4 @@
 .book-slot {
-    /* border: 1px solid red; */
     flex: none;
     display: flex;
     flex-direction: row;
@@ -8,6 +7,7 @@
     width: 88px;
     transition: transform 0.1s ease;
     border-radius: 0px 7px 8px 0px;
+    flex-shrink: 1;
 }
 
 /* Correct the hover selector to target the whole slot */
@@ -26,6 +26,7 @@
     height: inherit;
     width: inherit;
     visibility: visible;
+    flex-shrink: 1;
 }
 
 .book-slot img:hover {

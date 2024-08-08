@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import '../styles/Login.css';
-import About from '../components/About';
+import About from '../components/AboutSection';
 
 const Login = ({setIsAuthenticated}) => {
     return (

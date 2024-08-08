@@ -22,4 +22,5 @@ body, html, #root {
     box-sizing: border-box;
     height: 100%;
     padding-top: calc(20px + 105px);
+    flex-wrap: wrap;
 }

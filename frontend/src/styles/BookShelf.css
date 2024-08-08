@@ -6,7 +6,9 @@
     width: 30%;
     gap: 30px;
     height: calc(80% + 100px);
-    min-width: 364px; 
+    /* min-width: 364px;  */
+    min-width: 0;
+    min-height: 0;
 }
 
 .book-shelf h1{
@@ -16,6 +18,7 @@
     font-weight: 400;
     line-height: 34.18px;
     text-align: left;
+    min-height: 0;
 
 }
 

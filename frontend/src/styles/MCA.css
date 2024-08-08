@@ -1,15 +1,19 @@
 .mca {
+    box-sizing: border-box;
     display: flex;
     flex: 1;
     flex-direction: row;
     align-items: center;
-    justify-content:center;
+    justify-content:space-evenly;
     gap: 150px;
     box-sizing: border-box;
     width: 100vw;
+    min-width: 0;
+    height: 100vh - calc(105px);
     padding: 50px 30px;
     position: absolute;
-    bottom: 0px;
+    top: calc(105px);
+    bottom: 10px;
 }
 
 .user-info-section {
