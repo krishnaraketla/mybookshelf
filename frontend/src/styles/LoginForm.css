@@ -48,8 +48,6 @@
     box-sizing: border-box;
 }
 
-/* ... (keep your existing styles for form elements) */
-
 .form-card h2 {
     margin-bottom: 20px;
     color: var(--title-text-color);

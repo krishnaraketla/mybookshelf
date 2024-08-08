@@ -7,10 +7,9 @@
     gap: 150px;
     box-sizing: border-box;
     width: 100vw;
-    height: calc(100vh - (2% + 1% + 105px));
-    padding: 50px;
+    padding: 50px 30px;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
 }
 
 .user-info-section {

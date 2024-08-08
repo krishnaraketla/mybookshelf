@@ -7,6 +7,9 @@ const Home = () => {
         <div className="home">
             <NavBar showRightLinks="true" />
             <MCA />
+            <div className='user-info-section'>
+          
+            </div>
         </div>
     );
 }
