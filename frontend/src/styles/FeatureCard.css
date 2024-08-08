@@ -1,43 +1,58 @@
-.feature-card{
-    display:flex;
-    height: 60vh;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.feature-card:nth-child(odd){
-    background-color: var(--background-hover-color);
-    flex-direction: row-reverse;
-}
-
-.feature-card:nth-child(even){
+.feature-card {
+    width: 300px;
     background-color: var(--background-color);
-    flex-direction: row;
+    border: var(--border);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    overflow:hidden;
 }
 
-.illustration-box{
+.illustration-box {
+    height: 150px;
+    background-color: var(--alt-background-color);
     display: flex;
-    flex:1;
-    height: 100%;
     align-items: center;
     justify-content: center;
 }
-.feature-description-box{
-    display: flex;
-    flex:1;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+
+.illustration {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
 }
 
-
-.illustration{
-    border: 1px solid red;
-    height: 200px;
-    width: 200px;
+.manage-shelves {
+    background-image: url("../../public/genres_illust-min.png");
 }
-.feature-description{
-    border:1px solid black;
-    width: 500px;
-    height: 80%;
+
+.personalized-recommendations {
+    background-image: url("../../public/genres_illust-min.png");
+}
+
+.explore-bestsellers {
+    background-image: url("../../public/genres_illust-min.png");
+}
+
+.rate-review-books {
+    background-image: url("../../public/genres_illust-min.png");
+}
+
+.discover-new-authors {
+    background-image: url("../../public/genres_illust-min.png");
+}
+
+.feature-description-box {
+    padding: 20px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: var(--body-text-color);
+}
+
+h2 {
+    color: var(--title-text-color);
+    transition: color 0.3s ease;
 }

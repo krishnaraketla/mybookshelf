@@ -20,7 +20,7 @@ const NavBar = (props) => {
                 {location.pathname !== '/login' && <SearchBar onSearch={handleSearch} />}
             </div>
             <div className="right-links">
-                {props.showRightLinks && <Link to="/">About</Link> }
+                {props.showRightLinks && <Link to="/about">About</Link> }
                 {props.showRightLinks && <Link to="/">
                     <FontAwesomeIcon icon={faUser} />
                 </Link> }
