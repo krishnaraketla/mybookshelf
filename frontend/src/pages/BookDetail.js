@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark as faRegularBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import BookReviewSection from '../components/BookReviewSection';
+import Rating from '@mui/material/Rating';
 
 const BookDetail = () => {
     const { id } = useParams();
@@ -41,6 +43,7 @@ const BookDetail = () => {
                 if (response.ok) {
                     const data = await response.json();
                     setBook(data);
+                    console.log(book.description)
                 } else {
                     console.log("Book not found")
                     setError("Book not found");
@@ -292,14 +295,12 @@ const BookDetail = () => {
                     </div>
                     <div className="book-author">{book.authors.join(', ')}</div>
                     <div className="book-detail-rating">
-                        <span>★</span> {book.averageRating}
+                        <Rating name="read-only" value={book.averageRating} readOnly />
                     </div>
                     <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
                 </div>
             </div>
-            <div className='book-review-section'>
-                
-            </div>
+            <BookReviewSection />
         </div>
 
     );

@@ -1,9 +1,10 @@
 .book-detail-page {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
-    height: 100vh;
+    height: 100%;
     padding-top: calc(2% + 1% + 105px);
 }
 
@@ -162,9 +163,4 @@
 
 .shelf-item.bookInShelf {
     background-color: var(--background-hover-color);
-}
-
-.book-review-section{
-    min-height: 100vh;
-    width: 100vw;
 }
