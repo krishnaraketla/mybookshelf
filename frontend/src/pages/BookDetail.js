@@ -294,8 +294,12 @@ const BookDetail = () => {
                         </span> 
                     </div>
                     <div className="book-author">{book.authors.join(', ')}</div>
+                    <div className='book-pages-publisher'>{book.pages} pages</div>
+                    <div className='book-pages-publisher'>Published in the year {book.yearPublished} by {book.publisher}</div>
+                    <div className='book-pages-publisher'>Genres: {book.category}</div>
                     <div className="book-detail-rating">
-                        <Rating name="read-only" value={book.averageRating} readOnly />
+                        <Rating name="half-rating-read" defaultValue={book.averageRating} precision={0.5} readOnly />
+                        <span style={{ marginLeft: '5px' }}>{book.averageRating} Average rating</span>
                     </div>
                     <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
                 </div>

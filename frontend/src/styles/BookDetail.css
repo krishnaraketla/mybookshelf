@@ -1,5 +1,4 @@
 .book-detail-page {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -77,7 +76,19 @@
     width: fit-content;
 }
 
+.book-pages-publisher{
+    color: var(--caption-text-color);
+    font-family: Malayalam MN;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 10px;
+    text-align: left;
+
+}
+
 .book-detail-rating {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     margin-bottom: 10px;
     width: fit-content;

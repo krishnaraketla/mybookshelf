@@ -20,7 +20,6 @@ async function fetchGoogleBooks(url) {
 async function fetchNYTBooks(url) {
     await loadFetch();
     const response = await fetch(url);
-    console.log(response)
     if (!response.ok) {
         throw new Error(`Failed to fetch data from NYT API: ${response.statusText}`);
     }
@@ -31,6 +30,7 @@ async function fetchNYTBooks(url) {
 function mapToBookSchema(item) {
     const volumeInfo = item.volumeInfo;
     const imageLinks = volumeInfo.imageLinks || {};
+    console.log(item.volumeInfo.categories);
     return {
         googleId: item.id,  // Store Google's ID for potential future reference
         title: volumeInfo.title,
@@ -39,7 +39,7 @@ function mapToBookSchema(item) {
         image: "https://books.google.com/books/content?id=" + item.id + "&printsec=frontcover&img=1&zoom=4&edge=curl&source=gbs_api" || imageLinks.large || imageLinks.medium || imageLinks.small || imageLinks.thumbnail,
         publisher: volumeInfo.publisher || '',
         yearPublished: volumeInfo.publishedDate ? parseInt(volumeInfo.publishedDate.split("-")[0], 10) : null,
-        category: volumeInfo.categories ? volumeInfo.categories[0] : '',
+        category: volumeInfo.categories ? volumeInfo.categories.join(', ') : '',
         ISBN: volumeInfo.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || '',
         language: volumeInfo.language,
         pages: volumeInfo.pageCount || 0,
