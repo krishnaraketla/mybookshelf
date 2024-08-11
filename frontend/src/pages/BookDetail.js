@@ -296,6 +296,7 @@ const BookDetail = () => {
                     <div className="book-author">{book.authors.join(', ')}</div>
                     <div className='book-pages-publisher'>{book.pages} pages</div>
                     <div className='book-pages-publisher'>Published in the year {book.yearPublished} by {book.publisher}</div>
+                    <div className='book-pages-publisher'>ISBN: {book.ISBN}</div>
                     <div className='book-pages-publisher'>Genres: {book.category}</div>
                     <div className="book-detail-rating">
                         <Rating name="half-rating-read" defaultValue={book.averageRating} precision={0.5} readOnly />
