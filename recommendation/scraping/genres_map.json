@@ -1,0 +1,2210 @@
+{
+    "Adventure": {
+        "id": 1,
+        "genre_url": "https://www.smashwords.com/shelves/home/892/any/any"
+    },
+    "African American fiction": {
+        "id": 2,
+        "genre_url": "https://www.smashwords.com/shelves/home/1248/any/any"
+    },
+    "Alternative history": {
+        "id": 3,
+        "genre_url": "https://www.smashwords.com/shelves/home/1106/any/any"
+    },
+    "Anthologies": {
+        "id": 4,
+        "genre_url": "https://www.smashwords.com/shelves/home/62/any/any"
+    },
+    "Biographical": {
+        "id": 5,
+        "genre_url": "https://www.smashwords.com/shelves/home/1105/any/any"
+    },
+    "Business": {
+        "id": 6,
+        "genre_url": "https://www.smashwords.com/shelves/home/895/any/any"
+    },
+    "Children’s books": {
+        "id": 7,
+        "genre_url": "https://www.smashwords.com/shelves/home/61/any/any"
+    },
+    "Christian": {
+        "id": 8,
+        "genre_url": "https://www.smashwords.com/shelves/home/1223/any/any"
+    },
+    "Classics": {
+        "id": 9,
+        "genre_url": "https://www.smashwords.com/shelves/home/1348/any/any"
+    },
+    "Coming of age": {
+        "id": 10,
+        "genre_url": "https://www.smashwords.com/shelves/home/1095/any/any"
+    },
+    "Cultural & ethnic themes": {
+        "id": 11,
+        "genre_url": "https://www.smashwords.com/shelves/home/1332/any/any"
+    },
+    "Educational": {
+        "id": 12,
+        "genre_url": "https://www.smashwords.com/shelves/home/896/any/any"
+    },
+    "Fairy tales": {
+        "id": 13,
+        "genre_url": "https://www.smashwords.com/shelves/home/887/any/any"
+    },
+    "Fantasy": {
+        "id": 14,
+        "genre_url": "https://www.smashwords.com/shelves/home/1206/any/any"
+    },
+    "Gothic": {
+        "id": 15,
+        "genre_url": "https://www.smashwords.com/shelves/home/5306/any/any"
+    },
+    "Graphic novels & comics": {
+        "id": 16,
+        "genre_url": "https://www.smashwords.com/shelves/home/58/any/any"
+    },
+    "Historical": {
+        "id": 17,
+        "genre_url": "https://www.smashwords.com/shelves/home/884/any/any"
+    },
+    "Holiday": {
+        "id": 18,
+        "genre_url": "https://www.smashwords.com/shelves/home/1067/any/any"
+    },
+    "Horror": {
+        "id": 19,
+        "genre_url": "https://www.smashwords.com/shelves/home/883/any/any"
+    },
+    "Humor & comedy": {
+        "id": 20,
+        "genre_url": "https://www.smashwords.com/shelves/home/882/any/any"
+    },
+    "Inspirational": {
+        "id": 21,
+        "genre_url": "https://www.smashwords.com/shelves/home/1527/any/any"
+    },
+    "LGBTQ+": {
+        "id": 22,
+        "genre_url": "https://www.smashwords.com/shelves/home/886/any/any"
+    },
+    "Literary collections": {
+        "id": 23,
+        "genre_url": "https://www.smashwords.com/shelves/home/4815/any/any"
+    },
+    "Literature": {
+        "id": 24,
+        "genre_url": "https://www.smashwords.com/shelves/home/57/any/any"
+    },
+    "Mashups": {
+        "id": 25,
+        "genre_url": "https://www.smashwords.com/shelves/home/1350/any/any"
+    },
+    "Mystery & detective": {
+        "id": 26,
+        "genre_url": "https://www.smashwords.com/shelves/home/879/any/any"
+    },
+    "Plays & Screenplays": {
+        "id": 27,
+        "genre_url": "https://www.smashwords.com/shelves/home/60/any/any"
+    },
+    "Religious": {
+        "id": 28,
+        "genre_url": "https://www.smashwords.com/shelves/home/877/any/any"
+    },
+    "Romance": {
+        "id": 29,
+        "genre_url": "https://www.smashwords.com/shelves/home/1235/any/any"
+    },
+    "Science fiction": {
+        "id": 30,
+        "genre_url": "https://www.smashwords.com/shelves/home/1213/any/any"
+    },
+    "Sports": {
+        "id": 31,
+        "genre_url": "https://www.smashwords.com/shelves/home/1126/any/any"
+    },
+    "Themes & motifs": {
+        "id": 32,
+        "genre_url": "https://www.smashwords.com/shelves/home/1337/any/any"
+    },
+    "Thriller & suspense": {
+        "id": 33,
+        "genre_url": "https://www.smashwords.com/shelves/home/874/any/any"
+    },
+    "Transgressional fiction": {
+        "id": 34,
+        "genre_url": "https://www.smashwords.com/shelves/home/1001/any/any"
+    },
+    "Urban": {
+        "id": 35,
+        "genre_url": "https://www.smashwords.com/shelves/home/873/any/any"
+    },
+    "Visionary & metaphysical": {
+        "id": 36,
+        "genre_url": "https://www.smashwords.com/shelves/home/1091/any/any"
+    },
+    "Western": {
+        "id": 37,
+        "genre_url": "https://www.smashwords.com/shelves/home/871/any/any"
+    },
+    "Women's fiction": {
+        "id": 38,
+        "genre_url": "https://www.smashwords.com/shelves/home/870/any/any"
+    },
+    "Young adult or teen": {
+        "id": 39,
+        "genre_url": "https://www.smashwords.com/shelves/home/1018/any/any"
+    },
+    "Nonfiction": {
+        "id": 40,
+        "genre_url": "https://www.smashwords.com/shelves/home/4/any/any"
+    },
+    "Antiques & Collectibles": {
+        "id": 41,
+        "genre_url": "https://www.smashwords.com/shelves/home/96/any/any"
+    },
+    "Art, Architecture, Photography": {
+        "id": 42,
+        "genre_url": "https://www.smashwords.com/shelves/home/95/any/any"
+    },
+    "Biography": {
+        "id": 43,
+        "genre_url": "https://www.smashwords.com/shelves/home/94/any/any"
+    },
+    "Business & Economics": {
+        "id": 44,
+        "genre_url": "https://www.smashwords.com/shelves/home/93/any/any"
+    },
+    "Career Guides": {
+        "id": 45,
+        "genre_url": "https://www.smashwords.com/shelves/home/92/any/any"
+    },
+    "Children's Books": {
+        "id": 46,
+        "genre_url": "https://www.smashwords.com/shelves/home/91/any/any"
+    },
+    "Comics (nonfictional)": {
+        "id": 47,
+        "genre_url": "https://www.smashwords.com/shelves/home/4856/any/any"
+    },
+    "Computers & Internet": {
+        "id": 48,
+        "genre_url": "https://www.smashwords.com/shelves/home/90/any/any"
+    },
+    "Cooking, Food, Wine, Spirits": {
+        "id": 49,
+        "genre_url": "https://www.smashwords.com/shelves/home/89/any/any"
+    },
+    "Education & Study Guides": {
+        "id": 50,
+        "genre_url": "https://www.smashwords.com/shelves/home/88/any/any"
+    },
+    "Engineering, trades, & technology": {
+        "id": 51,
+        "genre_url": "https://www.smashwords.com/shelves/home/2369/any/any"
+    },
+    "Entertainment": {
+        "id": 52,
+        "genre_url": "https://www.smashwords.com/shelves/home/87/any/any"
+    },
+    "General reference": {
+        "id": 53,
+        "genre_url": "https://www.smashwords.com/shelves/home/4816/any/any"
+    },
+    "Health, wellbeing, & medicine": {
+        "id": 54,
+        "genre_url": "https://www.smashwords.com/shelves/home/85/any/any"
+    },
+    "History": {
+        "id": 55,
+        "genre_url": "https://www.smashwords.com/shelves/home/84/any/any"
+    },
+    "Home & Garden": {
+        "id": 56,
+        "genre_url": "https://www.smashwords.com/shelves/home/83/any/any"
+    },
+    "Inspiration": {
+        "id": 57,
+        "genre_url": "https://www.smashwords.com/shelves/home/82/any/any"
+    },
+    "Language Instruction": {
+        "id": 58,
+        "genre_url": "https://www.smashwords.com/shelves/home/81/any/any"
+    },
+    "Law": {
+        "id": 59,
+        "genre_url": "https://www.smashwords.com/shelves/home/80/any/any"
+    },
+    "Literary criticism": {
+        "id": 60,
+        "genre_url": "https://www.smashwords.com/shelves/home/880/any/any"
+    },
+    "Music": {
+        "id": 61,
+        "genre_url": "https://www.smashwords.com/shelves/home/79/any/any"
+    },
+    "New Age": {
+        "id": 62,
+        "genre_url": "https://www.smashwords.com/shelves/home/78/any/any"
+    },
+    "Parenting": {
+        "id": 63,
+        "genre_url": "https://www.smashwords.com/shelves/home/77/any/any"
+    },
+    "Philosophy": {
+        "id": 64,
+        "genre_url": "https://www.smashwords.com/shelves/home/76/any/any"
+    },
+    "Politics & Current Affairs": {
+        "id": 65,
+        "genre_url": "https://www.smashwords.com/shelves/home/75/any/any"
+    },
+    "Psychology": {
+        "id": 66,
+        "genre_url": "https://www.smashwords.com/shelves/home/74/any/any"
+    },
+    "Publishing": {
+        "id": 67,
+        "genre_url": "https://www.smashwords.com/shelves/home/1044/any/any"
+    },
+    "Reference": {
+        "id": 68,
+        "genre_url": "https://www.smashwords.com/shelves/home/73/any/any"
+    },
+    "Relationships & Family": {
+        "id": 69,
+        "genre_url": "https://www.smashwords.com/shelves/home/72/any/any"
+    },
+    "Religion & Spirituality": {
+        "id": 70,
+        "genre_url": "https://www.smashwords.com/shelves/home/71/any/any"
+    },
+    "Science & Nature": {
+        "id": 71,
+        "genre_url": "https://www.smashwords.com/shelves/home/70/any/any"
+    },
+    "Self-improvement": {
+        "id": 72,
+        "genre_url": "https://www.smashwords.com/shelves/home/69/any/any"
+    },
+    "Sex & Relationships": {
+        "id": 73,
+        "genre_url": "https://www.smashwords.com/shelves/home/68/any/any"
+    },
+    "Social Science": {
+        "id": 74,
+        "genre_url": "https://www.smashwords.com/shelves/home/67/any/any"
+    },
+    "Sports & outdoor recreation": {
+        "id": 75,
+        "genre_url": "https://www.smashwords.com/shelves/home/66/any/any"
+    },
+    "Transportation": {
+        "id": 76,
+        "genre_url": "https://www.smashwords.com/shelves/home/65/any/any"
+    },
+    "Travel": {
+        "id": 77,
+        "genre_url": "https://www.smashwords.com/shelves/home/64/any/any"
+    },
+    "True Crime": {
+        "id": 78,
+        "genre_url": "https://www.smashwords.com/shelves/home/1049/any/any"
+    },
+    "Weddings": {
+        "id": 79,
+        "genre_url": "https://www.smashwords.com/shelves/home/63/any/any"
+    },
+    "Essay": {
+        "id": 80,
+        "genre_url": "https://www.smashwords.com/shelves/home/898/any/any"
+    },
+    "Plays": {
+        "id": 81,
+        "genre_url": "https://www.smashwords.com/shelves/home/2044/any/any"
+    },
+    "Poetry": {
+        "id": 82,
+        "genre_url": "https://www.smashwords.com/shelves/home/56/any/any"
+    },
+    "Screenplays": {
+        "id": 83,
+        "genre_url": "https://www.smashwords.com/shelves/home/2/any/any"
+    },
+    "Fiction": {
+        "id": 84,
+        "genre_url": "https://www.smashwords.com/shelves/home/3/any/any"
+    },
+    "Action": {
+        "id": 85,
+        "genre_url": "https://www.smashwords.com/shelves/home/1306/any/any"
+    },
+    "General": {
+        "id": 86,
+        "genre_url": "https://www.smashwords.com/shelves/home/1302/any/any"
+    },
+    "Men’s adventure": {
+        "id": 87,
+        "genre_url": "https://www.smashwords.com/shelves/home/1331/any/any"
+    },
+    "Sea adventures": {
+        "id": 88,
+        "genre_url": "https://www.smashwords.com/shelves/home/1305/any/any"
+    },
+    "War & military adventure": {
+        "id": 89,
+        "genre_url": "https://www.smashwords.com/shelves/home/1304/any/any"
+    },
+    "Contemporary woman": {
+        "id": 90,
+        "genre_url": "https://www.smashwords.com/shelves/home/1251/any/any"
+    },
+    "Urban life": {
+        "id": 91,
+        "genre_url": "https://www.smashwords.com/shelves/home/1256/any/any"
+    },
+    "Drama/Theatrical": {
+        "id": 92,
+        "genre_url": "https://www.smashwords.com/shelves/home/869/any/any"
+    },
+    "Flash fiction": {
+        "id": 93,
+        "genre_url": "https://www.smashwords.com/shelves/home/1046/any/any"
+    },
+    "Graphic novels/comics/manga": {
+        "id": 94,
+        "genre_url": "https://www.smashwords.com/shelves/home/867/any/any"
+    },
+    "Mystery": {
+        "id": 95,
+        "genre_url": "https://www.smashwords.com/shelves/home/1002/any/any"
+    },
+    "Poetry - general": {
+        "id": 96,
+        "genre_url": "https://www.smashwords.com/shelves/home/1311/any/any"
+    },
+    "Poetry - multi-author": {
+        "id": 97,
+        "genre_url": "https://www.smashwords.com/shelves/home/865/any/any"
+    },
+    "Poetry - single author": {
+        "id": 98,
+        "genre_url": "https://www.smashwords.com/shelves/home/864/any/any"
+    },
+    "Short stories - multi-author": {
+        "id": 99,
+        "genre_url": "https://www.smashwords.com/shelves/home/863/any/any"
+    },
+    "Action & Adventure / Pirates": {
+        "id": 100,
+        "genre_url": "https://www.smashwords.com/shelves/home/4330/any/any"
+    },
+    "Action & Adventure / Survival Stories": {
+        "id": 101,
+        "genre_url": "https://www.smashwords.com/shelves/home/4329/any/any"
+    },
+    "Activity Books": {
+        "id": 102,
+        "genre_url": "https://www.smashwords.com/shelves/home/4517/any/any"
+    },
+    "Animals": {
+        "id": 103,
+        "genre_url": "https://www.smashwords.com/shelves/home/4872/any/any"
+    },
+    "Animals / Dinosaurs & Prehistoric Creatures": {
+        "id": 104,
+        "genre_url": "https://www.smashwords.com/shelves/home/4336/any/any"
+    },
+    "Art": {
+        "id": 105,
+        "genre_url": "https://www.smashwords.com/shelves/home/860/any/any"
+    },
+    "Biographical / Canada": {
+        "id": 106,
+        "genre_url": "https://www.smashwords.com/shelves/home/4359/any/any"
+    },
+    "Biographical / European": {
+        "id": 107,
+        "genre_url": "https://www.smashwords.com/shelves/home/4536/any/any"
+    },
+    "Biographical / General": {
+        "id": 108,
+        "genre_url": "https://www.smashwords.com/shelves/home/4535/any/any"
+    },
+    "Biographical / Other": {
+        "id": 109,
+        "genre_url": "https://www.smashwords.com/shelves/home/4358/any/any"
+    },
+    "Amish & Mennonite": {
+        "id": 110,
+        "genre_url": "https://www.smashwords.com/shelves/home/1329/any/any"
+    },
+    "Classical & allegory": {
+        "id": 111,
+        "genre_url": "https://www.smashwords.com/shelves/home/1225/any/any"
+    },
+    "Contemporary": {
+        "id": 112,
+        "genre_url": "https://www.smashwords.com/shelves/home/1234/any/any"
+    },
+    "Futuristic": {
+        "id": 113,
+        "genre_url": "https://www.smashwords.com/shelves/home/1226/any/any"
+    },
+    "Short stories": {
+        "id": 114,
+        "genre_url": "https://www.smashwords.com/shelves/home/1229/any/any"
+    },
+    "Asian American": {
+        "id": 115,
+        "genre_url": "https://www.smashwords.com/shelves/home/1335/any/any"
+    },
+    "Cultural interest, general": {
+        "id": 116,
+        "genre_url": "https://www.smashwords.com/shelves/home/1334/any/any"
+    },
+    "Hispanic & Latino": {
+        "id": 117,
+        "genre_url": "https://www.smashwords.com/shelves/home/1336/any/any"
+    },
+    "Jewish": {
+        "id": 118,
+        "genre_url": "https://www.smashwords.com/shelves/home/1333/any/any"
+    },
+    "Dark": {
+        "id": 119,
+        "genre_url": "https://www.smashwords.com/shelves/home/4922/any/any"
+    },
+    "Epic": {
+        "id": 120,
+        "genre_url": "https://www.smashwords.com/shelves/home/1209/any/any"
+    },
+    "Paranormal": {
+        "id": 121,
+        "genre_url": "https://www.smashwords.com/shelves/home/1211/any/any"
+    },
+    "Comics": {
+        "id": 122,
+        "genre_url": "https://www.smashwords.com/shelves/home/834/any/any"
+    },
+    "Contemporary women": {
+        "id": 123,
+        "genre_url": "https://www.smashwords.com/shelves/home/3226/any/any"
+    },
+    "Crime & mystery": {
+        "id": 124,
+        "genre_url": "https://www.smashwords.com/shelves/home/3218/any/any"
+    },
+    "Graphic novel": {
+        "id": 125,
+        "genre_url": "https://www.smashwords.com/shelves/home/1300/any/any"
+    },
+    "Ancient": {
+        "id": 126,
+        "genre_url": "https://www.smashwords.com/shelves/home/1296/any/any"
+    },
+    "Australia & New Zealand": {
+        "id": 127,
+        "genre_url": "https://www.smashwords.com/shelves/home/1293/any/any"
+    },
+    "Canada": {
+        "id": 128,
+        "genre_url": "https://www.smashwords.com/shelves/home/1295/any/any"
+    },
+    "Classical Greece & Rome": {
+        "id": 129,
+        "genre_url": "https://www.smashwords.com/shelves/home/1294/any/any"
+    },
+    "Colonial America": {
+        "id": 130,
+        "genre_url": "https://www.smashwords.com/shelves/home/1289/any/any"
+    },
+    "Medieval": {
+        "id": 131,
+        "genre_url": "https://www.smashwords.com/shelves/home/1292/any/any"
+    },
+    "Regency": {
+        "id": 132,
+        "genre_url": "https://www.smashwords.com/shelves/home/1291/any/any"
+    },
+    "Renaissance": {
+        "id": 133,
+        "genre_url": "https://www.smashwords.com/shelves/home/1298/any/any"
+    },
+    "Christmas": {
+        "id": 134,
+        "genre_url": "https://www.smashwords.com/shelves/home/1323/any/any"
+    },
+    "Family": {
+        "id": 135,
+        "genre_url": "https://www.smashwords.com/shelves/home/1069/any/any"
+    },
+    "Halloween": {
+        "id": 136,
+        "genre_url": "https://www.smashwords.com/shelves/home/1324/any/any"
+    },
+    "Humorous": {
+        "id": 137,
+        "genre_url": "https://www.smashwords.com/shelves/home/1068/any/any"
+    },
+    "Crime": {
+        "id": 138,
+        "genre_url": "https://www.smashwords.com/shelves/home/1322/any/any"
+    },
+    "Ghost": {
+        "id": 139,
+        "genre_url": "https://www.smashwords.com/shelves/home/1186/any/any"
+    },
+    "Occult": {
+        "id": 140,
+        "genre_url": "https://www.smashwords.com/shelves/home/1270/any/any"
+    },
+    "Undead": {
+        "id": 141,
+        "genre_url": "https://www.smashwords.com/shelves/home/1321/any/any"
+    },
+    "Weird fiction": {
+        "id": 142,
+        "genre_url": "https://www.smashwords.com/shelves/home/1269/any/any"
+    },
+    "Black comedy": {
+        "id": 143,
+        "genre_url": "https://www.smashwords.com/shelves/home/1275/any/any"
+    },
+    "Parody": {
+        "id": 144,
+        "genre_url": "https://www.smashwords.com/shelves/home/1274/any/any"
+    },
+    "Satire": {
+        "id": 145,
+        "genre_url": "https://www.smashwords.com/shelves/home/1273/any/any"
+    },
+    "Gay": {
+        "id": 146,
+        "genre_url": "https://www.smashwords.com/shelves/home/1315/any/any"
+    },
+    "Lesbian": {
+        "id": 147,
+        "genre_url": "https://www.smashwords.com/shelves/home/1127/any/any"
+    },
+    "African": {
+        "id": 148,
+        "genre_url": "https://www.smashwords.com/shelves/home/4817/any/any"
+    },
+    "American / African American": {
+        "id": 149,
+        "genre_url": "https://www.smashwords.com/shelves/home/4819/any/any"
+    },
+    "American / General": {
+        "id": 150,
+        "genre_url": "https://www.smashwords.com/shelves/home/4818/any/any"
+    },
+    "Ancient & Classical": {
+        "id": 151,
+        "genre_url": "https://www.smashwords.com/shelves/home/4820/any/any"
+    },
+    "Asian / Chinese": {
+        "id": 152,
+        "genre_url": "https://www.smashwords.com/shelves/home/4822/any/any"
+    },
+    "Asian / General": {
+        "id": 153,
+        "genre_url": "https://www.smashwords.com/shelves/home/4821/any/any"
+    },
+    "Asian / Indic": {
+        "id": 154,
+        "genre_url": "https://www.smashwords.com/shelves/home/4823/any/any"
+    },
+    "Asian / Japanese": {
+        "id": 155,
+        "genre_url": "https://www.smashwords.com/shelves/home/4824/any/any"
+    },
+    "Australian & Oceanian": {
+        "id": 156,
+        "genre_url": "https://www.smashwords.com/shelves/home/4825/any/any"
+    },
+    "Canadian": {
+        "id": 157,
+        "genre_url": "https://www.smashwords.com/shelves/home/4826/any/any"
+    },
+    "Amateur sleuth": {
+        "id": 158,
+        "genre_url": "https://www.smashwords.com/shelves/home/4920/any/any"
+    },
+    "Cozy": {
+        "id": 159,
+        "genre_url": "https://www.smashwords.com/shelves/home/4919/any/any"
+    },
+    "Hard-Boiled": {
+        "id": 160,
+        "genre_url": "https://www.smashwords.com/shelves/home/1123/any/any"
+    },
+    "International crime": {
+        "id": 161,
+        "genre_url": "https://www.smashwords.com/shelves/home/4923/any/any"
+    },
+    "Police Procedural": {
+        "id": 162,
+        "genre_url": "https://www.smashwords.com/shelves/home/1121/any/any"
+    },
+    "Short Stories": {
+        "id": 163,
+        "genre_url": "https://www.smashwords.com/shelves/home/1120/any/any"
+    },
+    "Traditional British": {
+        "id": 164,
+        "genre_url": "https://www.smashwords.com/shelves/home/1119/any/any"
+    },
+    "Women Sleuths": {
+        "id": 165,
+        "genre_url": "https://www.smashwords.com/shelves/home/1118/any/any"
+    },
+    "American": {
+        "id": 166,
+        "genre_url": "https://www.smashwords.com/shelves/home/850/any/any"
+    },
+    "Asian": {
+        "id": 167,
+        "genre_url": "https://www.smashwords.com/shelves/home/848/any/any"
+    },
+    "European": {
+        "id": 168,
+        "genre_url": "https://www.smashwords.com/shelves/home/847/any/any"
+    },
+    "Middle Eastern": {
+        "id": 169,
+        "genre_url": "https://www.smashwords.com/shelves/home/846/any/any"
+    },
+    "Russian": {
+        "id": 170,
+        "genre_url": "https://www.smashwords.com/shelves/home/845/any/any"
+    },
+    "Apocalyptic": {
+        "id": 171,
+        "genre_url": "https://www.smashwords.com/shelves/home/1264/any/any"
+    },
+    "Cyberpunk": {
+        "id": 172,
+        "genre_url": "https://www.smashwords.com/shelves/home/1221/any/any"
+    },
+    "Hard sci-fi": {
+        "id": 173,
+        "genre_url": "https://www.smashwords.com/shelves/home/1220/any/any"
+    },
+    "High tech": {
+        "id": 174,
+        "genre_url": "https://www.smashwords.com/shelves/home/1216/any/any"
+    },
+    "Military": {
+        "id": 175,
+        "genre_url": "https://www.smashwords.com/shelves/home/1222/any/any"
+    },
+    "Space opera": {
+        "id": 176,
+        "genre_url": "https://www.smashwords.com/shelves/home/1217/any/any"
+    },
+    "Steampunk & retropunk": {
+        "id": 177,
+        "genre_url": "https://www.smashwords.com/shelves/home/1271/any/any"
+    },
+    "Family sagas": {
+        "id": 178,
+        "genre_url": "https://www.smashwords.com/shelves/home/1347/any/any"
+    },
+    "Legal": {
+        "id": 179,
+        "genre_url": "https://www.smashwords.com/shelves/home/1339/any/any"
+    },
+    "Media tie-in": {
+        "id": 180,
+        "genre_url": "https://www.smashwords.com/shelves/home/1345/any/any"
+    },
+    "Medical": {
+        "id": 181,
+        "genre_url": "https://www.smashwords.com/shelves/home/1338/any/any"
+    },
+    "Political": {
+        "id": 182,
+        "genre_url": "https://www.smashwords.com/shelves/home/1346/any/any"
+    },
+    "Psychological": {
+        "id": 183,
+        "genre_url": "https://www.smashwords.com/shelves/home/1341/any/any"
+    },
+    "Spiritual & metaphysical": {
+        "id": 184,
+        "genre_url": "https://www.smashwords.com/shelves/home/1343/any/any"
+    },
+    "Technological": {
+        "id": 185,
+        "genre_url": "https://www.smashwords.com/shelves/home/1344/any/any"
+    },
+    "Action & suspense": {
+        "id": 186,
+        "genre_url": "https://www.smashwords.com/shelves/home/1284/any/any"
+    },
+    "Courtroom": {
+        "id": 187,
+        "genre_url": "https://www.smashwords.com/shelves/home/1285/any/any"
+    },
+    "Crime thriller": {
+        "id": 188,
+        "genre_url": "https://www.smashwords.com/shelves/home/1283/any/any"
+    },
+    "Psychological thriller": {
+        "id": 189,
+        "genre_url": "https://www.smashwords.com/shelves/home/1287/any/any"
+    },
+    "Spies & espionage": {
+        "id": 190,
+        "genre_url": "https://www.smashwords.com/shelves/home/1286/any/any"
+    },
+    "Supernatural": {
+        "id": 191,
+        "genre_url": "https://www.smashwords.com/shelves/home/4928/any/any"
+    },
+    "Chick lit": {
+        "id": 192,
+        "genre_url": "https://www.smashwords.com/shelves/home/890/any/any"
+    },
+    "Feminist": {
+        "id": 193,
+        "genre_url": "https://www.smashwords.com/shelves/home/1330/any/any"
+    },
+    "Anthology": {
+        "id": 194,
+        "genre_url": "https://www.smashwords.com/shelves/home/1040/any/any"
+    },
+    "Chick Lit": {
+        "id": 195,
+        "genre_url": "https://www.smashwords.com/shelves/home/1039/any/any"
+    },
+    "Drama": {
+        "id": 196,
+        "genre_url": "https://www.smashwords.com/shelves/home/1038/any/any"
+    },
+    "Fairy Tales": {
+        "id": 197,
+        "genre_url": "https://www.smashwords.com/shelves/home/1037/any/any"
+    },
+    "Graphic Novel": {
+        "id": 198,
+        "genre_url": "https://www.smashwords.com/shelves/home/1033/any/any"
+    },
+    "Americana": {
+        "id": 199,
+        "genre_url": "https://www.smashwords.com/shelves/home/809/any/any"
+    },
+    "Apparel, costumes, & textiles": {
+        "id": 200,
+        "genre_url": "https://www.smashwords.com/shelves/home/1379/any/any"
+    },
+    "Autographs": {
+        "id": 201,
+        "genre_url": "https://www.smashwords.com/shelves/home/1352/any/any"
+    },
+    "Books": {
+        "id": 202,
+        "genre_url": "https://www.smashwords.com/shelves/home/807/any/any"
+    },
+    "Buttons & pins": {
+        "id": 203,
+        "genre_url": "https://www.smashwords.com/shelves/home/1353/any/any"
+    },
+    "Canadiana": {
+        "id": 204,
+        "genre_url": "https://www.smashwords.com/shelves/home/1384/any/any"
+    },
+    "Care & restoration": {
+        "id": 205,
+        "genre_url": "https://www.smashwords.com/shelves/home/1354/any/any"
+    },
+    "Clocks & watches": {
+        "id": 206,
+        "genre_url": "https://www.smashwords.com/shelves/home/1356/any/any"
+    },
+    "Coins & stamps": {
+        "id": 207,
+        "genre_url": "https://www.smashwords.com/shelves/home/806/any/any"
+    },
+    "Applied arts": {
+        "id": 208,
+        "genre_url": "https://www.smashwords.com/shelves/home/2043/any/any"
+    },
+    "Architecture": {
+        "id": 209,
+        "genre_url": "https://www.smashwords.com/shelves/home/802/any/any"
+    },
+    "Art - how to": {
+        "id": 210,
+        "genre_url": "https://www.smashwords.com/shelves/home/801/any/any"
+    },
+    "Art history": {
+        "id": 211,
+        "genre_url": "https://www.smashwords.com/shelves/home/800/any/any"
+    },
+    "Artists": {
+        "id": 212,
+        "genre_url": "https://www.smashwords.com/shelves/home/799/any/any"
+    },
+    "Crafts - General": {
+        "id": 213,
+        "genre_url": "https://www.smashwords.com/shelves/home/1197/any/any"
+    },
+    "Crafts - Needlework General": {
+        "id": 214,
+        "genre_url": "https://www.smashwords.com/shelves/home/1196/any/any"
+    },
+    "Crafts - Needlework/Crocheting": {
+        "id": 215,
+        "genre_url": "https://www.smashwords.com/shelves/home/1195/any/any"
+    },
+    "Fine art": {
+        "id": 216,
+        "genre_url": "https://www.smashwords.com/shelves/home/1657/any/any"
+    },
+    "Performing arts": {
+        "id": 217,
+        "genre_url": "https://www.smashwords.com/shelves/home/3300/any/any"
+    },
+    "Adventurers & explorers": {
+        "id": 218,
+        "genre_url": "https://www.smashwords.com/shelves/home/1392/any/any"
+    },
+    "Artists, architects, & photographers": {
+        "id": 219,
+        "genre_url": "https://www.smashwords.com/shelves/home/1386/any/any"
+    },
+    "Autobiographies & Memoirs": {
+        "id": 220,
+        "genre_url": "https://www.smashwords.com/shelves/home/778/any/any"
+    },
+    "Biographical anthologies": {
+        "id": 221,
+        "genre_url": "https://www.smashwords.com/shelves/home/777/any/any"
+    },
+    "Business biography": {
+        "id": 222,
+        "genre_url": "https://www.smashwords.com/shelves/home/776/any/any"
+    },
+    "Celebrity biography": {
+        "id": 223,
+        "genre_url": "https://www.smashwords.com/shelves/home/775/any/any"
+    },
+    "Criminals & outlaws": {
+        "id": 224,
+        "genre_url": "https://www.smashwords.com/shelves/home/1393/any/any"
+    },
+    "Cultural heritage": {
+        "id": 225,
+        "genre_url": "https://www.smashwords.com/shelves/home/1387/any/any"
+    },
+    "Editors, journalists, & publishers": {
+        "id": 226,
+        "genre_url": "https://www.smashwords.com/shelves/home/1394/any/any"
+    },
+    "Environmentalists & naturalists": {
+        "id": 227,
+        "genre_url": "https://www.smashwords.com/shelves/home/1397/any/any"
+    },
+    "Accounting": {
+        "id": 228,
+        "genre_url": "https://www.smashwords.com/shelves/home/760/any/any"
+    },
+    "Accounting / financial": {
+        "id": 229,
+        "genre_url": "https://www.smashwords.com/shelves/home/1905/any/any"
+    },
+    "Accounting / governmental": {
+        "id": 230,
+        "genre_url": "https://www.smashwords.com/shelves/home/1906/any/any"
+    },
+    "Accounting / managerial": {
+        "id": 231,
+        "genre_url": "https://www.smashwords.com/shelves/home/1908/any/any"
+    },
+    "Accounting / standards (GAAP, IFRS, etc.)": {
+        "id": 232,
+        "genre_url": "https://www.smashwords.com/shelves/home/1909/any/any"
+    },
+    "Advertising": {
+        "id": 233,
+        "genre_url": "https://www.smashwords.com/shelves/home/759/any/any"
+    },
+    "Auditing": {
+        "id": 234,
+        "genre_url": "https://www.smashwords.com/shelves/home/1910/any/any"
+    },
+    "Banks & banking": {
+        "id": 235,
+        "genre_url": "https://www.smashwords.com/shelves/home/1911/any/any"
+    },
+    "Bookkeeping": {
+        "id": 236,
+        "genre_url": "https://www.smashwords.com/shelves/home/1912/any/any"
+    },
+    "Budgeting": {
+        "id": 237,
+        "genre_url": "https://www.smashwords.com/shelves/home/1913/any/any"
+    },
+    "Architecture & Engineering": {
+        "id": 238,
+        "genre_url": "https://www.smashwords.com/shelves/home/731/any/any"
+    },
+    "Arts": {
+        "id": 239,
+        "genre_url": "https://www.smashwords.com/shelves/home/730/any/any"
+    },
+    "Business Management": {
+        "id": 240,
+        "genre_url": "https://www.smashwords.com/shelves/home/729/any/any"
+    },
+    "Computer Science": {
+        "id": 241,
+        "genre_url": "https://www.smashwords.com/shelves/home/728/any/any"
+    },
+    "Construction": {
+        "id": 242,
+        "genre_url": "https://www.smashwords.com/shelves/home/727/any/any"
+    },
+    "Culinary arts": {
+        "id": 243,
+        "genre_url": "https://www.smashwords.com/shelves/home/726/any/any"
+    },
+    "Design": {
+        "id": 244,
+        "genre_url": "https://www.smashwords.com/shelves/home/725/any/any"
+    },
+    "Education": {
+        "id": 245,
+        "genre_url": "https://www.smashwords.com/shelves/home/724/any/any"
+    },
+    "Facilities Management": {
+        "id": 246,
+        "genre_url": "https://www.smashwords.com/shelves/home/722/any/any"
+    },
+    "Adventure & Adventurers": {
+        "id": 247,
+        "genre_url": "https://www.smashwords.com/shelves/home/3988/any/any"
+    },
+    "Animals / Animal Welfare": {
+        "id": 248,
+        "genre_url": "https://www.smashwords.com/shelves/home/4009/any/any"
+    },
+    "Animals / Apes, Monkeys, etc.": {
+        "id": 249,
+        "genre_url": "https://www.smashwords.com/shelves/home/3989/any/any"
+    },
+    "Animals / Baby Animals": {
+        "id": 250,
+        "genre_url": "https://www.smashwords.com/shelves/home/4020/any/any"
+    },
+    "Animals / Bears": {
+        "id": 251,
+        "genre_url": "https://www.smashwords.com/shelves/home/3990/any/any"
+    },
+    "Animals / Birds": {
+        "id": 252,
+        "genre_url": "https://www.smashwords.com/shelves/home/3991/any/any"
+    },
+    "Animals / Butterflies, Moths & Caterpillars": {
+        "id": 253,
+        "genre_url": "https://www.smashwords.com/shelves/home/4012/any/any"
+    },
+    "Animals / Cats": {
+        "id": 254,
+        "genre_url": "https://www.smashwords.com/shelves/home/3992/any/any"
+    },
+    "Bioinformatics": {
+        "id": 255,
+        "genre_url": "https://www.smashwords.com/shelves/home/2576/any/any"
+    },
+    "Blogging": {
+        "id": 256,
+        "genre_url": "https://www.smashwords.com/shelves/home/674/any/any"
+    },
+    "Buyer’s guides": {
+        "id": 257,
+        "genre_url": "https://www.smashwords.com/shelves/home/2454/any/any"
+    },
+    "Calculators": {
+        "id": 258,
+        "genre_url": "https://www.smashwords.com/shelves/home/2455/any/any"
+    },
+    "CD-DVD technology": {
+        "id": 259,
+        "genre_url": "https://www.smashwords.com/shelves/home/2456/any/any"
+    },
+    "Certification guides / A+": {
+        "id": 260,
+        "genre_url": "https://www.smashwords.com/shelves/home/2542/any/any"
+    },
+    "Certification guides / MCSE": {
+        "id": 261,
+        "genre_url": "https://www.smashwords.com/shelves/home/2543/any/any"
+    },
+    "Client-server computing": {
+        "id": 262,
+        "genre_url": "https://www.smashwords.com/shelves/home/2558/any/any"
+    },
+    "Compilers": {
+        "id": 263,
+        "genre_url": "https://www.smashwords.com/shelves/home/2457/any/any"
+    },
+    "Afghani": {
+        "id": 264,
+        "genre_url": "https://www.smashwords.com/shelves/home/648/any/any"
+    },
+    "American / California Style": {
+        "id": 265,
+        "genre_url": "https://www.smashwords.com/shelves/home/2372/any/any"
+    },
+    "American / Middle Atlantic States": {
+        "id": 266,
+        "genre_url": "https://www.smashwords.com/shelves/home/2373/any/any"
+    },
+    "American / Middle Western States": {
+        "id": 267,
+        "genre_url": "https://www.smashwords.com/shelves/home/2374/any/any"
+    },
+    "American / New England": {
+        "id": 268,
+        "genre_url": "https://www.smashwords.com/shelves/home/2375/any/any"
+    },
+    "American / Northwestern States": {
+        "id": 269,
+        "genre_url": "https://www.smashwords.com/shelves/home/2376/any/any"
+    },
+    "American / Southern States": {
+        "id": 270,
+        "genre_url": "https://www.smashwords.com/shelves/home/2377/any/any"
+    },
+    "American / Southwestern States": {
+        "id": 271,
+        "genre_url": "https://www.smashwords.com/shelves/home/2378/any/any"
+    },
+    "Administration / elementary & secondary": {
+        "id": 272,
+        "genre_url": "https://www.smashwords.com/shelves/home/2083/any/any"
+    },
+    "Administration / facility management": {
+        "id": 273,
+        "genre_url": "https://www.smashwords.com/shelves/home/2082/any/any"
+    },
+    "Administration / general": {
+        "id": 274,
+        "genre_url": "https://www.smashwords.com/shelves/home/2081/any/any"
+    },
+    "Administration / higher": {
+        "id": 275,
+        "genre_url": "https://www.smashwords.com/shelves/home/2084/any/any"
+    },
+    "Administration / school superintendents & principals": {
+        "id": 276,
+        "genre_url": "https://www.smashwords.com/shelves/home/2085/any/any"
+    },
+    "Adult & continuing education": {
+        "id": 277,
+        "genre_url": "https://www.smashwords.com/shelves/home/2086/any/any"
+    },
+    "Aims & objectives": {
+        "id": 278,
+        "genre_url": "https://www.smashwords.com/shelves/home/2087/any/any"
+    },
+    "Behavioral management": {
+        "id": 279,
+        "genre_url": "https://www.smashwords.com/shelves/home/2143/any/any"
+    },
+    "Bilingual education": {
+        "id": 280,
+        "genre_url": "https://www.smashwords.com/shelves/home/2088/any/any"
+    },
+    "Careers in education": {
+        "id": 281,
+        "genre_url": "https://www.smashwords.com/shelves/home/615/any/any"
+    },
+    "Acoustics & Sound": {
+        "id": 282,
+        "genre_url": "https://www.smashwords.com/shelves/home/3114/any/any"
+    },
+    "Aeronautics & Astronautics": {
+        "id": 283,
+        "genre_url": "https://www.smashwords.com/shelves/home/3115/any/any"
+    },
+    "Agriculture": {
+        "id": 284,
+        "genre_url": "https://www.smashwords.com/shelves/home/4929/any/any"
+    },
+    "Agriculture / Agronomy / Crop Science": {
+        "id": 285,
+        "genre_url": "https://www.smashwords.com/shelves/home/3117/any/any"
+    },
+    "Agriculture / Agronomy / General": {
+        "id": 286,
+        "genre_url": "https://www.smashwords.com/shelves/home/3121/any/any"
+    },
+    "Agriculture / Agronomy / Soil Science": {
+        "id": 287,
+        "genre_url": "https://www.smashwords.com/shelves/home/3119/any/any"
+    },
+    "Agriculture / Sustainable Agriculture": {
+        "id": 288,
+        "genre_url": "https://www.smashwords.com/shelves/home/3120/any/any"
+    },
+    "Agriculture / Tropical Agriculture": {
+        "id": 289,
+        "genre_url": "https://www.smashwords.com/shelves/home/3116/any/any"
+    },
+    "Automation": {
+        "id": 290,
+        "genre_url": "https://www.smashwords.com/shelves/home/3123/any/any"
+    },
+    "Automotive": {
+        "id": 291,
+        "genre_url": "https://www.smashwords.com/shelves/home/3151/any/any"
+    },
+    "Astrology": {
+        "id": 292,
+        "genre_url": "https://www.smashwords.com/shelves/home/570/any/any"
+    },
+    "Celebrity culture": {
+        "id": 293,
+        "genre_url": "https://www.smashwords.com/shelves/home/568/any/any"
+    },
+    "Computer gaming": {
+        "id": 294,
+        "genre_url": "https://www.smashwords.com/shelves/home/567/any/any"
+    },
+    "Entertainment industry": {
+        "id": 295,
+        "genre_url": "https://www.smashwords.com/shelves/home/566/any/any"
+    },
+    "Gambling": {
+        "id": 296,
+        "genre_url": "https://www.smashwords.com/shelves/home/565/any/any"
+    },
+    "Games, puzzles, & brain twisters": {
+        "id": 297,
+        "genre_url": "https://www.smashwords.com/shelves/home/564/any/any"
+    },
+    "History & Criticism": {
+        "id": 298,
+        "genre_url": "https://www.smashwords.com/shelves/home/1327/any/any"
+    },
+    "Humor & satire": {
+        "id": 299,
+        "genre_url": "https://www.smashwords.com/shelves/home/563/any/any"
+    },
+    "Bibliographies & indices": {
+        "id": 300,
+        "genre_url": "https://www.smashwords.com/shelves/home/4848/any/any"
+    },
+    "Catalogs": {
+        "id": 301,
+        "genre_url": "https://www.smashwords.com/shelves/home/4849/any/any"
+    },
+    "Curiosities & wonders": {
+        "id": 302,
+        "genre_url": "https://www.smashwords.com/shelves/home/4850/any/any"
+    },
+    "Questions & answers": {
+        "id": 303,
+        "genre_url": "https://www.smashwords.com/shelves/home/4851/any/any"
+    },
+    "Trivia": {
+        "id": 304,
+        "genre_url": "https://www.smashwords.com/shelves/home/4852/any/any"
+    },
+    "Yearbooks & annuals": {
+        "id": 305,
+        "genre_url": "https://www.smashwords.com/shelves/home/4853/any/any"
+    },
+    "Acupressure & acupuncture": {
+        "id": 306,
+        "genre_url": "https://www.smashwords.com/shelves/home/1414/any/any"
+    },
+    "Aerobics": {
+        "id": 307,
+        "genre_url": "https://www.smashwords.com/shelves/home/1415/any/any"
+    },
+    "Aging well": {
+        "id": 308,
+        "genre_url": "https://www.smashwords.com/shelves/home/528/any/any"
+    },
+    "Allergies": {
+        "id": 309,
+        "genre_url": "https://www.smashwords.com/shelves/home/1421/any/any"
+    },
+    "Alternative medicine": {
+        "id": 310,
+        "genre_url": "https://www.smashwords.com/shelves/home/527/any/any"
+    },
+    "Alternative therapies": {
+        "id": 311,
+        "genre_url": "https://www.smashwords.com/shelves/home/2684/any/any"
+    },
+    "Aromatherapy": {
+        "id": 312,
+        "genre_url": "https://www.smashwords.com/shelves/home/1422/any/any"
+    },
+    "Beauty & fashion": {
+        "id": 313,
+        "genre_url": "https://www.smashwords.com/shelves/home/526/any/any"
+    },
+    "Body art": {
+        "id": 314,
+        "genre_url": "https://www.smashwords.com/shelves/home/525/any/any"
+    },
+    "Body cleansing & detoxification": {
+        "id": 315,
+        "genre_url": "https://www.smashwords.com/shelves/home/1431/any/any"
+    },
+    "Africa": {
+        "id": 316,
+        "genre_url": "https://www.smashwords.com/shelves/home/503/any/any"
+    },
+    "Caribbean & West Indies / Cuba": {
+        "id": 317,
+        "genre_url": "https://www.smashwords.com/shelves/home/2759/any/any"
+    },
+    "Caribbean & West Indies / General": {
+        "id": 318,
+        "genre_url": "https://www.smashwords.com/shelves/home/2758/any/any"
+    },
+    "Civilization": {
+        "id": 319,
+        "genre_url": "https://www.smashwords.com/shelves/home/498/any/any"
+    },
+    "Contemporary political": {
+        "id": 320,
+        "genre_url": "https://www.smashwords.com/shelves/home/497/any/any"
+    },
+    "Antiques & collectibles": {
+        "id": 321,
+        "genre_url": "https://www.smashwords.com/shelves/home/482/any/any"
+    },
+    "Apartment living": {
+        "id": 322,
+        "genre_url": "https://www.smashwords.com/shelves/home/481/any/any"
+    },
+    "Cement": {
+        "id": 323,
+        "genre_url": "https://www.smashwords.com/shelves/home/480/any/any"
+    },
+    "Ceramics": {
+        "id": 324,
+        "genre_url": "https://www.smashwords.com/shelves/home/479/any/any"
+    },
+    "Cleaning & caretaking": {
+        "id": 325,
+        "genre_url": "https://www.smashwords.com/shelves/home/2780/any/any"
+    },
+    "Crafts & Hobbies": {
+        "id": 326,
+        "genre_url": "https://www.smashwords.com/shelves/home/478/any/any"
+    },
+    "Decks & patios": {
+        "id": 327,
+        "genre_url": "https://www.smashwords.com/shelves/home/477/any/any"
+    },
+    "Decorating": {
+        "id": 328,
+        "genre_url": "https://www.smashwords.com/shelves/home/2770/any/any"
+    },
+    "Do-it-yourself / carpentry": {
+        "id": 329,
+        "genre_url": "https://www.smashwords.com/shelves/home/2769/any/any"
+    },
+    "Do-it-yourself / general": {
+        "id": 330,
+        "genre_url": "https://www.smashwords.com/shelves/home/2771/any/any"
+    },
+    "12-step programs": {
+        "id": 331,
+        "genre_url": "https://www.smashwords.com/shelves/home/461/any/any"
+    },
+    "Daily affirmations": {
+        "id": 332,
+        "genre_url": "https://www.smashwords.com/shelves/home/460/any/any"
+    },
+    "General self-help": {
+        "id": 333,
+        "genre_url": "https://www.smashwords.com/shelves/home/459/any/any"
+    },
+    "Meditation": {
+        "id": 334,
+        "genre_url": "https://www.smashwords.com/shelves/home/458/any/any"
+    },
+    "Personal inspiration": {
+        "id": 335,
+        "genre_url": "https://www.smashwords.com/shelves/home/457/any/any"
+    },
+    "Spiritual inspiration": {
+        "id": 336,
+        "genre_url": "https://www.smashwords.com/shelves/home/456/any/any"
+    },
+    "African Languages": {
+        "id": 337,
+        "genre_url": "https://www.smashwords.com/shelves/home/2177/any/any"
+    },
+    "Ancient Languages": {
+        "id": 338,
+        "genre_url": "https://www.smashwords.com/shelves/home/2192/any/any"
+    },
+    "Arabic": {
+        "id": 339,
+        "genre_url": "https://www.smashwords.com/shelves/home/455/any/any"
+    },
+    "Baltic Languages": {
+        "id": 340,
+        "genre_url": "https://www.smashwords.com/shelves/home/2193/any/any"
+    },
+    "Bengali": {
+        "id": 341,
+        "genre_url": "https://www.smashwords.com/shelves/home/454/any/any"
+    },
+    "Burmese": {
+        "id": 342,
+        "genre_url": "https://www.smashwords.com/shelves/home/453/any/any"
+    },
+    "Cantonese": {
+        "id": 343,
+        "genre_url": "https://www.smashwords.com/shelves/home/452/any/any"
+    },
+    "Celtic Languages": {
+        "id": 344,
+        "genre_url": "https://www.smashwords.com/shelves/home/2189/any/any"
+    },
+    "Creole Languages": {
+        "id": 345,
+        "genre_url": "https://www.smashwords.com/shelves/home/2194/any/any"
+    },
+    "Czech": {
+        "id": 346,
+        "genre_url": "https://www.smashwords.com/shelves/home/451/any/any"
+    },
+    "Administrative Law & Regulatory Practice": {
+        "id": 347,
+        "genre_url": "https://www.smashwords.com/shelves/home/2227/any/any"
+    },
+    "Agricultural": {
+        "id": 348,
+        "genre_url": "https://www.smashwords.com/shelves/home/2305/any/any"
+    },
+    "Air & Space": {
+        "id": 349,
+        "genre_url": "https://www.smashwords.com/shelves/home/2228/any/any"
+    },
+    "Alternative Dispute Resolution": {
+        "id": 350,
+        "genre_url": "https://www.smashwords.com/shelves/home/2229/any/any"
+    },
+    "Annotations & Citations": {
+        "id": 351,
+        "genre_url": "https://www.smashwords.com/shelves/home/2230/any/any"
+    },
+    "Antitrust": {
+        "id": 352,
+        "genre_url": "https://www.smashwords.com/shelves/home/2231/any/any"
+    },
+    "Arbitration, Negotiation, Mediation": {
+        "id": 353,
+        "genre_url": "https://www.smashwords.com/shelves/home/2232/any/any"
+    },
+    "Banking": {
+        "id": 354,
+        "genre_url": "https://www.smashwords.com/shelves/home/2233/any/any"
+    },
+    "Bankruptcy & insolvency": {
+        "id": 355,
+        "genre_url": "https://www.smashwords.com/shelves/home/2234/any/any"
+    },
+    "Biographies": {
+        "id": 356,
+        "genre_url": "https://www.smashwords.com/shelves/home/540/any/any"
+    },
+    "Coming out": {
+        "id": 357,
+        "genre_url": "https://www.smashwords.com/shelves/home/539/any/any"
+    },
+    "Dating & relationships": {
+        "id": 358,
+        "genre_url": "https://www.smashwords.com/shelves/home/538/any/any"
+    },
+    "Essays": {
+        "id": 359,
+        "genre_url": "https://www.smashwords.com/shelves/home/536/any/any"
+    },
+    "Politics & society": {
+        "id": 360,
+        "genre_url": "https://www.smashwords.com/shelves/home/533/any/any"
+    },
+    "Sex & health": {
+        "id": 361,
+        "genre_url": "https://www.smashwords.com/shelves/home/532/any/any"
+    },
+    "Sociology": {
+        "id": 362,
+        "genre_url": "https://www.smashwords.com/shelves/home/531/any/any"
+    },
+    "American / Asian American": {
+        "id": 363,
+        "genre_url": "https://www.smashwords.com/shelves/home/2802/any/any"
+    },
+    "American / Hispanic American": {
+        "id": 364,
+        "genre_url": "https://www.smashwords.com/shelves/home/2804/any/any"
+    },
+    "Alternative": {
+        "id": 365,
+        "genre_url": "https://www.smashwords.com/shelves/home/411/any/any"
+    },
+    "Ballet": {
+        "id": 366,
+        "genre_url": "https://www.smashwords.com/shelves/home/3444/any/any"
+    },
+    "Big Band & Swing": {
+        "id": 367,
+        "genre_url": "https://www.smashwords.com/shelves/home/3447/any/any"
+    },
+    "Bluegrass": {
+        "id": 368,
+        "genre_url": "https://www.smashwords.com/shelves/home/409/any/any"
+    },
+    "Blues": {
+        "id": 369,
+        "genre_url": "https://www.smashwords.com/shelves/home/408/any/any"
+    },
+    "Chamber": {
+        "id": 370,
+        "genre_url": "https://www.smashwords.com/shelves/home/3445/any/any"
+    },
+    "Children’s": {
+        "id": 371,
+        "genre_url": "https://www.smashwords.com/shelves/home/3452/any/any"
+    },
+    "Choral": {
+        "id": 372,
+        "genre_url": "https://www.smashwords.com/shelves/home/3443/any/any"
+    },
+    "Classical": {
+        "id": 373,
+        "genre_url": "https://www.smashwords.com/shelves/home/407/any/any"
+    },
+    "Aliens & UFOs": {
+        "id": 374,
+        "genre_url": "https://www.smashwords.com/shelves/home/391/any/any"
+    },
+    "Angels & Fairies": {
+        "id": 375,
+        "genre_url": "https://www.smashwords.com/shelves/home/390/any/any"
+    },
+    "Auras & colors": {
+        "id": 376,
+        "genre_url": "https://www.smashwords.com/shelves/home/388/any/any"
+    },
+    "Dream interpretation": {
+        "id": 377,
+        "genre_url": "https://www.smashwords.com/shelves/home/387/any/any"
+    },
+    "Fortune telling": {
+        "id": 378,
+        "genre_url": "https://www.smashwords.com/shelves/home/386/any/any"
+    },
+    "Magic": {
+        "id": 379,
+        "genre_url": "https://www.smashwords.com/shelves/home/385/any/any"
+    },
+    "Mysticism": {
+        "id": 380,
+        "genre_url": "https://www.smashwords.com/shelves/home/383/any/any"
+    },
+    "Near-death experiences": {
+        "id": 381,
+        "genre_url": "https://www.smashwords.com/shelves/home/382/any/any"
+    },
+    "Absentee parents": {
+        "id": 382,
+        "genre_url": "https://www.smashwords.com/shelves/home/373/any/any"
+    },
+    "Adoption": {
+        "id": 383,
+        "genre_url": "https://www.smashwords.com/shelves/home/1047/any/any"
+    },
+    "Baby names": {
+        "id": 384,
+        "genre_url": "https://www.smashwords.com/shelves/home/372/any/any"
+    },
+    "Bedtime stories": {
+        "id": 385,
+        "genre_url": "https://www.smashwords.com/shelves/home/371/any/any"
+    },
+    "Breast Feeding": {
+        "id": 386,
+        "genre_url": "https://www.smashwords.com/shelves/home/370/any/any"
+    },
+    "Child nutrition": {
+        "id": 387,
+        "genre_url": "https://www.smashwords.com/shelves/home/369/any/any"
+    },
+    "Childhood development": {
+        "id": 388,
+        "genre_url": "https://www.smashwords.com/shelves/home/368/any/any"
+    },
+    "Childhood obesity": {
+        "id": 389,
+        "genre_url": "https://www.smashwords.com/shelves/home/367/any/any"
+    },
+    "Childhood psychology": {
+        "id": 390,
+        "genre_url": "https://www.smashwords.com/shelves/home/366/any/any"
+    },
+    "Divorce & children": {
+        "id": 391,
+        "genre_url": "https://www.smashwords.com/shelves/home/365/any/any"
+    },
+    "Aesthetics": {
+        "id": 392,
+        "genre_url": "https://www.smashwords.com/shelves/home/3567/any/any"
+    },
+    "American philosophy": {
+        "id": 393,
+        "genre_url": "https://www.smashwords.com/shelves/home/353/any/any"
+    },
+    "Ancient philosophy": {
+        "id": 394,
+        "genre_url": "https://www.smashwords.com/shelves/home/352/any/any"
+    },
+    "Asian philosophy": {
+        "id": 395,
+        "genre_url": "https://www.smashwords.com/shelves/home/351/any/any"
+    },
+    "Buddhist": {
+        "id": 396,
+        "genre_url": "https://www.smashwords.com/shelves/home/3582/any/any"
+    },
+    "Contemporary philosophy": {
+        "id": 397,
+        "genre_url": "https://www.smashwords.com/shelves/home/349/any/any"
+    },
+    "Criticism": {
+        "id": 398,
+        "genre_url": "https://www.smashwords.com/shelves/home/3580/any/any"
+    },
+    "Eastern": {
+        "id": 399,
+        "genre_url": "https://www.smashwords.com/shelves/home/3568/any/any"
+    },
+    "Epistemology": {
+        "id": 400,
+        "genre_url": "https://www.smashwords.com/shelves/home/3569/any/any"
+    },
+    "Activism": {
+        "id": 401,
+        "genre_url": "https://www.smashwords.com/shelves/home/343/any/any"
+    },
+    "Arms control": {
+        "id": 402,
+        "genre_url": "https://www.smashwords.com/shelves/home/342/any/any"
+    },
+    "City planning": {
+        "id": 403,
+        "genre_url": "https://www.smashwords.com/shelves/home/340/any/any"
+    },
+    "Civil & human rights": {
+        "id": 404,
+        "genre_url": "https://www.smashwords.com/shelves/home/339/any/any"
+    },
+    "Communism & socialism": {
+        "id": 405,
+        "genre_url": "https://www.smashwords.com/shelves/home/338/any/any"
+    },
+    "Congress": {
+        "id": 406,
+        "genre_url": "https://www.smashwords.com/shelves/home/337/any/any"
+    },
+    "Current affairs": {
+        "id": 407,
+        "genre_url": "https://www.smashwords.com/shelves/home/336/any/any"
+    },
+    "Democracy": {
+        "id": 408,
+        "genre_url": "https://www.smashwords.com/shelves/home/335/any/any"
+    },
+    "Economic policy": {
+        "id": 409,
+        "genre_url": "https://www.smashwords.com/shelves/home/334/any/any"
+    },
+    "Addiction": {
+        "id": 410,
+        "genre_url": "https://www.smashwords.com/shelves/home/316/any/any"
+    },
+    "ADHD": {
+        "id": 411,
+        "genre_url": "https://www.smashwords.com/shelves/home/317/any/any"
+    },
+    "Adolescent psychology": {
+        "id": 412,
+        "genre_url": "https://www.smashwords.com/shelves/home/315/any/any"
+    },
+    "Anxiety": {
+        "id": 413,
+        "genre_url": "https://www.smashwords.com/shelves/home/314/any/any"
+    },
+    "Applied psychology": {
+        "id": 414,
+        "genre_url": "https://www.smashwords.com/shelves/home/2887/any/any"
+    },
+    "Assessment, testing, & measurement": {
+        "id": 415,
+        "genre_url": "https://www.smashwords.com/shelves/home/2914/any/any"
+    },
+    "Child Abuse": {
+        "id": 416,
+        "genre_url": "https://www.smashwords.com/shelves/home/313/any/any"
+    },
+    "Clinical psychology": {
+        "id": 417,
+        "genre_url": "https://www.smashwords.com/shelves/home/312/any/any"
+    },
+    "Cognitive psychology": {
+        "id": 418,
+        "genre_url": "https://www.smashwords.com/shelves/home/2888/any/any"
+    },
+    "Creative ability": {
+        "id": 419,
+        "genre_url": "https://www.smashwords.com/shelves/home/2907/any/any"
+    },
+    "Playwriting": {
+        "id": 420,
+        "genre_url": "https://www.smashwords.com/shelves/home/1202/any/any"
+    },
+    "Screenwriting": {
+        "id": 421,
+        "genre_url": "https://www.smashwords.com/shelves/home/1204/any/any"
+    },
+    "Self-publishing": {
+        "id": 422,
+        "genre_url": "https://www.smashwords.com/shelves/home/1045/any/any"
+    },
+    "Almanac": {
+        "id": 423,
+        "genre_url": "https://www.smashwords.com/shelves/home/303/any/any"
+    },
+    "Atlases": {
+        "id": 424,
+        "genre_url": "https://www.smashwords.com/shelves/home/302/any/any"
+    },
+    "Careers": {
+        "id": 425,
+        "genre_url": "https://www.smashwords.com/shelves/home/301/any/any"
+    },
+    "Consumer guides": {
+        "id": 426,
+        "genre_url": "https://www.smashwords.com/shelves/home/300/any/any"
+    },
+    "Dictionaries": {
+        "id": 427,
+        "genre_url": "https://www.smashwords.com/shelves/home/299/any/any"
+    },
+    "Directories": {
+        "id": 428,
+        "genre_url": "https://www.smashwords.com/shelves/home/298/any/any"
+    },
+    "Encyclopedias": {
+        "id": 429,
+        "genre_url": "https://www.smashwords.com/shelves/home/297/any/any"
+    },
+    "Etiquette": {
+        "id": 430,
+        "genre_url": "https://www.smashwords.com/shelves/home/296/any/any"
+    },
+    "Etymology": {
+        "id": 431,
+        "genre_url": "https://www.smashwords.com/shelves/home/295/any/any"
+    },
+    "Foreign language study": {
+        "id": 432,
+        "genre_url": "https://www.smashwords.com/shelves/home/294/any/any"
+    },
+    "Abuse / domestic partner abuse": {
+        "id": 433,
+        "genre_url": "https://www.smashwords.com/shelves/home/2153/any/any"
+    },
+    "Abuse / elder abuse": {
+        "id": 434,
+        "genre_url": "https://www.smashwords.com/shelves/home/2152/any/any"
+    },
+    "Abuse / general": {
+        "id": 435,
+        "genre_url": "https://www.smashwords.com/shelves/home/2151/any/any"
+    },
+    "Aging": {
+        "id": 436,
+        "genre_url": "https://www.smashwords.com/shelves/home/556/any/any"
+    },
+    "Alternative family": {
+        "id": 437,
+        "genre_url": "https://www.smashwords.com/shelves/home/2155/any/any"
+    },
+    "Anger": {
+        "id": 438,
+        "genre_url": "https://www.smashwords.com/shelves/home/2156/any/any"
+    },
+    "Attention deficit disorder (ADD-ADHD)": {
+        "id": 439,
+        "genre_url": "https://www.smashwords.com/shelves/home/2175/any/any"
+    },
+    "Autism spectrum disorders": {
+        "id": 440,
+        "genre_url": "https://www.smashwords.com/shelves/home/2176/any/any"
+    },
+    "Balancing work & family": {
+        "id": 441,
+        "genre_url": "https://www.smashwords.com/shelves/home/555/any/any"
+    },
+    "Antiquities & Archaeology": {
+        "id": 442,
+        "genre_url": "https://www.smashwords.com/shelves/home/3068/any/any"
+    },
+    "Atheism/Agnosticism": {
+        "id": 443,
+        "genre_url": "https://www.smashwords.com/shelves/home/796/any/any"
+    },
+    "Bahá’í": {
+        "id": 444,
+        "genre_url": "https://www.smashwords.com/shelves/home/1493/any/any"
+    },
+    "Bibles": {
+        "id": 445,
+        "genre_url": "https://www.smashwords.com/shelves/home/795/any/any"
+    },
+    "Biblical Biography / General": {
+        "id": 446,
+        "genre_url": "https://www.smashwords.com/shelves/home/2925/any/any"
+    },
+    "Biblical Biography / New Testament": {
+        "id": 447,
+        "genre_url": "https://www.smashwords.com/shelves/home/2927/any/any"
+    },
+    "Biblical Biography / Old Testament": {
+        "id": 448,
+        "genre_url": "https://www.smashwords.com/shelves/home/2926/any/any"
+    },
+    "Biblical Commentary / General": {
+        "id": 449,
+        "genre_url": "https://www.smashwords.com/shelves/home/2928/any/any"
+    },
+    "Biblical Commentary / New Testament": {
+        "id": 450,
+        "genre_url": "https://www.smashwords.com/shelves/home/2930/any/any"
+    },
+    "Agricultural science": {
+        "id": 451,
+        "genre_url": "https://www.smashwords.com/shelves/home/267/any/any"
+    },
+    "Amateur naturalist": {
+        "id": 452,
+        "genre_url": "https://www.smashwords.com/shelves/home/3294/any/any"
+    },
+    "Animal husbandry": {
+        "id": 453,
+        "genre_url": "https://www.smashwords.com/shelves/home/266/any/any"
+    },
+    "Anthropology": {
+        "id": 454,
+        "genre_url": "https://www.smashwords.com/shelves/home/264/any/any"
+    },
+    "Applied Sciences": {
+        "id": 455,
+        "genre_url": "https://www.smashwords.com/shelves/home/4651/any/any"
+    },
+    "Archaeology": {
+        "id": 456,
+        "genre_url": "https://www.smashwords.com/shelves/home/263/any/any"
+    },
+    "Astronomy": {
+        "id": 457,
+        "genre_url": "https://www.smashwords.com/shelves/home/262/any/any"
+    },
+    "Biology": {
+        "id": 458,
+        "genre_url": "https://www.smashwords.com/shelves/home/261/any/any"
+    },
+    "Abuse": {
+        "id": 459,
+        "genre_url": "https://www.smashwords.com/shelves/home/4734/any/any"
+    },
+    "Addiction & recovery": {
+        "id": 460,
+        "genre_url": "https://www.smashwords.com/shelves/home/239/any/any"
+    },
+    "Adult Children of Substance Abusers": {
+        "id": 461,
+        "genre_url": "https://www.smashwords.com/shelves/home/4735/any/any"
+    },
+    "Anger management": {
+        "id": 462,
+        "genre_url": "https://www.smashwords.com/shelves/home/4753/any/any"
+    },
+    "Anxieties & Phobias": {
+        "id": 463,
+        "genre_url": "https://www.smashwords.com/shelves/home/4755/any/any"
+    },
+    "Codependency": {
+        "id": 464,
+        "genre_url": "https://www.smashwords.com/shelves/home/4737/any/any"
+    },
+    "Confidence & self-esteem": {
+        "id": 465,
+        "genre_url": "https://www.smashwords.com/shelves/home/238/any/any"
+    },
+    "Creativity": {
+        "id": 466,
+        "genre_url": "https://www.smashwords.com/shelves/home/4738/any/any"
+    },
+    "Death, Grief, Bereavement": {
+        "id": 467,
+        "genre_url": "https://www.smashwords.com/shelves/home/4739/any/any"
+    },
+    "Depression": {
+        "id": 468,
+        "genre_url": "https://www.smashwords.com/shelves/home/4740/any/any"
+    },
+    "History of sex": {
+        "id": 469,
+        "genre_url": "https://www.smashwords.com/shelves/home/282/any/any"
+    },
+    "Men's sexuality": {
+        "id": 470,
+        "genre_url": "https://www.smashwords.com/shelves/home/281/any/any"
+    },
+    "Prostitution": {
+        "id": 471,
+        "genre_url": "https://www.smashwords.com/shelves/home/280/any/any"
+    },
+    "Sex & culture": {
+        "id": 472,
+        "genre_url": "https://www.smashwords.com/shelves/home/279/any/any"
+    },
+    "Sex & politics": {
+        "id": 473,
+        "genre_url": "https://www.smashwords.com/shelves/home/278/any/any"
+    },
+    "Sex & religion": {
+        "id": 474,
+        "genre_url": "https://www.smashwords.com/shelves/home/277/any/any"
+    },
+    "Sex guides & how tos": {
+        "id": 475,
+        "genre_url": "https://www.smashwords.com/shelves/home/276/any/any"
+    },
+    "Sex research": {
+        "id": 476,
+        "genre_url": "https://www.smashwords.com/shelves/home/275/any/any"
+    },
+    "Sexual alternatives": {
+        "id": 477,
+        "genre_url": "https://www.smashwords.com/shelves/home/274/any/any"
+    },
+    "Sexual behavior": {
+        "id": 478,
+        "genre_url": "https://www.smashwords.com/shelves/home/273/any/any"
+    },
+    "Abortion & Birth Control": {
+        "id": 479,
+        "genre_url": "https://www.smashwords.com/shelves/home/4791/any/any"
+    },
+    "Africana": {
+        "id": 480,
+        "genre_url": "https://www.smashwords.com/shelves/home/232/any/any"
+    },
+    "Agriculture & food": {
+        "id": 481,
+        "genre_url": "https://www.smashwords.com/shelves/home/3091/any/any"
+    },
+    "Anthropology / Cultural": {
+        "id": 482,
+        "genre_url": "https://www.smashwords.com/shelves/home/4757/any/any"
+    },
+    "Anthropology / Physical": {
+        "id": 483,
+        "genre_url": "https://www.smashwords.com/shelves/home/4758/any/any"
+    },
+    "Atheistic & Agnostic studies": {
+        "id": 484,
+        "genre_url": "https://www.smashwords.com/shelves/home/229/any/any"
+    },
+    "Black studies (global)": {
+        "id": 485,
+        "genre_url": "https://www.smashwords.com/shelves/home/3092/any/any"
+    },
+    "Children's Studies": {
+        "id": 486,
+        "genre_url": "https://www.smashwords.com/shelves/home/4792/any/any"
+    },
+    "Archery": {
+        "id": 487,
+        "genre_url": "https://www.smashwords.com/shelves/home/1528/any/any"
+    },
+    "Backpacking": {
+        "id": 488,
+        "genre_url": "https://www.smashwords.com/shelves/home/209/any/any"
+    },
+    "Ballooning": {
+        "id": 489,
+        "genre_url": "https://www.smashwords.com/shelves/home/208/any/any"
+    },
+    "Baseball": {
+        "id": 490,
+        "genre_url": "https://www.smashwords.com/shelves/home/207/any/any"
+    },
+    "Baseball / Essays & Writings": {
+        "id": 491,
+        "genre_url": "https://www.smashwords.com/shelves/home/4795/any/any"
+    },
+    "Baseball / History": {
+        "id": 492,
+        "genre_url": "https://www.smashwords.com/shelves/home/4796/any/any"
+    },
+    "Baseball / Statistics": {
+        "id": 493,
+        "genre_url": "https://www.smashwords.com/shelves/home/4797/any/any"
+    },
+    "Basketball": {
+        "id": 494,
+        "genre_url": "https://www.smashwords.com/shelves/home/206/any/any"
+    },
+    "Bicycling": {
+        "id": 495,
+        "genre_url": "https://www.smashwords.com/shelves/home/205/any/any"
+    },
+    "Aircraft": {
+        "id": 496,
+        "genre_url": "https://www.smashwords.com/shelves/home/173/any/any"
+    },
+    "Automobiles": {
+        "id": 497,
+        "genre_url": "https://www.smashwords.com/shelves/home/172/any/any"
+    },
+    "Automotive / Antique & Classic": {
+        "id": 498,
+        "genre_url": "https://www.smashwords.com/shelves/home/2320/any/any"
+    },
+    "Automotive / Buyer’s Guides": {
+        "id": 499,
+        "genre_url": "https://www.smashwords.com/shelves/home/2321/any/any"
+    },
+    "Automotive / Customizing": {
+        "id": 500,
+        "genre_url": "https://www.smashwords.com/shelves/home/2322/any/any"
+    },
+    "Automotive / History": {
+        "id": 501,
+        "genre_url": "https://www.smashwords.com/shelves/home/2323/any/any"
+    },
+    "Automotive / Pictorial": {
+        "id": 502,
+        "genre_url": "https://www.smashwords.com/shelves/home/2324/any/any"
+    },
+    "Automotive / Repair & Maintenance": {
+        "id": 503,
+        "genre_url": "https://www.smashwords.com/shelves/home/2325/any/any"
+    },
+    "Automotive / Trucks": {
+        "id": 504,
+        "genre_url": "https://www.smashwords.com/shelves/home/2326/any/any"
+    },
+    "Aviation / Commercial": {
+        "id": 505,
+        "genre_url": "https://www.smashwords.com/shelves/home/2329/any/any"
+    },
+    "Amusement & theme parks": {
+        "id": 506,
+        "genre_url": "https://www.smashwords.com/shelves/home/1399/any/any"
+    },
+    "Bed & Breakfast": {
+        "id": 507,
+        "genre_url": "https://www.smashwords.com/shelves/home/161/any/any"
+    },
+    "Budget": {
+        "id": 508,
+        "genre_url": "https://www.smashwords.com/shelves/home/1403/any/any"
+    },
+    "By region": {
+        "id": 509,
+        "genre_url": "https://www.smashwords.com/shelves/home/3733/any/any"
+    },
+    "Camping & RVing": {
+        "id": 510,
+        "genre_url": "https://www.smashwords.com/shelves/home/158/any/any"
+    },
+    "Cruises": {
+        "id": 511,
+        "genre_url": "https://www.smashwords.com/shelves/home/1398/any/any"
+    },
+    "Essays & Travelogues": {
+        "id": 512,
+        "genre_url": "https://www.smashwords.com/shelves/home/151/any/any"
+    },
+    "Hikes & walks": {
+        "id": 513,
+        "genre_url": "https://www.smashwords.com/shelves/home/1404/any/any"
+    },
+    "Museums of the World": {
+        "id": 514,
+        "genre_url": "https://www.smashwords.com/shelves/home/132/any/any"
+    },
+    "Assassinations & Conspiracies": {
+        "id": 515,
+        "genre_url": "https://www.smashwords.com/shelves/home/1050/any/any"
+    },
+    "Computer Crime": {
+        "id": 516,
+        "genre_url": "https://www.smashwords.com/shelves/home/1051/any/any"
+    },
+    "Drug trade": {
+        "id": 517,
+        "genre_url": "https://www.smashwords.com/shelves/home/1061/any/any"
+    },
+    "Espionage": {
+        "id": 518,
+        "genre_url": "https://www.smashwords.com/shelves/home/1058/any/any"
+    },
+    "Family violence": {
+        "id": 519,
+        "genre_url": "https://www.smashwords.com/shelves/home/1060/any/any"
+    },
+    "General crimes": {
+        "id": 520,
+        "genre_url": "https://www.smashwords.com/shelves/home/1052/any/any"
+    },
+    "Hoaxes & deceptions": {
+        "id": 521,
+        "genre_url": "https://www.smashwords.com/shelves/home/1569/any/any"
+    },
+    "Identity theft": {
+        "id": 522,
+        "genre_url": "https://www.smashwords.com/shelves/home/1057/any/any"
+    },
+    "Kidnapping, abduction, hostage taking": {
+        "id": 523,
+        "genre_url": "https://www.smashwords.com/shelves/home/1053/any/any"
+    },
+    "Missing persons": {
+        "id": 524,
+        "genre_url": "https://www.smashwords.com/shelves/home/1054/any/any"
+    },
+    "Bride preparation": {
+        "id": 525,
+        "genre_url": "https://www.smashwords.com/shelves/home/103/any/any"
+    },
+    "Groom preparation": {
+        "id": 526,
+        "genre_url": "https://www.smashwords.com/shelves/home/102/any/any"
+    },
+    "Honeymoon planning": {
+        "id": 527,
+        "genre_url": "https://www.smashwords.com/shelves/home/101/any/any"
+    },
+    "Locations": {
+        "id": 528,
+        "genre_url": "https://www.smashwords.com/shelves/home/100/any/any"
+    },
+    "Wedding customs": {
+        "id": 529,
+        "genre_url": "https://www.smashwords.com/shelves/home/99/any/any"
+    },
+    "Wedding planning & checklists": {
+        "id": 530,
+        "genre_url": "https://www.smashwords.com/shelves/home/98/any/any"
+    },
+    "Biography & Autobiography": {
+        "id": 531,
+        "genre_url": "https://www.smashwords.com/shelves/home/5049/any/any"
+    },
+    "Books & Libraries": {
+        "id": 532,
+        "genre_url": "https://www.smashwords.com/shelves/home/5066/any/any"
+    },
+    "Boys & Men": {
+        "id": 533,
+        "genre_url": "https://www.smashwords.com/shelves/home/5067/any/any"
+    },
+    "Technology": {
+        "id": 534,
+        "genre_url": "https://www.smashwords.com/shelves/home/901/any/any"
+    },
+    "Caribbean & Latin American": {
+        "id": 535,
+        "genre_url": "https://www.smashwords.com/shelves/home/2076/any/any"
+    },
+    "European / English, Irish, Scottish, Welsh": {
+        "id": 536,
+        "genre_url": "https://www.smashwords.com/shelves/home/2065/any/any"
+    },
+    "European / French": {
+        "id": 537,
+        "genre_url": "https://www.smashwords.com/shelves/home/2066/any/any"
+    },
+    "European / German": {
+        "id": 538,
+        "genre_url": "https://www.smashwords.com/shelves/home/2067/any/any"
+    },
+    "European / Italian": {
+        "id": 539,
+        "genre_url": "https://www.smashwords.com/shelves/home/2068/any/any"
+    },
+    "African Poetry": {
+        "id": 540,
+        "genre_url": "https://www.smashwords.com/shelves/home/831/any/any"
+    },
+    "American poetry": {
+        "id": 541,
+        "genre_url": "https://www.smashwords.com/shelves/home/830/any/any"
+    },
+    "Ancient Poetry": {
+        "id": 542,
+        "genre_url": "https://www.smashwords.com/shelves/home/829/any/any"
+    },
+    "Asian poetry": {
+        "id": 543,
+        "genre_url": "https://www.smashwords.com/shelves/home/826/any/any"
+    },
+    "Canadian Poetry": {
+        "id": 544,
+        "genre_url": "https://www.smashwords.com/shelves/home/824/any/any"
+    },
+    "Caribbean Poetry": {
+        "id": 545,
+        "genre_url": "https://www.smashwords.com/shelves/home/823/any/any"
+    },
+    "Chinese poetry": {
+        "id": 546,
+        "genre_url": "https://www.smashwords.com/shelves/home/822/any/any"
+    },
+    "Contemporary Poetry": {
+        "id": 547,
+        "genre_url": "https://www.smashwords.com/shelves/home/821/any/any"
+    },
+    "Action Adventure": {
+        "id": 548,
+        "genre_url": "https://www.smashwords.com/shelves/home/55/any/any"
+    },
+    "Animation": {
+        "id": 549,
+        "genre_url": "https://www.smashwords.com/shelves/home/54/any/any"
+    },
+    "Comedy": {
+        "id": 550,
+        "genre_url": "https://www.smashwords.com/shelves/home/52/any/any"
+    },
+    "Documentary": {
+        "id": 551,
+        "genre_url": "https://www.smashwords.com/shelves/home/50/any/any"
+    },
+    "Film-Noir": {
+        "id": 552,
+        "genre_url": "https://www.smashwords.com/shelves/home/48/any/any"
+    }
+}
