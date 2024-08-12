@@ -17,6 +17,7 @@ const BookDetail = () => {
     const [shelves, setShelves] = useState([]);
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [isBookInShelf, setisBookInShelf] = useState(String);
+    const [genres, setGenres] = useState([]);
 
     const fetchBook = async (id) => {
         setLoading(true);
@@ -28,6 +29,7 @@ const BookDetail = () => {
             const bookDetail = localStorage.getItem("bookDetail")
             if(bookDetail){
                 setBook(JSON.parse(bookDetail))
+                // fetchGenres(bookDetail.description);
             }
             else{
                 
@@ -43,7 +45,6 @@ const BookDetail = () => {
                 if (response.ok) {
                     const data = await response.json();
                     setBook(data);
-                    console.log(book.description)
                 } else {
                     console.log("Book not found")
                     setError("Book not found");
@@ -54,6 +55,22 @@ const BookDetail = () => {
         }
         setLoading(false);
     };
+
+    const fetchGenres = async (description) => {
+        try {
+            console.log("fetch-genres");
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/search/books/fetch-genres?description=` + encodeURIComponent(description));
+                if (response.ok) {
+                            const data = await response.json();
+                            console.log(data)
+                            setGenres(data.genres);  // Assuming the API response has a 'genres' field
+                        } else {
+                            setError("Error fetching genres");
+                        }
+            } catch (error) {
+                setError("Error fetching genres");
+            }
+        };
 
     const fetchShelves = async () => {
         try {

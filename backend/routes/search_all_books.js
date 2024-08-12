@@ -2,12 +2,21 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 let fetch;
-
 async function loadFetch() {
     if (!fetch) {
         fetch = (await import('node-fetch')).default;
     }
 }
+
+const { HfInference } = require('@huggingface/inference');
+let hf;
+// Initialize the Hugging Face Inference client after fetch is loaded
+async function initHfInference() {
+    await loadFetch();
+    hf = new HfInference('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', { fetch }); // Option 2: Pass fetch directly to HfInference
+}
+initHfInference(); 
+
 const Book = require('../models/book.model');  // Adjust the path as necessary
 
 // Helper function to fetch data from Google Books API
@@ -30,7 +39,7 @@ async function fetchNYTBooks(url) {
 function mapToBookSchema(item) {
     const volumeInfo = item.volumeInfo;
     const imageLinks = volumeInfo.imageLinks || {};
-    console.log(item.volumeInfo.categories);
+    // console.log(item.volumeInfo.categories);
     return {
         googleId: item.id,  // Store Google's ID for potential future reference
         title: volumeInfo.title,
@@ -54,6 +63,22 @@ const fetchRelatedBooks = async (volumeId) => {
     const data = await response.json();
     return data;
 };
+
+router.get('/fetch-genres', async (req, res) => {
+    const description = req.query.description;
+
+    try {
+        const response = await hf.textClassification({
+            model: 'nasrin2023ripa/multilabel-book-genre-classifier',
+            inputs: description,
+        });
+
+        res.json(response);
+    } catch (error) {
+        console.error('Error fetching genres:', error);
+        res.status(500).json({ error: 'Error fetching genres' });
+    }
+});
 
 // Endpoint to search books by title
 router.get('/title', async (req, res) => {
