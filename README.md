@@ -4,6 +4,8 @@ Welcome to **MyBookShelf**, your ultimate book management and reading companion!
 
 <img width="1680" alt="image" src="https://github.com/user-attachments/assets/5d3cb778-a689-40ee-ad5e-30b6321376de">
 
+<img width="1680" alt="image" src="https://github.com/user-attachments/assets/4e955660-153a-44b9-96f1-b4ab1e078c4d">
+
 
 ## Key Features
 
