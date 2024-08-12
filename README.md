@@ -22,26 +22,6 @@ Welcome to **MyBookShelf**, your ultimate book management and reading companion!
 - **Book Clubs:** Join or create book clubs to discuss your favorite reads.
 - **Reading Challenges:** Participate in reading challenges and set goals to expand your literary horizons.
 
-## Getting Started
-
-1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/krishnaraketla/mybookshelf.git
-    ```
-2. **Navigate to the Project Directory:**
-    ```bash
-    cd mybookshelf
-    ```
-3. **Install Dependencies:**
-    ```bash
-    npm install
-    ```
-4. **Run the Application:**
-    ```bash
-    cd frontend
-    npm start
-    ```
-
 ## Technologies Used
 
 - **Frontend:** React, Redux, CSS Modules
