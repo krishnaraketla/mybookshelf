@@ -11,7 +11,8 @@ const BookSlot = ({ book }) => {
         <Tooltip 
             {...props} 
             classes={{ popper: className }} 
-            enterDelay={2000} // Delay before the tooltip appears
+            enterDelay={2000}
+            arrow
         />
     ))(({ theme }) => ({
         [`& .${tooltipClasses.tooltip}`]: {
@@ -20,8 +21,7 @@ const BookSlot = ({ book }) => {
             width: '220px', // Fixed width
             fontSize: theme.typography.pxToRem(12),
             border: '1px solid #dadde9',
-            overflow: 'hidden', // Ensure content doesn't overflow
-        },
+        }
     }));
 
     const navigate = useNavigate();
