@@ -19,11 +19,7 @@ const BookSlotTooltip = ({ children, title, description, rating }) => {
             width: '220px', // Fixed width
             fontSize: theme.typography.pxToRem(12),
             border: '1px solid #dadde9',
-            overflow: 'hidden',
-        },
-        [`& .${tooltipClasses.arrow}`]: {
-            color: '#bbb', // Match arrow color with the tooltip background
-        },
+        }
     }));
 
     const handleSeeMore = (e) => {
@@ -32,7 +28,7 @@ const BookSlotTooltip = ({ children, title, description, rating }) => {
     };
 
     const renderDescription = () => {
-        const maxLength = 100; // Maximum characters before showing "See More"
+        const maxLength = 500; // Maximum characters before showing "See More"
         if (description && description.length > maxLength && !showFullDescription) {
             return (
                 <>
