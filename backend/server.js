@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const shelvesRoutes = require("./routes/shelves");
 const allBooksRoutes = require("./routes/search_all_books");
 const authRoutes = require("./routes/authRoutes");
+const interactions = require('./routes/interaction'); 
 const User = require("./models/user.model")
 const Shelf = require('./models/shelf.model');
 const path = require('path');
@@ -32,6 +33,7 @@ app.use(express.json());
 app.use('/shelves', shelvesRoutes);
 app.use('/search/books', allBooksRoutes);
 app.use('/auth', authRoutes);
+app.use('/interactions', interactions);
 
 // Function to create a default user and shelves
 const createDefaultUser = async () => {

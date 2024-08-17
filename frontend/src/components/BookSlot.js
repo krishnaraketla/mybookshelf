@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/BookSlot.css'; 
 import { useNavigate } from 'react-router-dom';
-import BookSlotTooltip from './BookSlitTooltip';
+import BookSlotTooltip from './BookSlotTooltip';
 
 const BookSlot = ({ book }) => {
     const navigate = useNavigate();
@@ -21,13 +21,13 @@ const BookSlot = ({ book }) => {
             rating={book.averageRating}
         >
             <div className='book-slot'>
-                {book && book.googleId ? (
+                {book && book._id ? (
                     <img 
                         src={book.image} 
                         alt="Book Cover" 
                         onClick={() => { 
                             localStorage.setItem("bookDetail", JSON.stringify(book));
-                            navigate(`/books/${book.googleId}`);
+                            navigate(`/books/${book._id}`);
                         }} 
                         onError={(e) => { console.log(e); }}
                     />

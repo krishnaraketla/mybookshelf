@@ -92,18 +92,6 @@ router.get('/:id/books', auth, async (req, res) => {
     }
 });
 
-// // GET a single book in a shelf
-// router.get('/:id/books/:bookId', auth, async (req, res) => {
-//     try {
-//         const book = await Book.findOne({ googleId: req.params.bookId });
-//         if (!book) {
-//             return res.status(404).json({ message: "Book not found" });
-//         }
-//         res.json(book);
-//     } catch (error) {
-//         res.status(500).json({ message: "Error fetching book", error: error.message });
-//     }
-// });
 
 // Add a book to a shelf
 router.post('/:id/books', auth, async (req, res) => {
@@ -117,11 +105,10 @@ router.post('/:id/books', auth, async (req, res) => {
     try {
         // Create a new book
         const existingBook = await Book.findOne({ $or: [{ googleId }, { ISBN }] });
-        
         if(!existingBook){
 
             const newBook = new Book({
-                googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
+                _id: ISBN, googleId, title, description, publisher, yearPublished, authors, image, category, ISBN, language, pages, format, averageRating
             });
 
             newBook.save();
@@ -133,7 +120,7 @@ router.post('/:id/books', auth, async (req, res) => {
             }
 
             // Add the new book to the shelf
-            shelf.books.push(newBook);
+            shelf.books.push(newBook._id);
             await shelf.save();
 
             // Return the saved book in the response
@@ -172,7 +159,7 @@ router.put('/:name/books/:bookId', auth, async (req, res) => {
     }
 });
 
-// Delete bok from a shelf
+// Delete book from a shelf
 router.delete('/:id/books/:bookId', auth, async (req, res) => {
     try {
         // Find the shelf by ID and owner
@@ -182,7 +169,7 @@ router.delete('/:id/books/:bookId', auth, async (req, res) => {
         }
 
         // Remove the book by its ID from the shelf's books array
-        const bookIndex = shelf.books.findIndex(book => book._id.toString() === req.params.bookId);
+        const bookIndex = shelf.books.findIndex(book => book === req.params.bookId);
         if (bookIndex > -1) {
             shelf.books.splice(bookIndex, 1);
             await shelf.save();

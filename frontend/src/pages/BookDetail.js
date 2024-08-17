@@ -109,7 +109,7 @@ const BookDetail = () => {
 
                 if (response.ok) {
                     const books = await response.json();
-                    if (books.some(b => b.googleId === book.googleId)) {
+                    if (books.some(b => b._id === book._id)) {
                         setisBookInShelf(shelf.id);
                         return;
                     }
@@ -146,6 +146,31 @@ const BookDetail = () => {
             }
     }
 
+    const updateInteraction = async (hasRead) => {
+        const token = localStorage.getItem('token');
+        try {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/interactions/${book._id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                cache: 'no-store',
+                body: JSON.stringify({
+                    hasRead: hasRead,
+                    dateFinished: hasRead ? new Date().toISOString() : null  // Set or clear dateFinished
+                }),
+            });
+    
+            if (!response.ok) {
+                console.log("Error updating interaction");
+            }
+        } catch (error) {
+            console.log(error);
+            setError("Error updating interaction");
+        }
+    };
+
     const addBookToShelf = async (shelf) => {
         const token = localStorage.getItem('token');
         const bookDetail = localStorage.getItem("bookDetail")
@@ -161,7 +186,13 @@ const BookDetail = () => {
             });
 
             if (response.ok) {
-                setisBookInShelf(shelf.id)
+                setisBookInShelf(shelf._id)
+                if (shelf.name.toLowerCase() === 'finished') {
+                    await updateInteraction(true);
+                }
+                if (shelf.name.toLowerCase() === 'reading') {
+                    // await updateInteraction();
+                }
             } else {
                 console.log("Error adding book to shelf")
             }
@@ -191,7 +222,7 @@ const BookDetail = () => {
 
                 if (response.ok) {
                     const books = await response.json();
-                    const bookInShelf = books.find(b => b.googleId === book.googleId);
+                    const bookInShelf = books.find(b => b._id === book._id);
                     if (bookInShelf) {
                         foundBook = bookInShelf; // Capture the found book
                         foundShelf = shelf;
@@ -222,6 +253,9 @@ const BookDetail = () => {
 
             if (response.ok) {
                 setisBookInShelf("")
+                if (shelfSelected.name.toLowerCase() === 'finished') {
+                    await updateInteraction(false);
+                }
             } else {
                 console.log("Error removing book to shelf")
             }

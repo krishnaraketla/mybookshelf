@@ -64,7 +64,7 @@ const SearchBar = ({ onSearch }) => {
         // setSearchTerm(result.title);
         console.log("Selected: ",result.title)
         setShowDropdown(false);
-        navigate(`/books/${result.googleId}`);
+        navigate(`/books/${result._id}`);
         localStorage.setItem("bookDetail", JSON.stringify(result))
     };
 

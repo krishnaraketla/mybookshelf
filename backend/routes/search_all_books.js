@@ -41,6 +41,7 @@ function mapToBookSchema(item) {
     const imageLinks = volumeInfo.imageLinks || {};
     // console.log(item.volumeInfo.categories);
     return {
+        _id: volumeInfo.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || '',
         googleId: item.id,  // Store Google's ID for potential future reference
         title: volumeInfo.title,
         authors: volumeInfo.authors || [],
@@ -95,7 +96,7 @@ router.get('/title', async (req, res) => {
             return mapToBookSchema(item);
         });
 
-        // Save the data to a file
+        //Save the data to a file
         fs.writeFile('books.json', JSON.stringify(books, null, 2), (err) => {
             if (err) {
                 console.error('Error writing to file', err);

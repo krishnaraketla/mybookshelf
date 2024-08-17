@@ -4,7 +4,8 @@ const bookSchema = require('./book.model');
 const shelfSchema = new mongoose.Schema({
     name: { type: String, required: true, index: true },  // Names like 'Reading', 'TBR', 'Finished'
     owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book' }]
+    books: [{ type: String, ref: 'Book' }],
+    isDeletable: { type: Boolean, default: false },
 });
 
 // Virtual field for dynamic link
