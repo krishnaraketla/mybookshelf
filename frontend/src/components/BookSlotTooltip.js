@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
+import Rating from '@mui/material/Rating';
 
 const BookSlotTooltip = ({ children, title, description, rating }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
@@ -14,11 +15,14 @@ const BookSlotTooltip = ({ children, title, description, rating }) => {
         />
     ))(({ theme }) => ({
         [`& .${tooltipClasses.tooltip}`]: {
-            backgroundColor: '#f5f5f9',
-            color: 'rgba(0, 0, 0, 0.87)',
+            backgroundColor: '#e6dcc8',
+            color: '#6d6460',
             width: '220px', // Fixed width
             fontSize: theme.typography.pxToRem(12),
-            border: '1px solid #dadde9',
+            border: '1px solid black',
+            borderRadius: '10px', // Adding rounded corners for a softer look
+            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+            padding: '10px', // Adding padding for better content spacing
         }
     }));
 
@@ -77,7 +81,10 @@ const BookSlotTooltip = ({ children, title, description, rating }) => {
                 <React.Fragment>
                     <strong>{title || "No Title Available"}</strong>
                     <p>{renderDescription()}</p>
-                    <em>{`Rating: ${rating || "N/A"}`}</em>
+                    <div className="book-detail-rating">
+                        <span style={{ marginLeft: '5px' }}>Average rating: </span>
+                        <Rating name="half-rating-read" defaultValue={rating} precision={0.5} size= "small" readOnly />
+                    </div>
                 </React.Fragment>
             }
             placement="right"
