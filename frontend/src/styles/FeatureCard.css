@@ -30,27 +30,27 @@
 }
 
 .manage-shelves {
-    background-image: url("../../public/genres_illust-min.png");
+    background-image: url("../../public/cat.webp");
 }
 
 .personalized-recommendations {
-    background-image: url("../../public/genres_illust-min.png");
+    background-image: url("../../public/cat.webp");
 }
 
 .explore-bestsellers {
-    background-image: url("../../public/genres_illust-min.png");
+    background-image: url("../../public/cat.webp");
 }
 
 .rate-review-books {
-    background-image: url("../../public/genres_illust-min.png");
+    background-image: url("../../public/cat.webp");
 }
 
-.discover-new-authors {
-    background-image: url("../../public/genres_illust-min.png");
+.reading-insights {
+    background-image: url("../../public/cat.webp");
 }
 
 .share-shelves {
-    background-image: url("../../public/genres_illust-min.png");
+    background-image: url("../../public/cat.webp");
 }
 
 .feature-description-box {

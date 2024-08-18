@@ -33,9 +33,9 @@ const AboutSection = () => {
                         description="Share your opinions by rating and reviewing the books you've read."
                     />
                     <FeatureCard 
-                        illustrationClass="discover-new-authors"
-                        title="Discover New Authors"
-                        description="Find hidden gems and discover new authors that match your taste."
+                        illustrationClass="reading-insights"
+                        title="Gain Reading Insights"
+                        description="Analyze your reading patterns and habits to better understand your preferences and discover more books you'll love."
                     />
                     <FeatureCard 
                         illustrationClass="share-shelves"
