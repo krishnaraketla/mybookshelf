@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import '../styles/Login.css';
-import About from '../components/AboutSection';
+import AboutSection from '../components/AboutSection';
 
 const Login = ({setIsAuthenticated}) => {
     return (
@@ -13,6 +13,7 @@ const Login = ({setIsAuthenticated}) => {
                 </div>
                 <LoginForm setIsAuthenticated={setIsAuthenticated} />
             </div>
+            <AboutSection />
         </div>
     );
 }

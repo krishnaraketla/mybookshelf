@@ -1,10 +1,12 @@
 .about-section {
     text-align: center;
+    background-color: #f7f3ea;
+    padding-bottom: 40px;;
 }
 
 .features-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -18,6 +20,25 @@
 }
 
 h2 {
+    margin-bottom: 40px;
+    color: var(--title-text-color);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #e6dcc8, #f7f3ea);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.hero-section h1 {
+    font-size: 48px;
     margin-bottom: 20px;
-    color: #333;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 0;
 }
