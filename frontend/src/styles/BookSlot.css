@@ -1,7 +1,6 @@
 .book-slot {
     height: 132px;
-    width: 88px;
-    aspect-ratio: 1.5;
+    width: 88px; 
     transition: transform 0.1s ease;
     border-radius: 0px 7px 8px 0px;
 }
@@ -14,7 +13,7 @@
 .book-slot img {
     flex: 1;
     display: block;
-    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
     border-radius: 0px 7px 8px 0px;
     gap: 0px;
     transition: opacity 0.3s ease;  /* Smooth transition for the opacity */
@@ -28,4 +27,5 @@
     opacity: 1;
     cursor: grabbing;
     transition: transform 0.2s;
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
 }
