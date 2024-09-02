@@ -19,9 +19,8 @@ const BookSlotTooltip = ({ children, title, description, rating }) => {
             color: '#6d6460',
             width: '220px', // Fixed width
             fontSize: theme.typography.pxToRem(12),
-            border: '1px solid black',
             borderRadius: '10px', // Adding rounded corners for a softer look
-            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', // Subtle shadow for depth
             padding: '10px', // Adding padding for better content spacing
         }
     }));

@@ -3,9 +3,6 @@ body, html, #root {
     font-family: Malayalam MN;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    min-height: 100vh;
 }
 
 .pages {
@@ -19,8 +16,11 @@ body, html, #root {
     flex-direction: column;
     justify-content:center;
     flex: 1;
-    box-sizing: border-box;
-    height: 100%;
-    padding-top: calc(20px + 105px);
-    flex-wrap: wrap;
+    padding-top: 6rem;
+}
+
+@media (max-width: 40em) {
+    .home{
+        padding-top: 1.5rem;
+    }
 }

@@ -1,13 +1,9 @@
 .book-slot {
-    flex: none;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
     height: 132px;
     width: 88px;
+    aspect-ratio: 1.5;
     transition: transform 0.1s ease;
     border-radius: 0px 7px 8px 0px;
-    flex-shrink: 1;
 }
 
 /* Correct the hover selector to target the whole slot */
@@ -21,7 +17,6 @@
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
     border-radius: 0px 7px 8px 0px;
     gap: 0px;
-    /* opacity: 0px;  Note: This sets images to be invisible unless hovered */
     transition: opacity 0.3s ease;  /* Smooth transition for the opacity */
     height: inherit;
     width: inherit;
@@ -34,15 +29,3 @@
     cursor: grabbing;
     transition: transform 0.2s;
 }
-
-@keyframes wobble {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
-    100% { transform: rotate(0deg); }
-  }
-
-  .book-slot.wobble {
-    animation: wobble 0.5s infinite;
-  }

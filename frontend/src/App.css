@@ -2,6 +2,5 @@
     display: flex;
     margin: 0;
     padding: 0;
-    flex: 1;
-    flex-wrap: 1;
+    justify-content: space-evenly;
 }

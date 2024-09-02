@@ -1,23 +1,24 @@
 .mca {
-    box-sizing: border-box;
     display: flex;
-    flex: 1;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
-    gap: 150px;
-    box-sizing: border-box;
-    width: 100vw;
+    gap: 5rem;
+    height: 80dvh;
     min-width: 0;
-    height: 100vh - calc(105px);
-    padding: 50px 30px;
-    position: absolute;
-    top: calc(105px);
-    bottom: 10px;
+    min-height: 0;
+    padding: 1.5rem 0.5rem;
 }
 
 .user-info-section {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* padding: 100px; */
-    height: 100vh;
+    /* height: 100vh; */
   }
+
+  @media (max-width: 40em) {
+    .mca{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+}

@@ -1,12 +1,8 @@
 .book-shelf {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 30%;
-    gap: 30px;
-    height: calc(80% + 100px);
-    /* min-width: 364px;  */
+    width: calc(100dvw/4);
+    gap: 1rem;;
     min-width: 0;
     min-height: 0;
 }
@@ -42,4 +38,10 @@
 /* Optional: Add hover effect to change color or opacity */
 .navigation-arrows svg:hover {
     fill: var(--nav-arrows-hover); /* Slightly change color on hover */
+}
+
+@media (max-width: 40em) {
+    .book-shelf{
+        width:max-content;
+    }
 }
