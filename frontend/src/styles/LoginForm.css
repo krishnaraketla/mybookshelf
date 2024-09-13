@@ -1,16 +1,14 @@
 .card {
-    perspective: 1000px;
-    width: 568px;
-    height: 500px; /* Adjust as needed */
-    position: absolute;
-    top: 30%;
-    right: 5%;
+    perspective: 62.5rem;
+    width: 100%;
+    max-width: 35.5rem;
+    /* margin: 2rem auto; */
+    box-sizing: border-box;
 }
 
 .card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -35,73 +33,69 @@
 }
 
 .form-card {
-    width: 100%;
-    height: 100%;
-    border-radius: 39px;
+    width: 90%;
+    border-radius: 2.4375rem; /* Converted from 39px */
     background: var(--background-color);
-    box-shadow: -10px 10px 30px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -0.625rem 0.625rem 1.875rem 0.625rem rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    /* padding: 1.25rem; */
     box-sizing: border-box;
 }
 
 .form-card h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: var(--title-text-color);
     font-family: Malayalam MN;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 400;
-    line-height: 51.28px;
+    line-height: 1.2;
     text-align: center;
 }
 
 .form-group {
-    width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     color: var(--title-text-color);
     font-family: Malayalam MN;
 }
 
 .form-group input {
-    width: 100%;
-    height: 61px;
-    padding: 0 20px;
-    border-radius: 40px;
+    width: 20rem;
+    height: 3.8125rem;
+    padding: 0 1.25rem;
+    border-radius: 2.5rem;
     background: rgba(230, 221, 204, 1);
-    border: 1px solid #ccc;
+    border: 0.0625rem solid #ccc;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1rem;
     outline: none;
 }
 
 .form-group input:focus {
     border-color: #9bc2d5;
-    box-shadow: 0 0 5px rgba(155, 194, 213, 0.5);
+    box-shadow: 0 0 0.3125rem rgba(155, 194, 213, 0.5);
 }
 
 .form-group button {
-    width: 432px;
-    height: 61px;
-    top: 805px;
-    left: 1068px;
-    gap: 0px;
-    border-radius: 40px 40px 40px 40px;
-    border: 0px;
+    width: 100%;
+    height: 3.8125rem;
+    border-radius: 2.5rem;
+    border: 0;
     background: rgba(134, 178, 185, 1);
     cursor: pointer;
     color: rgba(255, 250, 250, 1);
+    font-size: 1rem;
 }
 
 .sign-up-link {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     color: #888;
     text-align: center;
 }
@@ -109,4 +103,31 @@
 .sign-up-link a {
     color: #888;
     text-decoration: underline;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 40em) {
+    .form-card h2 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .form-group input,
+    .form-group button {
+        height: 3rem;
+        font-size: 0.875rem;
+        width: 15em;
+    }
+
+    .form-group label {
+        font-size: 0.875rem;
+    }
+
+    .card {
+        /* margin: 1rem; */
+    }
+
+    .form-card {
+        padding: 1rem;
+    }
 }

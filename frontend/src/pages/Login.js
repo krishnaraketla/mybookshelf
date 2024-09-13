@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import '../styles/Login.css';
-import AboutSection from '../components/AboutSection';
 
-const Login = ({setIsAuthenticated}) => {
+const Login = ({ setIsAuthenticated }) => {
     return (
         <div className='LandingPage'>
+            <div className='company-logo'>
+                <Link to="/login">
+                    <img src="/logo.png" alt='logo' />
+                </Link>
+            </div>
             <div className='login-page-container'>
-                <div className='company-logo'>
-                    <Link to="/login"><img src="/logo.png" alt='logo'></img></Link>
-                </div>
                 <LoginForm setIsAuthenticated={setIsAuthenticated} />
             </div>
-            <AboutSection />
+            {/* <AboutSection /> */}
         </div>
     );
 }

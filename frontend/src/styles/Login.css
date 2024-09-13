@@ -1,16 +1,39 @@
-.login-page-container {
-    background: var(--background-color);
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+.LandingPage {
+    position: relative;
+    min-height: 100vh;
     background-image: url("../../public/genres_illust-min.png");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
-    align-content: center;
-    justify-content: left;
+    box-sizing: border-box;
 }
 
-.company-logo{
-    /* border: 1px solid red; */
+.company-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.company-logo img {
+    /* width: 3rem; Adjust size as needed */
+    /* height: auto; */
+}
+
+.login-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* padding-top: 4rem; To prevent overlap with the logo */
+}
+
+@media (max-width: 40em) {
+    .company-logo img {
+        /* width: 15rem; */
+    }
+
+    .login-page-container {
+        padding-top: 3rem;
+    }
 }
