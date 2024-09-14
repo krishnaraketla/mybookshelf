@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items:flex-start;
     justify-content:space-evenly;
+    flex-wrap: wrap;
     gap: 5rem;
     height: 80dvh;
     min-width: 0;
@@ -16,7 +17,7 @@
     /* height: 100vh; */
   }
 
-  @media (max-width: 78rem) {
+  @media (max-width: 40rem) {
     .mca{
         flex-direction: column-reverse;
         height: auto;
