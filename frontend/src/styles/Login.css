@@ -8,16 +8,15 @@
     box-sizing: border-box;
 }
 
-.company-logo {
+/* .company-logo {
     position: absolute;
     top: 1rem;
     left: 1rem;
 }
 
 .company-logo img {
-    /* width: 3rem; Adjust size as needed */
-    /* height: auto; */
-}
+
+} */
 
 .login-page-container {
     display: flex;

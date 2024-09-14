@@ -150,9 +150,9 @@ const BookShelf = ({ shelfName }) => {
     return (
         <div className='book-shelf'>
             <h1>{shelfName}</h1>
-            <BookRow books={row1} />
-            <BookRow books={row2} />
-            <BookRow books={row3} />
+            { (row1.length > 0) && <BookRow books={row1} /> }
+            { (row2.length > 0) && <BookRow books={row2} /> }
+            { (row3.length > 0) && <BookRow books={row3} /> }
             <div className="navigation-arrows">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(237, 238, 213, 0.5)" className="bi bi-chevron-left" viewBox="0 0 16 16" onClick={() => {setCurrentPage(currentPage - 1)}}>
                     <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>

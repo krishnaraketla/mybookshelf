@@ -26,13 +26,13 @@
 
 .bi {
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 .navigation-arrows svg {
     fill: var(--nav-arrows);
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 /* Optional: Add hover effect to change color or opacity */
@@ -40,7 +40,7 @@
     fill: var(--nav-arrows-hover); /* Slightly change color on hover */
 }
 
-@media (max-width: 40em) {
+@media (max-width: 78em) {
     .book-shelf{
         width:max-content;
     }

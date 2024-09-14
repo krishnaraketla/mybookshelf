@@ -1,7 +1,7 @@
 .mca {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:flex-start;
     justify-content:space-evenly;
     gap: 5rem;
     height: 80dvh;
@@ -16,9 +16,10 @@
     /* height: 100vh; */
   }
 
-  @media (max-width: 40em) {
+  @media (max-width: 78rem) {
     .mca{
         flex-direction: column-reverse;
         height: auto;
+        align-items:center;
     }
 }
