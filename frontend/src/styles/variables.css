@@ -1,9 +1,9 @@
 :root {
     --background-color: rgba(247, 243, 234, 1);
-    --title-text-color: rgba(161, 140, 130, 1);
-    --title-text-hover: rgb(54, 53, 53);
-    --body-text-color: rgba(109, 100, 96, 1);
-    --caption-text-color: rgba(160, 150, 145, 1);
+    --title-text-color: rgba(54, 53, 53, 1);
+    --title-text-hover: rgba(34, 34, 34, 1);
+    --body-text-color: rgba(85, 85, 85, 1);
+    --caption-text-color: rgba(119, 119, 119, 1);
     --background-hover-color: rgba(230, 220, 200, 1);
     --border: 1px solid rgba(200, 190, 180, 1);
     --shelf-color: rgba(226, 214, 195, 0.6);

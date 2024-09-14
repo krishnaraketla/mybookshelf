@@ -3,16 +3,20 @@
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
-    height: 100%;
-    padding-top: calc(2% + 1% + 105px);
+    padding: 1.5rem 0.5rem;
 }
 
 .book-detail-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     gap: 0px;
     margin: 0 auto;
-    width: 90%;
+    margin-top: 1.5rem;
+    /* width: 90%; */
 }
 
 .book-detail-image {
@@ -24,19 +28,16 @@
 
 .book-detail-image img {
     object-fit: cover;
-    border-radius: 10px;
-    max-width: 381px;
-    max-height: 578px;
+    border-radius: 1rem;
+    max-width: 20rem;
     gap: 0px;
     border-radius: 0px 40px 40px 0px;
     box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .book-row-base-full{
-    width: 546px;
-    height: 29px;
-    top: 488px;
-    left: 111px;
+    width: 24rem;
+    height: 2rem;
     gap: 0px;
     border-radius: 7px;
     background: var(--shelf-color);
@@ -50,27 +51,23 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 15%;
-    gap: 20px;
+    gap: 1.5rem;
     overflow: auto;
 }
 
 .book-title {
-    font-family: Malayalam MN;
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 400;
-    line-height: 91.16px;
+    line-height: 4rem;
     text-align: left;
     color: var(--title-text-color);
-    width: fit-content;
-    gap: 20px;
 }
 
 .book-author {
     color: var(--body-text-color);
-    font-family: Malayalam MN;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 51.28px;
+    line-height: 0.5rem;
     text-align: left;
 
     width: fit-content;
@@ -78,10 +75,9 @@
 
 .book-pages-publisher{
     color: var(--caption-text-color);
-    font-family: Malayalam MN;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 10px;
+    line-height: 0.3rem;
     text-align: left;
 
 }
@@ -96,15 +92,14 @@
 }
 
 .book-description {
-    max-width: 800px;
+    /* max-width: 800px; */
     height: fit-content;
     font-family: Malayalam MN;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 28.49px;
+    line-height: 2rem;
     text-align: left;
     justify-content: center;
-    text-justify:kashida;
     align-items: center;
     color: var(--body-text-color);
 }
@@ -174,4 +169,26 @@
 
 .shelf-item.bookInShelf {
     background-color: var(--background-hover-color);
+}
+
+@media (max-width: 40rem) {
+
+    .book-detail-image img {
+        max-width: 10rem;
+    }
+    .book-row-base-full{
+        width: 12rem;
+        height: 2rem;
+    }
+    .book-detail-container {
+        display: flex;
+        grid-template-rows: 1fr 1fr;
+    }
+    .book-title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .book-author {
+        font-size: 1rem;
+    }
 }

@@ -7,14 +7,16 @@ body, html, #root {
 
 .pages {
     margin: 0;
-    padding: 0;
     flex: 1;
+    height: 100vh;
+    align-content: center;
+    padding-top: 0.5rem;
 }
 
 .home {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    /* justify-content:center; */
     flex: 1;
     padding-top: 6rem;
 }
@@ -22,5 +24,11 @@ body, html, #root {
 @media (max-width: 40em) {
     .home{
         padding-top: 1.5rem;
+    }
+}
+
+@media (min-width: 40em) {
+    .pages{
+        padding-top: 2rem;
     }
 }
