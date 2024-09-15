@@ -1,4 +1,5 @@
 .LandingPage {
+    displaY: block;
     position: relative;
     min-height: 100vh;
     background-image: url("../../public/genres_illust-min.png");
@@ -6,6 +7,9 @@
     background-position: left;
     background-repeat: no-repeat;
     box-sizing: border-box;
+
+    align-items: center;
+    justify-content: center;
 }
 
 /* .company-logo {

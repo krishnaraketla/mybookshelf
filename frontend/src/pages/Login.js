@@ -6,11 +6,6 @@ import '../styles/Login.css';
 const Login = ({ setIsAuthenticated }) => {
     return (
         <div className='LandingPage'>
-            <div className='company-logo'>
-                <Link to="/login">
-                    <img src="/logo.png" alt='logo' />
-                </Link>
-            </div>
             <div className='login-page-container'>
                 <LoginForm setIsAuthenticated={setIsAuthenticated} />
             </div>
@@ -20,3 +15,11 @@ const Login = ({ setIsAuthenticated }) => {
 }
 
 export default Login;
+
+/*
+<div className='company-logo'>
+                <Link to="/login">
+                    <img src="/logo.png" alt='logo' />
+                </Link>
+            </div>
+*/
