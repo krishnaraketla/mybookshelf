@@ -8,7 +8,7 @@
 
 .book-detail-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
@@ -16,6 +16,7 @@
     gap: 0px;
     margin: 0 auto;
     margin-top: 1.5rem;
+    margin-right: 5rem;
     /* width: 90%; */
 }
 
@@ -92,14 +93,12 @@
 }
 
 .book-description {
-    /* max-width: 800px; */
     height: fit-content;
     font-family: Malayalam MN;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
-    text-align: left;
-    justify-content: center;
+    text-align:justify;
     align-items: center;
     color: var(--body-text-color);
 }
@@ -183,6 +182,7 @@
     .book-detail-container {
         display: flex;
         grid-template-rows: 1fr 1fr;
+        margin-right: 1rem;
     }
     .book-title {
         font-size: 2rem;
