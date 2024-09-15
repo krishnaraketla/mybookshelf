@@ -1,7 +1,7 @@
 .LandingPage {
     displaY: block;
-    position: relative;
-    min-height: 100vh;
+    /* position: relative; */
+    min-height: 100dvh;
     background-image: url("../../public/genres_illust-min.png");
     background-size: cover;
     background-position: left;
@@ -27,7 +27,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     /* padding-top: 4rem; To prevent overlap with the logo */
 }
 
