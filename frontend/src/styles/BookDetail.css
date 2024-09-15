@@ -95,7 +95,7 @@
 
 .book-description {
     height: fit-content;
-    font-family: Malayalam MN;
+    /* font-family: Malayalam MN; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
@@ -151,7 +151,7 @@
 .shelf-item p{
     align-self: center;
     flex: 1;
-    font-family: Malayalam MN;
+    /* font-family: Malayalam MN; */
     font-size: 20px;
     font-weight: 400;
     line-height: 28.49px;
