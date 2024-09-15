@@ -1,9 +1,9 @@
 /* BookRating.css */
 .book-rating {
-  padding: 16px;
-  border-radius: 8px;
-  max-width: 500px;
-  margin: 16px auto; /* Added margin for spacing */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 5rem;
+  margin: 1rem auto; /* Added margin for spacing */
 }
 
 .book-rating.expanded {
@@ -15,31 +15,33 @@
 }
 
 .section-title {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .rating-container {
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
+  padding: 1rem;
 }
 
 .rating-field {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .rating-field legend {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .done-button {
   display: flex;
   justify-content: flex-end;
+  align-self: center;
 }
 
 .done-button button {
-  padding: 8px 16px;
-  font-size: 16px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -49,9 +51,9 @@
 }
 
 .collapsed-view legend {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .collapsed-view .MuiRating-root {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }

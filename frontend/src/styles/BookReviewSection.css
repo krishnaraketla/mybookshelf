@@ -4,10 +4,14 @@
     display: flex;
     flex-direction: column;
     margin-inline: 5rem;
+    gap:0;
 }
-
+.reviews-and-ratings-title{
+    line-height: 0;
+}
 .rating-title{
     text-align: center;
+    line-height: 0;
 }
 
 @media (max-width: 40rem) {
