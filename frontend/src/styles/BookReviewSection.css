@@ -1,6 +1,17 @@
 .book-review-section{
-    min-height: 100%;
-    width: 100%;
     flex: 1;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 5rem;
+}
+
+.rating-title{
+    text-align: center;
+}
+
+@media (max-width: 40rem) {
+    .book-review-section{
+        margin-inline: 0.5rem;
+    }
 }

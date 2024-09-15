@@ -16,6 +16,7 @@
 .company-logo {
     /* border: 1px solid red; */
     /* height: 80%; */
+    /* background: var(--background-color); */
     flex: 1;
     display: flex;
     justify-content: flex-start;

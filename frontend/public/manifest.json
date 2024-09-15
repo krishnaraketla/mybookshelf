@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MyBookShelf",
+  "name": "My Book Shelf",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "logo-min.png",
       "type": "image/png",
       "sizes": "192x192"
     }

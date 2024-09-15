@@ -4,6 +4,7 @@
     flex: 1;
     box-sizing: border-box;
     padding: 1.5rem 0.5rem;
+    gap: 3rem;
 }
 
 .book-detail-container {
