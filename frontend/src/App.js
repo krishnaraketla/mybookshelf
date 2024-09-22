@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import BookDetail from './pages/BookDetail';
+import BookWorks from './pages/BookWorks';
 import About from './pages/About';
 import './App.css';
 
@@ -60,7 +61,8 @@ function App() {
               path="/login"
               element={<Login setIsAuthenticated={setIsAuthenticated} />}
             />
-            <Route path="/books/:id" element={<BookDetail />} />
+            <Route path="/books/works/:id" element={<BookDetail />} />
+            <Route path="/books/works/:id/edition/:id" element={<BookDetail />} />
             <Route
               path="/about"
               element={ <About />}

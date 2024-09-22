@@ -1,0 +1,194 @@
+.book-detail-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 1.5rem 0.5rem;
+    gap: 3rem;
+}
+
+.book-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 0px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.book-detail-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+}
+
+.book-detail-image img {
+    object-fit: cover;
+    border-radius: 1rem;
+    max-width: 20rem;
+    gap: 0px;
+    border-radius: 0px 40px 40px 0px;
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.book-row-base-full{
+    width: 24rem;
+    height: 2rem;
+    gap: 0px;
+    border-radius: 7px;
+    background: var(--shelf-color);
+    box-shadow: 0px 4px 6px 0px rgba(255, 250, 250, 0.6) inset, 
+                0px -4px 7px 0px rgba(0, 0, 0, 0.25) inset,
+                -2px 15px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 15%;
+    gap: 1.5rem;
+    overflow: auto;
+    padding: 2rem;
+}
+
+.book-title {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4rem;
+    text-align: left;
+    color: var(--title-text-color);
+}
+
+.book-author {
+    color: var(--body-text-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 0.5rem;
+    text-align: left;
+
+    width: fit-content;
+}
+
+.book-pages-publisher{
+    color: var(--caption-text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.3rem;
+    text-align: left;
+
+}
+
+.book-detail-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: fit-content;
+    color: var(--caption-text-color);
+}
+
+.book-description {
+    height: fit-content;
+    /* font-family: Malayalam MN; */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align:justify;
+    align-items: center;
+    color: var(--body-text-color);
+}
+
+.book-detail-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.book-detail-actions button {
+    background-color: #666;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-detail-actions button:hover {
+    background-color: var(--background-hover-color);
+}
+
+.shelves-icon {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    padding: 10px;
+}
+
+.shelves-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 90%;
+    background-color: var(--background-color);
+    border: var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 150px;
+    font-size: 14px;
+}
+
+.shelf-item {
+    flex: 1;
+    border-bottom: var(--border);
+    overflow: hidden;
+}
+
+.shelf-item p{
+    align-self: center;
+    flex: 1;
+    /* font-family: Malayalam MN; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28.49px;
+    color: var(--body-text-color);
+    
+}
+
+.shelf-item:last-child {
+    border-bottom: none;
+}
+
+.shelf-item:hover {
+    background-color: var(--background-hover-color);
+}
+
+.shelf-item.bookInShelf {
+    background-color: var(--background-hover-color);
+}
+
+@media (max-width: 40rem) {
+
+    .book-detail-image img {
+        max-width: 10rem;
+    }
+    .book-row-base-full{
+        width: 12rem;
+        height: 2rem;
+    }
+    .book-detail-container {
+        display: flex;
+        grid-template-rows: 1fr 1fr;
+        margin-right: 1rem;
+    }
+    .book-title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .book-author {
+        font-size: 1rem;
+    }
+}

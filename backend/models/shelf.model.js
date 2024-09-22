@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bookSchema = require('./book.model');
+const bookSchema = require('./work.model');
 
 const shelfSchema = new mongoose.Schema({
     name: { type: String, required: true, index: true },  // Names like 'Reading', 'TBR', 'Finished'

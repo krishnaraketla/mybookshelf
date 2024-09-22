@@ -12,15 +12,15 @@ const SearchBar = ({ onSearch }) => {
     const navigate = useNavigate();
     const wrapperRef = useRef(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const [placeholderText, setPlaceHolderText] = useState("Search books by title")
-    const [searchParam, setSearchParam] = useState("title")
+    const [placeholderText, setPlaceHolderText] = useState("Search books by title");
+    const [searchParam, setSearchParam] = useState("title");
 
     // Debounce function to limit API calls, wrapped in useCallback to maintain reference
     const debouncedSearch = useCallback(
         debounce(async (query) => {
             if (query) {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/search/books/${searchParam}?query="${encodeURIComponent(query)}"`, { cache: "no-store" });
+                    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/search/books/${searchParam}?query=${encodeURIComponent(query)}`, { cache: "no-store" });
                     if (response.ok) {
                         const data = await response.json();
                         console.log(`Received ${data.length} results`); // For debugging
@@ -28,15 +28,20 @@ const SearchBar = ({ onSearch }) => {
                         setShowDropdown(true);
                     } else {
                         console.error("Error fetching search results:", response.statusText);
+                        setResults([]);
+                        setShowDropdown(false);
                     }
                 } catch (error) {
                     console.error("Error fetching search results:", error);
+                    setResults([]);
+                    setShowDropdown(false);
                 }
             } else {
                 setShowDropdown(false);
+                setResults([]);
             }
-        }, 1000),
-        [] // Empty dependencies array means the function is created only once
+        }, 500), // Reduced debounce delay for better UX
+        [searchParam] // Added searchParam to dependencies
     );
 
     useEffect(() => {
@@ -61,12 +66,11 @@ const SearchBar = ({ onSearch }) => {
     };
 
     const handleSelect = (result) => {
-        // setSearchTerm(result.title);
-        console.log("Selected: ",result.title)
-        console.log(result.image)
+        console.log("Selected: ", result.title);
+        // Handle image if needed
         setShowDropdown(false);
-        navigate(`/books/${result._id}`);
-        localStorage.setItem("bookDetail", JSON.stringify(result))
+        navigate(`/books${result._id}`);
+        localStorage.setItem("bookDetail", JSON.stringify(result));
     };
 
     const handleSubmit = (event) => {
@@ -95,46 +99,76 @@ const SearchBar = ({ onSearch }) => {
         setDropdownVisible(false);
     };
 
+    const handleSeeMore = () => {
+        // Navigate to the Search Results page with query and param as state or URL parameters
+        navigate(`/search`, { state: { query: searchTerm, param: searchParam } });
+        setShowDropdown(false);
+    };
+
+    // Function to get image URL
+    const getImageUrl = (result) => {
+        if (result.image) {
+            return result.image;
+        } else if (result.coverIDs && result.coverIDs.length > 0) {
+            return `https://covers.openlibrary.org/b/id/${result.coverIDs[0]}-M.jpg`;
+        } else {
+            return "https://via.placeholder.com/150";
+        }
+    };
 
     return (
         <div className="search-bar-container" ref={wrapperRef}>
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
             <span className='chevron-icon'>
-            <FontAwesomeIcon icon={faChevronDown} onClick={() => {setDropdownVisible(!dropdownVisible)}}/>
-            {dropdownVisible && (
-                                <div className="search-options-dropdown" onMouseEnter={handleMouseEnter} 
-                                onMouseLeave={handleMouseLeave}>
-                                    <div className='search-options' onClick={() => {setPlaceHolderText("Search books by title"); setSearchParam("title");}}>
-                                        <p>title</p>
-                                    </div>
-                                    <div className='search-options' onClick={() => {setPlaceHolderText("Search books by author"); setSearchParam("author");}}>
-                                        <p>author</p>
-                                    </div>
-                                </div>
-                            )}
+                <FontAwesomeIcon icon={faChevronDown} onClick={() => { setDropdownVisible(!dropdownVisible) }} />
+                {dropdownVisible && (
+                    <div className="search-options-dropdown" onMouseEnter={handleMouseEnter} 
+                        onMouseLeave={handleMouseLeave}>
+                        <div 
+                            className='search-options' 
+                            onClick={() => { 
+                                setPlaceHolderText("Search books by title"); 
+                                setSearchParam("title"); 
+                                setDropdownVisible(false);
+                            }}>
+                            <p>Title</p>
+                        </div>
+                        <div 
+                            className='search-options' 
+                            onClick={() => { 
+                                setPlaceHolderText("Search books by author"); 
+                                setSearchParam("author"); 
+                                setDropdownVisible(false);
+                            }}>
+                            <p>Author</p>
+                        </div>
+                    </div>
+                )}
             </span>
             <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"
-                    placeholder = {placeholderText}
+                    placeholder={placeholderText}
                     value={searchTerm}
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                 />
             </form>
-            {showDropdown && (
+            {showDropdown && results.length > 0 && (
                 <ul className="search-results-dropdown">
                     {results.map(result => (
-                        <li key={result.googleId} onClick={() => handleSelect(result)} className="dropdown-item">
-                            <img src={result.image} alt={result.title} className="dropdown-item-image" />
+                        <li key={result._id} onClick={() => handleSelect(result)} className="dropdown-item">
+                            <img src={getImageUrl(result)} alt={result.title} className="dropdown-item-image" />
                             <div className="dropdown-item-info">
                                 <span className="dropdown-item-title">{result.title}</span>
-                                <span className="dropdown-item-author">{result.authors.join(', ')}</span>
+                                <span className="dropdown-item-author">
+                                    {result.authors && result.authors.length > 0 ? result.authors.join(', ') : 'Unknown Author'}
+                                </span>
                             </div>
                         </li>
                     ))}
-                    <li>
+                    <li onClick={handleSeeMore} className="dropdown-view-more">
                         <div className='dropdown-view-more'>
                             <h5>See more.</h5>
                         </div>

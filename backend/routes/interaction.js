@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');  // Assuming you have an authentication middleware
 const Interaction = require('../models/interaction.model');  // Assuming you have an Interaction model
-const Book = require('../models/book.model');  // Assuming you have a Book model
+const Book = require('../models/work.model');  // Assuming you have a Book model
 
 // GET all interactions for a user
 router.get('/', auth, async (req, res) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/BookDetail.css'; 
+import '../styles/BookWorks.css'; 
 import NavBar from '../components/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +9,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import BookReviewSection from '../components/BookReviewSection';
 import Rating from '@mui/material/Rating';
 
-const BookDetail = () => {
+const BookWorks = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
     const [error, setError] = useState(null);
@@ -269,25 +269,8 @@ const BookDetail = () => {
 
     useEffect(() => {
         fetchBook(id);
-        fetchShelves();
     }, [id]);
 
-    useEffect(() => {
-    }, [shelves]);
-
-    useEffect(() => {
-        if (shelves.length > 0 && book) {
-            checkBookInShelves(shelves);
-        }
-    }, [shelves, book]);
-
-    const handleMouseEnter = () => {
-        setDropdownVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-        setDropdownVisible(false);
-    };
 
     if (loading) {
         return(<div><NavBar showRightLinks="true"/> <div className="book-detail-loading">Loading...</div></div>);
@@ -326,41 +309,14 @@ const BookDetail = () => {
                 <div className="book-detail-info">
                     <div className="book-title">
                         {book.title} 
-                        <span 
-                            className='shelves-icon' 
-                            onMouseEnter={handleMouseEnter} 
-                            onMouseLeave={handleMouseLeave}
-                            style={{ position: 'relative' }} /* Ensure relative positioning */
-                        >
-                            <FontAwesomeIcon 
-                                icon={isBookInShelf ? faSolidBookmark : faRegularBookmark} 
-                                style={{ color: isBookInShelf ? 'gray' : 'white' }} 
-                            />
-                            {dropdownVisible && (
-                                <div className="shelves-dropdown">
-                                    {shelves.map(shelf => (
-                                        <div key={shelf._id} className={`shelf-item ${isBookInShelf === shelf._id? 'bookInShelf' : ''}`} onClick={() => toggleShelf(shelf)}><p>{shelf.name}</p></div>
-                                    ))}
-                                </div>
-                            )}
-                        </span> 
                     </div>
                     <div className="book-author">{book.authors.join(', ')}</div>
-                    <div className='book-pages-publisher'>{book.numberOfPages} pages</div>
-                    <div className='book-pages-publisher'>Published in the year {book.publishedYear} by {book.publishers}</div>
-                    <div className='book-pages-publisher'>ISBN: {book.ISBN}</div>
-                    <div className='book-pages-publisher'>Genres: {book.category}</div>
-                    <div className="book-detail-rating">
-                        <Rating name="half-rating-read" defaultValue={book.averageRating} precision={0.5} readOnly />
-                        <span style={{ marginLeft: '5px' }}>{book.averageRating} Average rating</span>
-                    </div>
-                    <div className="book-description" dangerouslySetInnerHTML={{ __html: book.description }} />
+                    <div className='book-pages-publisher'>First published in the year {book.publishedYear}</div>
                 </div>
             </div>
-            <BookReviewSection />
         </div>
 
     );
 };
 
-export default BookDetail;
+export default BookWorks;

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Shelf = require('../models/shelf.model');
-const Book = require('../models/book.model');
+const Book = require('../models/work.model');
 const User = require('../models/user.model');
 const auth = require('../middleware/auth');
 

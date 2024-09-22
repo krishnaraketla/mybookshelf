@@ -2,112 +2,118 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 let fetch;
+
 async function loadFetch() {
     if (!fetch) {
         fetch = (await import('node-fetch')).default;
     }
 }
 
-const { HfInference } = require('@huggingface/inference');
-let hf;
-// Initialize the Hugging Face Inference client after fetch is loaded
-async function initHfInference() {
-    await loadFetch();
-    hf = new HfInference('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', { fetch }); // Option 2: Pass fetch directly to HfInference
-}
-initHfInference(); 
+const Book = require('../models/work.model');  // Adjust the path as necessary
 
-const Book = require('../models/book.model');  // Adjust the path as necessary
-
-// Helper function to fetch data from Google Books API
-async function fetchGoogleBooks(url) {
-    await loadFetch();
-    const response = await fetch(url);
-    return response.json();
-}
-
-async function fetchNYTBooks(url) {
+// Helper function to fetch data from Open Library API
+async function fetchOpenLibraryBooks(url) {
     await loadFetch();
     const response = await fetch(url);
     if (!response.ok) {
-        throw new Error(`Failed to fetch data from NYT API: ${response.statusText}`);
+        throw new Error(`Failed to fetch data from Open Library API: ${response.statusText}`);
     }
     return response.json();
 }
 
-// Function to map Google Books API response to Book schema
+// Function to map Open Library API response to Book schema
 function mapToBookSchema(item) {
-    const volumeInfo = item.volumeInfo;
-    const imageLinks = volumeInfo.imageLinks || {};
-    // console.log(item.volumeInfo.categories);
+    let description = '';
+    if (item.description) {
+        if (typeof item.description === 'string') {
+            description = item.description;
+        } else if (typeof item.description === 'object' && item.description.value) {
+            description = item.description.value;
+        }
+    }
+    console.log(item.description)
     return {
-        _id: volumeInfo.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || '',
-        googleId: item.id,  // Store Google's ID for potential future reference
-        title: volumeInfo.title,
-        authors: volumeInfo.authors || [],
-        description: volumeInfo.description || '',
-        image: "https://books.google.com/books/content?id=" + item.id + "&printsec=frontcover&img=1&zoom=4&edge=curl&source=gbs_api" || imageLinks.large || imageLinks.medium || imageLinks.small || imageLinks.thumbnail,
-        publisher: volumeInfo.publisher || '',
-        yearPublished: volumeInfo.publishedDate ? parseInt(volumeInfo.publishedDate.split("-")[0], 10) : null,
-        category: volumeInfo.categories ? volumeInfo.categories.join(', ') : '',
-        ISBN: volumeInfo.industryIdentifiers?.find(id => id.type === 'ISBN_13')?.identifier || '',
-        language: volumeInfo.language,
-        pages: volumeInfo.pageCount || 0,
-        format: volumeInfo.printType,
-        averageRating: volumeInfo.averageRating || 0
+        _id: item.key, // e.g., "/works/OL12345W" @todo: should this be isbn? what if we change api?
+        workKey: item.key,
+        title: item.title || '',
+        description: description,
+        publishers: item.publishers || [],
+        publishedYear: item.first_publish_year || null,
+        authors: item.author_name || [],
+        coverIDs: item.cover_i ? [item.cover_i] : [],
+        subjects: item.subject || [],
+        ISBN_10: item.isbn_10 || [],
+        ISBN_13: item.isbn_13 || [],
+        languages: item.language || [],
+        numberOfPages: item.number_of_pages_median || 0,
+        formats: item.format || [],
+        averageRating: 0, // Placeholder
+        editions: item.edition_key || []
     };
 }
 
-const fetchRelatedBooks = async (volumeId) => {
-    const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes/${volumeId}/associated?key=${process.env.GOOGLE_BOOKS_API_KEY}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-};
-
-router.get('/fetch-genres', async (req, res) => {
-    const description = req.query.description;
-
-    try {
-        const response = await hf.textClassification({
-            model: 'nasrin2023ripa/multilabel-book-genre-classifier',
-            inputs: description,
-        });
-
-        res.json(response);
-    } catch (error) {
-        console.error('Error fetching genres:', error);
-        res.status(500).json({ error: 'Error fetching genres' });
+// Function to map Open Library API response to Edition schema
+function mapToEditionSchema(item) {
+    let description = '';
+    console.log("\n\n trying to get description from work: \n")
+    if (item.description) {
+        if (typeof item.description === 'string') {
+            description = item.description;
+            console.log("======= item.description " ,item.description)
+        } else if (typeof item.description === 'object' && item.description.value) {
+            description = item.description.value;
+            console.log("=======" ,item.description.value)
+        }
     }
-});
+    return {
+        editionKey: item.key.replace('/books/', ''), // e.g., "OL12345M"
+        workKey: item.works && item.works[0] ? item.works[0].key : '',
+        title: item.title || '',
+        description: description,
+        publishers: item.publishers || [],
+        publishDate: item.publish_date || '',
+        numberOfPages: item.number_of_pages || 0,
+        ISBN_10: item.isbn_10 || [],
+        ISBN_13: item.isbn_13 || [],
+        languages: item.languages ? item.languages.map(lang => lang.key) : [],
+        // Add other relevant fields if needed
+    };
+}
 
-// Endpoint to search books by title
+// Endpoint to search books by title and return editions
 router.get('/title', async (req, res) => {
     const { query } = req.query;
     if (!query) {
         return res.status(400).json({ message: "Query parameter is required for searching with title." });
     }
     try {
-        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=intitle:"${encodeURIComponent(query)}"&orderBy=relevance&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
-        const data = await fetchGoogleBooks(url);
+        // Fetch works matching the title
+        const worksUrl = `https://openlibrary.org/search.json?title=${encodeURIComponent(query)}&limit=20`;
+        const worksData = await fetchOpenLibraryBooks(worksUrl);
 
-        // Process the books
-        const books = data.items.map((item) => {
-            return mapToBookSchema(item);
-        });
+        // For each work, fetch the first edition
+        const editionsPromises = worksData.docs.map(async (work) => {
+            const workId = work.key.replace('/works/', '');
+            const editionsUrl = `https://openlibrary.org/works/${workId}/editions.json?limit=1`;
+            const editionsData = await fetchOpenLibraryBooks(editionsUrl);
+            const edition = editionsData.entries[0];
 
-        //Save the data to a file
-        fs.writeFile('books.json', JSON.stringify(books, null, 2), (err) => {
-            if (err) {
-                console.error('Error writing to file', err);
-            } else {
-                console.log('Data written to file successfully');
+            if (edition) {
+                return mapToEditionSchema(edition);
             }
+            return null;
         });
 
-        res.json(books);
+        // Wait for all promises to resolve
+        const editions = await Promise.all(editionsPromises);
+
+        // Filter out any null editions
+        const filteredEditions = editions.filter(edition => edition !== null);
+
+        res.json(filteredEditions);
     } catch (error) {
-        res.status(500).json({ message: "Error searching for books by title", error: error.message });
+        console.error('Error searching for editions by title:', error);
+        res.status(500).json({ message: "Error searching for editions by title", error: error.message });
     }
 });
 
@@ -118,72 +124,22 @@ router.get('/author', async (req, res) => {
         return res.status(400).json({ message: "Query parameter is required for searching with author." });
     }
     try {
-        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes?q=inauthor:${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
-        const data = await fetchGoogleBooks(url);
+        const url = `https://openlibrary.org/search.json?author=${encodeURIComponent(query)}&limit=20`; // Adjust limit as needed
+        const data = await fetchOpenLibraryBooks(url);
 
-        const books = data.items.map(mapToBookSchema);
+        const books = data.docs.map(mapToBookSchema);
 
         res.json(books);
     } catch (error) {
+        console.error('Error searching for books by author:', error);
         res.status(500).json({ message: "Error searching for books by author", error: error.message });
-    }
-});
-
-// Route to get associated books by volume ID
-router.get('/associated/:id', async (req, res) => {
-    const { id } = req.params;
-    try {
-        const relatedBooks = await fetchRelatedBooks(id);
-
-        // Process the other editions
-        const associatedBooks = relatedBooks.items ? relatedBooks.items.map(mapToBookSchema) : [];
-
-        res.json(associatedBooks);
-    } catch (error) {
-        res.status(500).json({ message: "Error fetching associated books", error: error.message });
-    }
-});
-
-router.get('/bestsellers', async (req, res) => {
-    const { list } = req.query;
-    if (!list) {
-        return res.status(400).json({ message: "List parameter is required to get bestsellers." });
-    }
-    try {
-        // const url = `${process.env.NYT_API_BASE_URL}/current/${encodeURIComponent(list)}.json?api-key=${process.env.NYT_API_KEY}`;
-        const url = `${process.env.NYT_API_BASE_URL}/names.json?api-key=${process.env.NYT_API_KEY}`;
-        const data = await fetchNYTBooks(url);
-        // const books = data.results.books.map((item) => {
-        //     return mapToBookSchema(item);
-        // });
-
-        res.json(data);
-    } catch (error) {
-        res.status(500).json({ message: "Error fetching bestsellers", error: error.message });
-    }
-});
-
-// Get a specific book by Google Books API ID
-router.get('/:id', async (req, res) => {
-    const { id } = req.params;
-    try {
-        const url = `${process.env.GOOGLE_BOOKS_API_BASE_URL}/volumes/${id}?key=${process.env.GOOGLE_BOOKS_API_KEY}`;
-        const data = await fetchGoogleBooks(url);
-
-        if (!data || data.error) {
-            return res.status(404).json({ message: "Book not found" });
-        }
-
-        book = new Book(mapToBookSchema(data));
-
-        res.json(book);
-    } catch (error) {
-        console.log(error.message)
-        res.status(500).json({ message: "Error retrieving the book", error: error.message });
     }
 });
 
 module.exports = router;
 
-///books/qCxIAgAAQBAJ
-// http://localhost:3000/books/cZpR_0kN9gEC
+// Example Open Library URLs:
+// https://openlibrary.org/works/OL27448W.json
+// https://openlibrary.org/works/OL27448W/editions.json
+// Accessing a specific book:
+// http://localhost:3000/books/OL27448W
