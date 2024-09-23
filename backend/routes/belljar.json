@@ -1,0 +1,2944 @@
+{
+    "numFound": 55,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+        {
+            "author_alternative_name": [
+                "Victoria Lucas"
+            ],
+            "author_key": [
+                "OL4327652A"
+            ],
+            "author_name": [
+                "Sylvia Plath"
+            ],
+            "contributor": [
+                "Frances McCullough (Foreword)",
+                "Maggie Gyllenhaal (Narrator)",
+                "Frances Mcdormand (Narrator)",
+                "Ames, Lois.",
+                "Patton, James R., former owner.",
+                "Sylvia Plath (Illustrator)"
+            ],
+            "cover_edition_key": "OL21389163M",
+            "cover_i": 8477115,
+            "ddc": [
+                "813",
+                "813.54"
+            ],
+            "ebook_access": "public",
+            "ebook_count_i": 12,
+            "edition_count": 149,
+            "edition_key": [
+                "OL51637904M",
+                "OL46473887M",
+                "OL40816060M",
+                "OL46181418M",
+                "OL46375867M",
+                "OL46653155M",
+                "OL44288186M",
+                "OL43491015M",
+                "OL40603523M",
+                "OL40593461M",
+                "OL46911127M",
+                "OL42596302M",
+                "OL42677416M",
+                "OL46616604M",
+                "OL42387662M",
+                "OL42430185M",
+                "OL46715581M",
+                "OL40140035M",
+                "OL39674218M",
+                "OL40164895M",
+                "OL46676803M",
+                "OL46447334M",
+                "OL39730125M",
+                "OL46707364M",
+                "OL42817824M",
+                "OL39748663M",
+                "OL40127678M",
+                "OL49084122M",
+                "OL48292590M",
+                "OL49149179M",
+                "OL49140607M",
+                "OL48962240M",
+                "OL49178695M",
+                "OL48890567M",
+                "OL42555881M",
+                "OL49166666M",
+                "OL43400672M",
+                "OL43170694M",
+                "OL43155536M",
+                "OL42927839M",
+                "OL37789353M",
+                "OL44777916M",
+                "OL40665876M",
+                "OL48501902M",
+                "OL49052990M",
+                "OL43446922M",
+                "OL38935696M",
+                "OL38925762M",
+                "OL36523261M",
+                "OL36037536M",
+                "OL36848340M",
+                "OL36910060M",
+                "OL36956773M",
+                "OL37335505M",
+                "OL37704528M",
+                "OL37721308M",
+                "OL37937797M",
+                "OL37989782M",
+                "OL38133067M",
+                "OL38137054M",
+                "OL38431039M",
+                "OL38452602M",
+                "OL39444186M",
+                "OL30902563M",
+                "OL29832214M",
+                "OL28509735M",
+                "OL28719809M",
+                "OL29722176M",
+                "OL7278984M",
+                "OL9233692M",
+                "OL27295061M",
+                "OL11762480M",
+                "OL21389163M",
+                "OL14818240M",
+                "OL22458910M",
+                "OL24237003M",
+                "OL1003851M",
+                "OL7288814M",
+                "OL22118961M",
+                "OL7759670M",
+                "OL7584716M",
+                "OL22163168M",
+                "OL22363280M",
+                "OL7817281M",
+                "OL7858288M",
+                "OL7818633M",
+                "OL6012563M",
+                "OL11346281M",
+                "OL24201329M",
+                "OL22990333M",
+                "OL22993170M",
+                "OL24226381M",
+                "OL366824M",
+                "OL9233609M",
+                "OL5929419M",
+                "OL23265267M",
+                "OL23005433M",
+                "OL7821609M",
+                "OL614704M",
+                "OL8276775M",
+                "OL17749453M",
+                "OL7857412M",
+                "OL9322197M",
+                "OL26454420M",
+                "OL26454315M",
+                "OL24090152M",
+                "OL26454421M",
+                "OL26454463M",
+                "OL26454455M",
+                "OL26454426M",
+                "OL26454223M",
+                "OL8840421M",
+                "OL24763795M",
+                "OL26454305M",
+                "OL26454461M",
+                "OL26454285M",
+                "OL26454310M",
+                "OL9129664M",
+                "OL16275648M",
+                "OL26501147M",
+                "OL9238104M",
+                "OL26454290M",
+                "OL9051128M",
+                "OL26454490M",
+                "OL26454476M",
+                "OL26454471M",
+                "OL4915397M",
+                "OL7822937M",
+                "OL26454024M",
+                "OL8937362M",
+                "OL7282744M",
+                "OL7589236M",
+                "OL25183126M",
+                "OL26454425M",
+                "OL26501142M",
+                "OL9050427M",
+                "OL9237451M",
+                "OL26454306M",
+                "OL26454434M",
+                "OL20801772M",
+                "OL26454422M",
+                "OL7284977M",
+                "OL26454316M",
+                "OL22151034M",
+                "OL7584790M",
+                "OL26315411M",
+                "OL13586529M",
+                "OL26466496M",
+                "OL7278901M"
+            ],
+            "first_publish_year": 1963,
+            "first_sentence": [
+                "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn't know what I was doing in New York.",
+                "IT WAS A QUEER, sultry summer, the summer they electrocuted the Rosenbergs, and I didn't know what I was doing in New York."
+            ],
+            "format": [
+                "paperback",
+                "Library Binding",
+                "Ebook",
+                "Trade Paperback",
+                "Prebound",
+                "Audio CD",
+                "Epub",
+                "Digital Audiobook",
+                "Audio Cassette",
+                "Digital Audio",
+                "Hardcover",
+                "Library binding",
+                "Mass Market Paperback",
+                "audio cd",
+                "Leather Bound",
+                "Audio cassette",
+                "Paperback"
+            ],
+            "has_fulltext": true,
+            "ia": [
+                "belljar0000unse_f0s1",
+                "belljar000plat",
+                "belljar00plat_0",
+                "belljarplat00plat",
+                "belljar00plat_1",
+                "belljar00platrich",
+                "belljar00sylv",
+                "isbn_9780060174903",
+                "belljarokat00plat",
+                "belljarps00sylv",
+                "belljar0000unse"
+            ],
+            "ia_collection": [
+                "365-Books-by-Women-Authors",
+                "additional_collections",
+                "internetarchivebooks",
+                "litigationworks",
+                "printdisabled"
+            ],
+            "ia_collection_s": "365-Books-by-Women-Authors;additional_collections;internetarchivebooks;litigationworks;printdisabled",
+            "isbn": [
+                "9798837405068",
+                "9780060174903",
+                "9788652128020",
+                "9780571179817",
+                "9788417339289",
+                "9798401793232",
+                "9780062444479",
+                "9780060569457",
+                "0060930187",
+                "9798557365789",
+                "9798440383937",
+                "9780571200337",
+                "9788702154375",
+                "8804545046",
+                "9798719270852",
+                "9780899668154",
+                "0694517305",
+                "9783518456767",
+                "1980415544",
+                "0553071785",
+                "0899668151",
+                "9023485343",
+                "9780812415148",
+                "9789576073755",
+                "0571308406",
+                "9780061148514",
+                "3518456768",
+                "9780571373109",
+                "9780553260083",
+                "9876283529",
+                "9798846289710",
+                "0571226167",
+                "9781510020313",
+                "9576073758",
+                "9780553124200",
+                "1510020314",
+                "1976762480",
+                "9787544776851",
+                "0571248209",
+                "9798783526480",
+                "0571373070",
+                "9798447662356",
+                "8439736347",
+                "8652128022",
+                "9780606198073",
+                "8435015734",
+                "0571268862",
+                "9798720315146",
+                "9789734633746",
+                "3518423657",
+                "8087888146",
+                "9782070712182",
+                "9781980415541",
+                "1790603412",
+                "9798459980554",
+                "9798783520440",
+                "0060133562",
+                "0061849901",
+                "9798353485889",
+                "0808513982",
+                "9780060886646",
+                "9787544703109",
+                "754470310X",
+                "9780553278354",
+                "9780553103700",
+                "9798731237796",
+                "9780571226160",
+                "1443428590",
+                "9780375404634",
+                "0553260081",
+                "9798448569265",
+                "9798365259072",
+                "351822221X",
+                "0571179819",
+                "9798847857741",
+                "9798556348608",
+                "9780613291989",
+                "006056945X",
+                "9783518423653",
+                "9798800199710",
+                "0606198075",
+                "9789876283526",
+                "957733427X",
+                "0571067824",
+                "7544776859",
+                "9783803124722",
+                "0553103709",
+                "9798758110164",
+                "0060837020",
+                "9780694517305",
+                "9734633759",
+                "9788439736349",
+                "9798582358145",
+                "9780808513988",
+                "9780571248209",
+                "9789734633753",
+                "9029533293",
+                "0060573090",
+                "9781417692958",
+                "8702154374",
+                "9798832739649",
+                "0812415140",
+                "9798840025307",
+                "9781977017789",
+                "9781976762482",
+                "9798732645699",
+                "0553278355",
+                "9798818117034",
+                "9780060878771",
+                "9798365576001",
+                "9798658876276",
+                "9798843421366",
+                "9798803070528",
+                "8417339280",
+                "0375404635",
+                "055312420X",
+                "9786054764716",
+                "9780571373079",
+                "9798774719556",
+                "0060886641",
+                "9780060930189",
+                "986173970X",
+                "9788435015738",
+                "9798800172652",
+                "9781622402939",
+                "9789755100166",
+                "9798401792884",
+                "9780571067824",
+                "9798846285002",
+                "9798521173204",
+                "9780553143843",
+                "0060174900",
+                "9798746233943",
+                "9780553204520",
+                "3518393545",
+                "9789029533294",
+                "0060878770",
+                "3803124727",
+                "9780060837020",
+                "9798443779591",
+                "9798817194111",
+                "9798354315864",
+                "9755100164",
+                "9783518393543",
+                "9789023485346",
+                "9780553239607",
+                "9789734627950",
+                "9783518222218",
+                "2070712184",
+                "0571355064",
+                "9798836093976",
+                "0553239600",
+                "9798839573451",
+                "9789861739700",
+                "0571200338",
+                "9780571268863",
+                "9780060573096",
+                "0061148512",
+                "9798471405455",
+                "9734627953",
+                "9798450039510",
+                "0062444476",
+                "9798486149863",
+                "0571373100",
+                "9789577334275",
+                "9780571355068",
+                "0613291980",
+                "9780571081783",
+                "9798481852553",
+                "9780061849909",
+                "9798412006284",
+                "9781790603411",
+                "1417692952",
+                "0553143840",
+                "9788087888148",
+                "0571081789",
+                "9780060133566",
+                "1622402936",
+                "9798352584415",
+                "9734633740",
+                "6054764713",
+                "9780571308408",
+                "9788804545040",
+                "1977017789",
+                "9780553071788",
+                "0783819870",
+                "0553204521",
+                "9798546084301",
+                "9780783819877",
+                "9781443428590"
+            ],
+            "key": "/works/OL1865528W",
+            "language": [
+                "ita",
+                "fre",
+                "eng",
+                "rum",
+                "ger",
+                "dan",
+                "tur",
+                "dut",
+                "chi",
+                "srp",
+                "spa",
+                "cat"
+            ],
+            "last_modified_i": 1724512714,
+            "lcc": [
+                "PS-3566.00000000.L27 B4 1996",
+                "PS-3566.00000000.L27 Be",
+                "PS-3566.00000000.L27 Be3",
+                "PS-3566.00000000.L27 B45",
+                "PS-3566.00000000.L27 Be6",
+                "PS-3566.00000000.L27 B415",
+                "PS-3566.00000000.L27B4 1996b",
+                "PS-3566.00000000.L27.B4 1996",
+                "PS-3566.00000000.L27 B45x 1971",
+                "PS-3566.00000000.L27 B4 2013",
+                "PZ-0004.00000000.P717; PS3566.L27",
+                "PZ-0004.00000000.P717 Be",
+                "PS-3566.00000000.L27 B4 1998",
+                "PS-3566.00000000.L27B4",
+                "PZ-0004.00000000.P717 Be3",
+                "PZ-0004.00000000.P717 Be6",
+                "PS-3566.00000000.L27 B4 1996b",
+                "PS-3566.00000000 L27 B44 1981",
+                "PS-3566.00000000 L27 B44 1966",
+                "PS-3566.00000000.L27 B41",
+                "PS-3566.00000000.L27"
+            ],
+            "lccn": [
+                "98027309",
+                "96043537",
+                "66068247",
+                "71138756",
+                "76149743",
+                "64054573",
+                "68120883",
+                "96211742"
+            ],
+            "number_of_pages_median": 258,
+            "oclc": [
+                "612444",
+                "247817088",
+                "444868443",
+                "16996",
+                "896066683",
+                "924766941",
+                "923835391",
+                "848622525",
+                "986537946",
+                "317798553",
+                "749865328",
+                "36740765",
+                "23263699",
+                "1029356927",
+                "936695590",
+                "940522404",
+                "898242383",
+                "244167789",
+                "38220114",
+                "1037228204",
+                "856807309",
+                "858422238",
+                "974313656",
+                "826905887",
+                "44077761",
+                "43421475",
+                "34321827",
+                "813673802",
+                "74670037",
+                "701211909",
+                "781504869",
+                "51958543",
+                "1037238727",
+                "924728646",
+                "861766163",
+                "248437431",
+                "310399238",
+                "137269",
+                "891752221",
+                "246666006",
+                "852543159",
+                "47794727",
+                "949360812",
+                "53171838",
+                "823691394",
+                "64388429",
+                "87879291",
+                "924747373",
+                "908857625",
+                "29616928",
+                "993610502",
+                "4843648",
+                "978256776",
+                "890264014",
+                "39235796",
+                "1000046079",
+                "35565044",
+                "719316768"
+            ],
+            "osp_count": 1221,
+            "printdisabled_s": "OL7817281M",
+            "public_scan_b": true,
+            "publish_date": [
+                "2017",
+                "1971",
+                "2021",
+                "2005 August",
+                "1966",
+                "1972",
+                "2016 May 12",
+                "1977",
+                "1972 April",
+                "1988 January 14",
+                "2003",
+                "1999 October",
+                "2013",
+                "2004 December",
+                "1998",
+                "2003 April 1",
+                "2016 February 2",
+                "2000 March",
+                "2014",
+                "2001 January 1",
+                "September 23, 2003",
+                "1997 January 1",
+                "2018",
+                "1971-01-01",
+                "2006",
+                "2000",
+                "2015 April",
+                "1970?",
+                "2019",
+                "2003-09-30",
+                "2022",
+                "1996",
+                "1981 08",
+                "1983 July 1",
+                "2001 March",
+                "2005 August 2",
+                "2003 September 30",
+                "1993",
+                "1998 June 1",
+                "2001",
+                "1971 February",
+                "2020",
+                "1999",
+                "2008",
+                "1964-01-01",
+                "Dec 09, 2012",
+                "1977 July",
+                "2006 February 28",
+                "1968",
+                "1981",
+                "1976-09",
+                "2014 January",
+                "Aug 01, 2007",
+                "2022-02-15",
+                "1972 November",
+                "2005",
+                "1963",
+                "2015",
+                "1980",
+                "2009 November 3",
+                "2016",
+                "2012",
+                "1972-01-01",
+                "Jan 03, 2013"
+            ],
+            "publish_place": [
+                "Norwalk, CT, USA",
+                "Cutchogue, NY, USA",
+                "Kuala Lumpur, Malaysia",
+                "Istanbul, Turkey",
+                "Taibei Shi",
+                "Frankfurt am Main, Germany",
+                "Bath, England",
+                "Thorndike, Me",
+                "The Netherlands",
+                "Washington DC, USA",
+                "Amsterdam, The Netherlands",
+                "Taibei Xian Sanchong Shi",
+                "New York, USA",
+                "Toronto, Canada",
+                "New York",
+                "Toronto, Ontario, Canada",
+                "London, England",
+                "Frankfurt, Germany",
+                "Barcelona, Spain",
+                "Los Angeles, USA",
+                "Bucharest, Romania",
+                "New York USA"
+            ],
+            "publish_year": [
+                1963,
+                1964,
+                1966,
+                1968,
+                1970,
+                1971,
+                1972,
+                1976,
+                1977,
+                1980,
+                1981,
+                1983,
+                1988,
+                1993,
+                1996,
+                1997,
+                1998,
+                1999,
+                2000,
+                2001,
+                2003,
+                2004,
+                2005,
+                2006,
+                2007,
+                2008,
+                2009,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016,
+                2017,
+                2018,
+                2019,
+                2020,
+                2021,
+                2022
+            ],
+            "publisher": [
+                "Edicions del periscopi",
+                "Harper Perennial",
+                "Turtleback Books Distributed by Demco Media",
+                "Chivers Press",
+                "Faber & Faber, Limited",
+                "Gallimard",
+                "Xin yü chu ban she",
+                "HarperCollins Publishers",
+                "Viking Penguin",
+                "Caedmon",
+                "Whole Story Audio Books",
+                "Edhasa",
+                "BBC",
+                "De Bezige Bij",
+                "Penguin Random House Grupo Editorial",
+                "Can Yayınları",
+                "FadedPage",
+                "Bt Bound",
+                "De Arbeiderspers",
+                "Suhrkamp Verlag",
+                "Buccaneer Books",
+                "Perfection Learning",
+                "G.K. Hall",
+                "Easton Press",
+                "Wagenbach",
+                "Harper Perennial Modern Classics",
+                "Bantam",
+                "Bantam Books",
+                "Harper & Row",
+                "the bell jar of Phoenix Publishing Media Group. Y",
+                "HarperLargePrint",
+                "Heinemann",
+                "Harper",
+                "HarperAudio",
+                "Laguna",
+                "Oscar Mondadori",
+                "Perennial Classics",
+                "Alfred A. Knopf",
+                "HarperCollins",
+                "Tandem Library",
+                "Pressbooks",
+                "Parnell Classics",
+                "Everyman's Library",
+                "Independently Published",
+                "Suhrkamp",
+                "Xian jue chu ban",
+                "Green Light E-Books",
+                "HarperPerennial Classics",
+                "Editura POLIROM",
+                "William Heinemann 1964",
+                "Rye Field Publications",
+                "Gyldendal",
+                "Faber and Faber",
+                "Kırmızı Kedi Yayınevi",
+                "The White House",
+                "Ryerson Pressbooks",
+                "Faber",
+                "Quality Paperback Book Club",
+                "HarperCollins Canada, Limited",
+                "Faber & Faber"
+            ],
+            "seed": [
+                "/books/OL51637904M",
+                "/books/OL46473887M",
+                "/books/OL40816060M",
+                "/books/OL46181418M",
+                "/books/OL46375867M",
+                "/books/OL46653155M",
+                "/books/OL44288186M",
+                "/books/OL43491015M",
+                "/books/OL40603523M",
+                "/books/OL40593461M",
+                "/books/OL46911127M",
+                "/books/OL42596302M",
+                "/books/OL42677416M",
+                "/books/OL46616604M",
+                "/books/OL42387662M",
+                "/books/OL42430185M",
+                "/books/OL46715581M",
+                "/books/OL40140035M",
+                "/books/OL39674218M",
+                "/books/OL40164895M",
+                "/books/OL46676803M",
+                "/books/OL46447334M",
+                "/books/OL39730125M",
+                "/books/OL46707364M",
+                "/books/OL42817824M",
+                "/books/OL39748663M",
+                "/books/OL40127678M",
+                "/books/OL49084122M",
+                "/books/OL48292590M",
+                "/books/OL49149179M",
+                "/books/OL49140607M",
+                "/books/OL48962240M",
+                "/books/OL49178695M",
+                "/books/OL48890567M",
+                "/books/OL42555881M",
+                "/books/OL49166666M",
+                "/books/OL43400672M",
+                "/books/OL43170694M",
+                "/books/OL43155536M",
+                "/books/OL42927839M",
+                "/books/OL37789353M",
+                "/books/OL44777916M",
+                "/books/OL40665876M",
+                "/books/OL48501902M",
+                "/books/OL49052990M",
+                "/books/OL43446922M",
+                "/books/OL38935696M",
+                "/books/OL38925762M",
+                "/books/OL36523261M",
+                "/books/OL36037536M",
+                "/books/OL36848340M",
+                "/books/OL36910060M",
+                "/books/OL36956773M",
+                "/books/OL37335505M",
+                "/books/OL37704528M",
+                "/books/OL37721308M",
+                "/books/OL37937797M",
+                "/books/OL37989782M",
+                "/books/OL38133067M",
+                "/books/OL38137054M",
+                "/books/OL38431039M",
+                "/books/OL38452602M",
+                "/books/OL39444186M",
+                "/books/OL30902563M",
+                "/books/OL29832214M",
+                "/books/OL28509735M",
+                "/books/OL28719809M",
+                "/books/OL29722176M",
+                "/books/OL7278984M",
+                "/books/OL9233692M",
+                "/books/OL27295061M",
+                "/books/OL11762480M",
+                "/books/OL21389163M",
+                "/books/OL14818240M",
+                "/books/OL22458910M",
+                "/books/OL24237003M",
+                "/books/OL1003851M",
+                "/books/OL7288814M",
+                "/books/OL22118961M",
+                "/books/OL7759670M",
+                "/books/OL7584716M",
+                "/books/OL22163168M",
+                "/books/OL22363280M",
+                "/books/OL7817281M",
+                "/books/OL7858288M",
+                "/books/OL7818633M",
+                "/books/OL6012563M",
+                "/books/OL11346281M",
+                "/books/OL24201329M",
+                "/books/OL22990333M",
+                "/books/OL22993170M",
+                "/books/OL24226381M",
+                "/books/OL366824M",
+                "/books/OL9233609M",
+                "/books/OL5929419M",
+                "/books/OL23265267M",
+                "/books/OL23005433M",
+                "/books/OL7821609M",
+                "/books/OL614704M",
+                "/books/OL8276775M",
+                "/books/OL17749453M",
+                "/books/OL7857412M",
+                "/books/OL9322197M",
+                "/books/OL26454420M",
+                "/books/OL26454315M",
+                "/books/OL24090152M",
+                "/books/OL26454421M",
+                "/books/OL26454463M",
+                "/books/OL26454455M",
+                "/books/OL26454426M",
+                "/books/OL26454223M",
+                "/books/OL8840421M",
+                "/books/OL24763795M",
+                "/books/OL26454305M",
+                "/books/OL26454461M",
+                "/books/OL26454285M",
+                "/books/OL26454310M",
+                "/books/OL9129664M",
+                "/books/OL16275648M",
+                "/books/OL26501147M",
+                "/books/OL9238104M",
+                "/books/OL26454290M",
+                "/books/OL9051128M",
+                "/books/OL26454490M",
+                "/books/OL26454476M",
+                "/books/OL26454471M",
+                "/books/OL4915397M",
+                "/books/OL7822937M",
+                "/books/OL26454024M",
+                "/books/OL8937362M",
+                "/books/OL7282744M",
+                "/books/OL7589236M",
+                "/books/OL25183126M",
+                "/books/OL26454425M",
+                "/books/OL26501142M",
+                "/books/OL9050427M",
+                "/books/OL9237451M",
+                "/books/OL26454306M",
+                "/books/OL26454434M",
+                "/books/OL20801772M",
+                "/books/OL26454422M",
+                "/books/OL7284977M",
+                "/books/OL26454316M",
+                "/books/OL22151034M",
+                "/books/OL7584790M",
+                "/books/OL26315411M",
+                "/books/OL13586529M",
+                "/books/OL26466496M",
+                "/books/OL7278901M",
+                "/works/OL1865528W",
+                "/authors/OL4327652A",
+                "/subjects/women_college_students",
+                "/subjects/summer",
+                "/subjects/classics",
+                "/subjects/literature",
+                "/subjects/psychology",
+                "/subjects/feminism",
+                "/subjects/novel",
+                "/subjects/poetry",
+                "/subjects/mental_health",
+                "/subjects/american",
+                "/subjects/adult",
+                "/subjects/fiction",
+                "/subjects/mental_depression",
+                "/subjects/suicidal_behavior",
+                "/subjects/mentally_ill",
+                "/subjects/psychiatric_hospital_patients",
+                "/subjects/mental_illness",
+                "/subjects/women_authors",
+                "/subjects/treatment",
+                "/subjects/women_periodical_editors",
+                "/subjects/college_students",
+                "/subjects/suicide",
+                "/subjects/psychological_fiction",
+                "/subjects/autobiographical_fiction",
+                "/subjects/roman_à_clef",
+                "/subjects/open_syllabus_project",
+                "/subjects/women_psychotherapy_patients",
+                "/subjects/fiction_psychological",
+                "/subjects/american_fiction_(fictional_works_by_one_author)",
+                "/subjects/young_women_fiction",
+                "/subjects/students_fiction",
+                "/subjects/children's_fiction",
+                "/subjects/depression_mental_fiction",
+                "/subjects/fiction_biographical",
+                "/subjects/fiction_general",
+                "/subjects/new_york_(n.y.)_fiction",
+                "/subjects/american_literature",
+                "/subjects/interns",
+                "/subjects/women's_periodicals",
+                "/subjects/electroconvulsive_therapy",
+                "/subjects/sexism",
+                "/subjects/depression_in_women",
+                "/subjects/authors",
+                "/subjects/person:esther_greenwood",
+                "/subjects/person:buddy_willard",
+                "/subjects/person:betsy",
+                "/subjects/person:constantin",
+                "/subjects/person:deedee",
+                "/subjects/person:doctor_gordon",
+                "/subjects/person:doctor_nolan",
+                "/subjects/person:dodo_conway",
+                "/subjects/place:new_york_city",
+                "/subjects/place:adirondacks",
+                "/subjects/place:boston",
+                "/subjects/place:united_states",
+                "/subjects/place:belsize",
+                "/subjects/time:1953",
+                "/subjects/time:1950s"
+            ],
+            "title": "The Bell Jar",
+            "title_sort": "The Bell Jar",
+            "title_suggest": "The Bell Jar",
+            "type": "work",
+            "id_amazon": [
+                "B002BLP862",
+                "B00RWMD17S",
+                "B00OPE8AZO",
+                "B00BN17FIA",
+                "B003N3EWFA",
+                "0571268862",
+                "1417692952",
+                "0060930187",
+                "0061148512",
+                "0694517305",
+                "0553103709",
+                "0571226167",
+                "0812415140",
+                "0375404635",
+                "006056945X",
+                "0553239600",
+                "0899668151",
+                "0571200338",
+                "0061849901",
+                "2070712184",
+                "0553278355",
+                "3518456768",
+                "8435015734",
+                "0060878770",
+                "3518393545",
+                "B07CS2L124",
+                "B07BC8HLQM",
+                "B07BX49CM3",
+                "0553260081",
+                "3803124727",
+                "0060837020",
+                "0613291980",
+                "B00NWN2SMA",
+                "6054764713",
+                "351822221X",
+                "0060837020",
+                "8804545046",
+                "3518423657",
+                "0060930187",
+                "0606198075",
+                "006056945X"
+            ],
+            "id_better_world_books": [
+                "BWB20703027",
+                "BWB29371323",
+                "BWBM26320013",
+                "BWBM52773066"
+            ],
+            "id_goodreads": [
+                "907483",
+                "907483",
+                "2141692",
+                "15869826",
+                "410276",
+                "35167461",
+                "839105",
+                "6514",
+                "1019233",
+                "34117826",
+                "58377276",
+                "774308",
+                "70015",
+                "828038",
+                "3476735",
+                "35167461",
+                "907483",
+                "35167461",
+                "458288",
+                "7136572",
+                "2235739",
+                "56616144",
+                "839106",
+                "6515",
+                "599649",
+                "40227943",
+                "15980215",
+                "6343665",
+                "26288043",
+                "28257286",
+                "25618227",
+                "20900848",
+                "12478228",
+                "1253871",
+                "839103",
+                "1001842",
+                "30294490",
+                "917078",
+                "24807353",
+                "1462280",
+                "907484",
+                "29069501",
+                "1001845",
+                "38254387",
+                "39711287",
+                "36549510",
+                "36206959",
+                "38732858",
+                "40018168",
+                "39109770",
+                "39729794",
+                "907485",
+                "839102",
+                "40214226",
+                "1001844",
+                "395040",
+                "56616095",
+                "839104",
+                "34315037",
+                "26863089",
+                "35857544",
+                "19505000",
+                "997892",
+                "395040",
+                "12375873",
+                "40234286",
+                "20809001",
+                "22747499",
+                "410276",
+                "40228052",
+                "40228063",
+                "828038",
+                "828041",
+                "10141834",
+                "18773934",
+                "7136572"
+            ],
+            "id_librarything": [
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512",
+                "1512"
+            ],
+            "id_amazon_de_asin": [
+                "0060930187",
+                "0553103709",
+                "0571226167",
+                "0553143840",
+                "0812415140",
+                "0571200338",
+                "0808513982",
+                "9734627953",
+                "3518456768",
+                "0060878770",
+                "B073XYNQSM",
+                "B07BC8HLQM",
+                "B07BX49CM3",
+                "3803124727",
+                "6054764713",
+                "3518423657",
+                "0060930187",
+                "0571081789"
+            ],
+            "id_google": [
+                "9RwyPwAACAAJ",
+                "JHWdPwAACAAJ",
+                "T2hkWXVHlGIC",
+                "_TRyAAAACAAJ",
+                "k2qMAAAACAAJ",
+                "pg6mPwAACAAJ",
+                "IjGVPwAACAAJ",
+                "DUO1QgAACAAJ",
+                "EJ8rAAAAYAAJ",
+                "ju_EQgAACAAJ",
+                "TOCZ7VWtRdEC",
+                "KGWJAwAAQBAJ",
+                "g4BWAAAAYAAJ",
+                "iO-TCwAAQBAJ",
+                "vTk2HAAACAAJ",
+                "1cL81MLdPWcC",
+                "q_GRtwAACAAJ",
+                "cZpR_0kN9gEC",
+                "GlV6AgAAQBAJ",
+                "uju_jwEACAAJ",
+                "cZpR_0kN9gEC",
+                "9NHwNAEACAAJ",
+                "LRLtAQAAQBAJ"
+            ],
+            "id_hathi_trust": [
+                "005958568"
+            ],
+            "id_amazon_co_uk_asin": [
+                "0694517305",
+                "0571226167",
+                "0812415140",
+                "0375404635",
+                "9734627953",
+                "3518456768",
+                "B073XYNQSM",
+                "B077ZK3LRH",
+                "B07CS2L124",
+                "B07BC8HLQM",
+                "B07BX49CM3",
+                "8804545046",
+                "3518423657",
+                "0606198075"
+            ],
+            "id_nla": [
+                "2230037"
+            ],
+            "id_alibris_id": [
+                "9780060573096",
+                "9780061849909"
+            ],
+            "id_paperback_swap": [
+                "0375404635",
+                "0060878770"
+            ],
+            "id_amazon_it_asin": [
+                "006056945X",
+                "0808513982",
+                "3518456768",
+                "B073XYNQSM",
+                "B075GYPWYN",
+                "3518423657",
+                "006056945X"
+            ],
+            "id_amazon_ca_asin": [
+                "0571200338",
+                "0808513982",
+                "B00HZT4582",
+                "8435015734",
+                "B073XYNQSM",
+                "B07BC8HLQM",
+                "B07BX49CM3",
+                "3803124727",
+                "6054764713",
+                "3518423657",
+                "0606198075"
+            ],
+            "id_overdrive": [
+                "1446189"
+            ],
+            "subject": [
+                "women college students",
+                "summer",
+                "Classics",
+                "Literature",
+                "Psychology",
+                "Feminism",
+                "Novel",
+                "Poetry",
+                "Mental Health",
+                "American",
+                "Adult",
+                "Fiction",
+                "Mental Depression",
+                "Suicidal behavior",
+                "Mentally ill",
+                "Psychiatric hospital patients",
+                "Mental illness",
+                "Women authors",
+                "Treatment",
+                "Women periodical editors",
+                "College students",
+                "Suicide",
+                "Psychological fiction",
+                "Autobiographical fiction",
+                "Roman à clef",
+                "open_syllabus_project",
+                "Women psychotherapy patients",
+                "Fiction, psychological",
+                "American fiction (fictional works by one author)",
+                "Young women, fiction",
+                "Students, fiction",
+                "Children's fiction",
+                "Depression, mental, fiction",
+                "Fiction, biographical",
+                "Fiction, general",
+                "New york (n.y.), fiction",
+                "American literature",
+                "Interns",
+                "Women's periodicals",
+                "Electroconvulsive therapy",
+                "Sexism",
+                "Depression in women",
+                "Authors"
+            ],
+            "place": [
+                "New York City",
+                "Adirondacks",
+                "Boston",
+                "United States",
+                "Belsize"
+            ],
+            "time": [
+                "1953",
+                "1950s"
+            ],
+            "person": [
+                "Esther Greenwood",
+                "Buddy Willard",
+                "Betsy",
+                "Constantin",
+                "DeeDee",
+                "Doctor Gordon",
+                "Doctor Nolan",
+                "Dodo Conway"
+            ],
+            "ia_loaded_id": [
+                "belljar000plat"
+            ],
+            "ia_box_id": [
+                "IA115724",
+                "IA119307",
+                "IA133316",
+                "IA101523",
+                "IA153501"
+            ],
+            "ratings_average": 4.206897,
+            "ratings_sortable": 3.7632258,
+            "ratings_count": 29,
+            "ratings_count_1": 0,
+            "ratings_count_2": 0,
+            "ratings_count_3": 5,
+            "ratings_count_4": 13,
+            "ratings_count_5": 11,
+            "readinglog_count": 1373,
+            "want_to_read_count": 1290,
+            "currently_reading_count": 21,
+            "already_read_count": 62,
+            "publisher_facet": [
+                "Alfred A. Knopf",
+                "BBC",
+                "Bantam",
+                "Bantam Books",
+                "Bt Bound",
+                "Buccaneer Books",
+                "Caedmon",
+                "Can Yayınları",
+                "Chivers Press",
+                "De Arbeiderspers",
+                "De Bezige Bij",
+                "Easton Press",
+                "Edhasa",
+                "Edicions del periscopi",
+                "Editura POLIROM",
+                "Everyman's Library",
+                "Faber",
+                "Faber & Faber",
+                "Faber & Faber, Limited",
+                "Faber and Faber",
+                "FadedPage",
+                "G.K. Hall",
+                "Gallimard",
+                "Green Light E-Books",
+                "Gyldendal",
+                "Harper",
+                "Harper & Row",
+                "Harper Perennial",
+                "Harper Perennial Modern Classics",
+                "HarperAudio",
+                "HarperCollins",
+                "HarperCollins Canada, Limited",
+                "HarperCollins Publishers",
+                "HarperLargePrint",
+                "HarperPerennial Classics",
+                "Heinemann",
+                "Independently Published",
+                "Kırmızı Kedi Yayınevi",
+                "Laguna",
+                "Oscar Mondadori",
+                "Parnell Classics",
+                "Penguin Random House Grupo Editorial",
+                "Perennial Classics",
+                "Perfection Learning",
+                "Pressbooks",
+                "Quality Paperback Book Club",
+                "Rye Field Publications",
+                "Ryerson Pressbooks",
+                "Suhrkamp",
+                "Suhrkamp Verlag",
+                "Tandem Library",
+                "The White House",
+                "Turtleback Books Distributed by Demco Media",
+                "Viking Penguin",
+                "Wagenbach",
+                "Whole Story Audio Books",
+                "William Heinemann 1964",
+                "Xian jue chu ban",
+                "Xin yü chu ban she",
+                "the bell jar of Phoenix Publishing Media Group. Y"
+            ],
+            "person_key": [
+                "betsy",
+                "buddy_willard",
+                "constantin",
+                "deedee",
+                "doctor_gordon",
+                "doctor_nolan",
+                "dodo_conway",
+                "esther_greenwood"
+            ],
+            "time_facet": [
+                "1950s",
+                "1953"
+            ],
+            "place_key": [
+                "adirondacks",
+                "belsize",
+                "boston",
+                "new_york_city",
+                "united_states"
+            ],
+            "person_facet": [
+                "Betsy",
+                "Buddy Willard",
+                "Constantin",
+                "DeeDee",
+                "Doctor Gordon",
+                "Doctor Nolan",
+                "Dodo Conway",
+                "Esther Greenwood"
+            ],
+            "subject_facet": [
+                "Adult",
+                "American",
+                "American fiction (fictional works by one author)",
+                "American literature",
+                "Authors",
+                "Autobiographical fiction",
+                "Children's fiction",
+                "Classics",
+                "College students",
+                "Depression in women",
+                "Depression, mental, fiction",
+                "Electroconvulsive therapy",
+                "Feminism",
+                "Fiction",
+                "Fiction, biographical",
+                "Fiction, general",
+                "Fiction, psychological",
+                "Interns",
+                "Literature",
+                "Mental Depression",
+                "Mental Health",
+                "Mental illness",
+                "Mentally ill",
+                "New york (n.y.), fiction",
+                "Novel",
+                "Poetry",
+                "Psychiatric hospital patients",
+                "Psychological fiction",
+                "Psychology",
+                "Roman à clef",
+                "Sexism",
+                "Students, fiction",
+                "Suicidal behavior",
+                "Suicide",
+                "Treatment",
+                "Women authors",
+                "Women periodical editors",
+                "Women psychotherapy patients",
+                "Women's periodicals",
+                "Young women, fiction",
+                "open_syllabus_project",
+                "summer",
+                "women college students"
+            ],
+            "_version_": 1808282648434442200,
+            "place_facet": [
+                "Adirondacks",
+                "Belsize",
+                "Boston",
+                "New York City",
+                "United States"
+            ],
+            "lcc_sort": "PS-3566.00000000.L27 B45x 1971",
+            "author_facet": [
+                "OL4327652A Sylvia Plath"
+            ],
+            "subject_key": [
+                "adult",
+                "american",
+                "american_fiction_(fictional_works_by_one_author)",
+                "american_literature",
+                "authors",
+                "autobiographical_fiction",
+                "children's_fiction",
+                "classics",
+                "college_students",
+                "depression_in_women",
+                "depression_mental_fiction",
+                "electroconvulsive_therapy",
+                "feminism",
+                "fiction",
+                "fiction_biographical",
+                "fiction_general",
+                "fiction_psychological",
+                "interns",
+                "literature",
+                "mental_depression",
+                "mental_health",
+                "mental_illness",
+                "mentally_ill",
+                "new_york_(n.y.)_fiction",
+                "novel",
+                "open_syllabus_project",
+                "poetry",
+                "psychiatric_hospital_patients",
+                "psychological_fiction",
+                "psychology",
+                "roman_à_clef",
+                "sexism",
+                "students_fiction",
+                "suicidal_behavior",
+                "suicide",
+                "summer",
+                "treatment",
+                "women's_periodicals",
+                "women_authors",
+                "women_college_students",
+                "women_periodical_editors",
+                "women_psychotherapy_patients",
+                "young_women_fiction"
+            ],
+            "ddc_sort": "813.54",
+            "time_key": [
+                "1950s",
+                "1953"
+            ]
+        },
+        {
+            "author_key": [
+                "OL2849894A"
+            ],
+            "author_name": [
+                "Jeanne Inness"
+            ],
+            "cover_edition_key": "OL13586766M",
+            "cover_i": 621618,
+            "ebook_access": "borrowable",
+            "ebook_count_i": 2,
+            "edition_count": 2,
+            "edition_key": [
+                "OL13586766M",
+                "OL24248779M"
+            ],
+            "first_publish_year": 1984,
+            "format": [
+                "Electronic resource"
+            ],
+            "has_fulltext": true,
+            "ia": [
+                "belljarnotes00inne",
+                "plathsbelljarcli00plat"
+            ],
+            "ia_collection": [
+                "inlibrary",
+                "internetarchivebooks",
+                "openlibrary-d-ol",
+                "printdisabled",
+                "spokanepubliclibrary-ol"
+            ],
+            "ia_collection_s": "inlibrary;internetarchivebooks;openlibrary-d-ol;printdisabled;spokanepubliclibrary-ol",
+            "isbn": [
+                "9780822070238",
+                "9780822002260",
+                "0822002264",
+                "0822070235"
+            ],
+            "key": "/works/OL8513623W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1673723039,
+            "lending_edition_s": "OL13586766M",
+            "lending_identifier_s": "belljarnotes00inne",
+            "number_of_pages_median": 78,
+            "printdisabled_s": "OL13586766M",
+            "public_scan_b": false,
+            "publish_date": [
+                "2002",
+                "1984"
+            ],
+            "publish_place": [
+                "New York",
+                "Lincoln, Neb"
+            ],
+            "publish_year": [
+                1984,
+                2002
+            ],
+            "publisher": [
+                "John Wiley & Sons, Ltd.",
+                "Cliffs Notes"
+            ],
+            "seed": [
+                "/books/OL13586766M",
+                "/books/OL24248779M",
+                "/works/OL8513623W",
+                "/authors/OL2849894A",
+                "/subjects/literary_criticism",
+                "/subjects/nonfiction",
+                "/subjects/plath_sylvia_1932-1963",
+                "/subjects/american_fiction_(fictional_works_by_one_author)",
+                "/subjects/person:sylvia_plath"
+            ],
+            "title": "The bell jar",
+            "title_suggest": "The bell jar",
+            "title_sort": "The bell jar",
+            "type": "work",
+            "id_goodreads": [
+                "11639"
+            ],
+            "id_librarything": [
+                "1445894"
+            ],
+            "id_overdrive": [
+                "BBE1082D-7517-49FD-B424-18830538B58F"
+            ],
+            "subject": [
+                "Literary Criticism",
+                "Nonfiction",
+                "Plath, sylvia, 1932-1963",
+                "American fiction (fictional works by one author)"
+            ],
+            "person": [
+                "Sylvia Plath"
+            ],
+            "readinglog_count": 11,
+            "want_to_read_count": 11,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Cliffs Notes",
+                "John Wiley & Sons, Ltd."
+            ],
+            "person_key": [
+                "sylvia_plath"
+            ],
+            "person_facet": [
+                "Sylvia Plath"
+            ],
+            "subject_facet": [
+                "American fiction (fictional works by one author)",
+                "Literary Criticism",
+                "Nonfiction",
+                "Plath, sylvia, 1932-1963"
+            ],
+            "_version_": 1795929345526595600,
+            "author_facet": [
+                "OL2849894A Jeanne Inness"
+            ],
+            "subject_key": [
+                "american_fiction_(fictional_works_by_one_author)",
+                "literary_criticism",
+                "nonfiction",
+                "plath_sylvia_1932-1963"
+            ]
+        },
+        {
+            "author_key": [
+                "OL29809A"
+            ],
+            "author_name": [
+                "Harold Bloom"
+            ],
+            "contributor": [
+                "Bloom, Harold."
+            ],
+            "cover_edition_key": "OL22501081M",
+            "cover_i": 6259288,
+            "ddc": [
+                "813.54"
+            ],
+            "ebook_access": "borrowable",
+            "ebook_count_i": 1,
+            "edition_count": 1,
+            "edition_key": [
+                "OL22501081M"
+            ],
+            "first_publish_year": 2009,
+            "has_fulltext": true,
+            "ia": [
+                "sylviaplathsbell0000unse"
+            ],
+            "ia_collection": [
+                "inlibrary",
+                "internetarchivebooks",
+                "openlibrary-d-ol",
+                "printdisabled",
+                "udc-ol",
+                "unb-ol"
+            ],
+            "ia_collection_s": "inlibrary;internetarchivebooks;openlibrary-d-ol;printdisabled;udc-ol;unb-ol",
+            "isbn": [
+                "9781604132038",
+                "1604132035"
+            ],
+            "key": "/works/OL18626662W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1670531654,
+            "lcc": [
+                "PS-3566.00000000.L27B438 2009",
+                "PS-3566.00000000.L27 B438 2009"
+            ],
+            "lccn": [
+                "2008036547"
+            ],
+            "lending_edition_s": "OL22501081M",
+            "lending_identifier_s": "sylviaplathsbell0000unse",
+            "printdisabled_s": "OL22501081M",
+            "public_scan_b": false,
+            "publish_date": [
+                "2009"
+            ],
+            "publish_place": [
+                "New York, NY"
+            ],
+            "publish_year": [
+                2009
+            ],
+            "publisher": [
+                "Bloom's Literary Criticism"
+            ],
+            "seed": [
+                "/books/OL22501081M",
+                "/works/OL18626662W",
+                "/authors/OL29809A",
+                "/subjects/american_literature_history_and_criticism",
+                "/subjects/literature_history_and_criticism_juvenile_literature",
+                "/subjects/person:sylvia_plath"
+            ],
+            "title": "Sylvia Plath's The Bell Jar",
+            "title_suggest": "Sylvia Plath's The Bell Jar",
+            "title_sort": "Sylvia Plath's The Bell Jar",
+            "type": "work",
+            "id_goodreads": [
+                "5497670"
+            ],
+            "id_librarything": [
+                "7796916"
+            ],
+            "subject": [
+                "American literature, history and criticism",
+                "Literature, history and criticism, juvenile literature"
+            ],
+            "person": [
+                "Sylvia Plath"
+            ],
+            "readinglog_count": 13,
+            "want_to_read_count": 12,
+            "currently_reading_count": 1,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Bloom's Literary Criticism"
+            ],
+            "person_key": [
+                "sylvia_plath"
+            ],
+            "person_facet": [
+                "Sylvia Plath"
+            ],
+            "subject_facet": [
+                "American literature, history and criticism",
+                "Literature, history and criticism, juvenile literature"
+            ],
+            "_version_": 1795868225566670800,
+            "lcc_sort": "PS-3566.00000000.L27 B438 2009",
+            "author_facet": [
+                "OL29809A Harold Bloom"
+            ],
+            "subject_key": [
+                "american_literature_history_and_criticism",
+                "literature_history_and_criticism_juvenile_literature"
+            ],
+            "ddc_sort": "813.54"
+        },
+        {
+            "author_key": [
+                "OL10654233A"
+            ],
+            "author_name": [
+                "Sylvia Plath"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 0,
+            "has_fulltext": false,
+            "key": "/works/OL28861509W",
+            "last_modified_i": 1663528671,
+            "public_scan_b": false,
+            "seed": [
+                "/works/OL28861509W",
+                "/authors/OL10654233A"
+            ],
+            "title": "Bell Jar",
+            "title_suggest": "Bell Jar",
+            "title_sort": "Bell Jar",
+            "type": "work",
+            "readinglog_count": 3,
+            "want_to_read_count": 3,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "_version_": 1795895861578825700,
+            "author_facet": [
+                "OL10654233A Sylvia Plath"
+            ]
+        },
+        {
+            "author_key": [
+                "OL10654233A"
+            ],
+            "author_name": [
+                "Sylvia Plath"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL52259913M"
+            ],
+            "first_publish_year": 2017,
+            "has_fulltext": false,
+            "isbn": [
+                "1981813314",
+                "9781981813315"
+            ],
+            "key": "/works/OL35788947W",
+            "last_modified_i": 1720055931,
+            "public_scan_b": false,
+            "publish_date": [
+                "2017-12-12"
+            ],
+            "publish_year": [
+                2017
+            ],
+            "publisher": [
+                "CreateSpace Independent Publishing Platform"
+            ],
+            "seed": [
+                "/books/OL52259913M",
+                "/works/OL35788947W",
+                "/authors/OL10654233A"
+            ],
+            "title": "Bell Jar",
+            "title_suggest": "Bell Jar",
+            "title_sort": "Bell Jar",
+            "type": "work",
+            "readinglog_count": 2,
+            "want_to_read_count": 2,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "CreateSpace Independent Publishing Platform"
+            ],
+            "_version_": 1803609375017795600,
+            "author_facet": [
+                "OL10654233A Sylvia Plath"
+            ]
+        },
+        {
+            "author_key": [
+                "OL894315A"
+            ],
+            "author_name": [
+                "Pat Macpherson"
+            ],
+            "cover_edition_key": "OL1888101M",
+            "cover_i": 11704608,
+            "ddc": [
+                "811.54"
+            ],
+            "ebook_access": "borrowable",
+            "ebook_count_i": 1,
+            "edition_count": 1,
+            "edition_key": [
+                "OL1888101M"
+            ],
+            "first_publish_year": 1991,
+            "has_fulltext": true,
+            "ia": [
+                "reflectingonbell0000macp"
+            ],
+            "ia_collection": [
+                "americanuniversity-ol",
+                "binghamton-ol",
+                "dartmouthlibrary-ol",
+                "inlibrary",
+                "internetarchivebooks",
+                "openlibrary-d-ol",
+                "printdisabled",
+                "riceuniversity-ol",
+                "rochester-ol",
+                "the-claremont-colleges-ol",
+                "uni-ol",
+                "universityofarizona-ol",
+                "universityofcoloradoboulder-ol",
+                "wilsoncollege-ol"
+            ],
+            "ia_collection_s": "americanuniversity-ol;binghamton-ol;dartmouthlibrary-ol;inlibrary;internetarchivebooks;openlibrary-d-ol;printdisabled;riceuniversity-ol;rochester-ol;the-claremont-colleges-ol;uni-ol;universityofarizona-ol;universityofcoloradoboulder-ol;wilsoncollege-ol",
+            "isbn": [
+                "041504393X",
+                "9780415043939"
+            ],
+            "key": "/works/OL4481750W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1721255303,
+            "lcc": [
+                "PS-3566.00000000.L27B436 1991",
+                "PS-3566.00000000.L27 B436 1991"
+            ],
+            "lccn": [
+                "90049425"
+            ],
+            "lending_edition_s": "OL1888101M",
+            "lending_identifier_s": "reflectingonbell0000macp",
+            "number_of_pages_median": 101,
+            "oclc": [
+                "22507582"
+            ],
+            "osp_count": 27,
+            "printdisabled_s": "OL1888101M",
+            "public_scan_b": false,
+            "publish_date": [
+                "1991"
+            ],
+            "publish_place": [
+                "London",
+                "New York"
+            ],
+            "publish_year": [
+                1991
+            ],
+            "publisher": [
+                "Routledge"
+            ],
+            "seed": [
+                "/books/OL1888101M",
+                "/works/OL4481750W",
+                "/authors/OL894315A",
+                "/subjects/feminism_and_literature",
+                "/subjects/heroines_in_literature",
+                "/subjects/history",
+                "/subjects/plath_sylvia_1932-1963",
+                "/subjects/person:sylvia_plath",
+                "/subjects/place:united_states",
+                "/subjects/time:20th_century"
+            ],
+            "title": "Reflecting on The bell jar",
+            "title_suggest": "Reflecting on The bell jar",
+            "title_sort": "Reflecting on The bell jar",
+            "type": "work",
+            "id_librarything": [
+                "686098"
+            ],
+            "id_goodreads": [
+                "28732"
+            ],
+            "subject": [
+                "Feminism and literature",
+                "Heroines in literature",
+                "History",
+                "Plath, sylvia, 1932-1963"
+            ],
+            "place": [
+                "United States"
+            ],
+            "time": [
+                "20th century"
+            ],
+            "person": [
+                "Sylvia Plath"
+            ],
+            "readinglog_count": 4,
+            "want_to_read_count": 4,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Routledge"
+            ],
+            "person_key": [
+                "sylvia_plath"
+            ],
+            "time_facet": [
+                "20th century"
+            ],
+            "place_key": [
+                "united_states"
+            ],
+            "person_facet": [
+                "Sylvia Plath"
+            ],
+            "subject_facet": [
+                "Feminism and literature",
+                "Heroines in literature",
+                "History",
+                "Plath, sylvia, 1932-1963"
+            ],
+            "_version_": 1804867005989257200,
+            "place_facet": [
+                "United States"
+            ],
+            "lcc_sort": "PS-3566.00000000.L27 B436 1991",
+            "author_facet": [
+                "OL894315A Pat Macpherson"
+            ],
+            "subject_key": [
+                "feminism_and_literature",
+                "heroines_in_literature",
+                "history",
+                "plath_sylvia_1932-1963"
+            ],
+            "ddc_sort": "811.54",
+            "time_key": [
+                "20th_century"
+            ]
+        },
+        {
+            "author_key": [
+                "OL227335A"
+            ],
+            "author_name": [
+                "Gordon Claridge"
+            ],
+            "contributor": [
+                "Pryor, Ruth.",
+                "Watkins, Gwen, 1923-",
+                "Watkins, Gwen."
+            ],
+            "cover_edition_key": "OL363037M",
+            "cover_i": 930084,
+            "ddc": [
+                "820.9",
+                "820.9920824"
+            ],
+            "ebook_access": "borrowable",
+            "ebook_count_i": 1,
+            "edition_count": 5,
+            "edition_key": [
+                "OL39612861M",
+                "OL27990398M",
+                "OL20690569M",
+                "OL363037M",
+                "OL2225522M"
+            ],
+            "first_publish_year": 1990,
+            "format": [
+                "paperback"
+            ],
+            "has_fulltext": true,
+            "ia": [
+                "soundsfrombellja0000clar"
+            ],
+            "ia_collection": [
+                "dartmouthlibrary-ol",
+                "inlibrary",
+                "internetarchivebooks",
+                "printdisabled"
+            ],
+            "ia_collection_s": "dartmouthlibrary-ol;inlibrary;internetarchivebooks;printdisabled",
+            "isbn": [
+                "0333475879",
+                "1883536154",
+                "9781883536152",
+                "9781349104994",
+                "134910499X",
+                "9781349105014",
+                "9780312046323",
+                "9780333475874",
+                "0312046324",
+                "1349105015"
+            ],
+            "key": "/works/OL1898792W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1722012410,
+            "lcc": [
+                "PR-0149.00000000.P78C55 1990",
+                "PR-0149.00000000.P78C55 1998",
+                "PR-0149.00000000.P78 C55 1990b",
+                "PR-0149.00000000.P78 C55 1998",
+                "PR-0149.00000000.P78 C55 1990"
+            ],
+            "lccn": [
+                "89070354",
+                "98023264"
+            ],
+            "lending_edition_s": "OL363037M",
+            "lending_identifier_s": "soundsfrombellja0000clar",
+            "number_of_pages_median": 260,
+            "oclc": [
+                "20419213"
+            ],
+            "osp_count": 9,
+            "printdisabled_s": "OL363037M",
+            "public_scan_b": false,
+            "publish_date": [
+                "1990",
+                "1998",
+                "Jan 01, 1990",
+                "2016"
+            ],
+            "publish_place": [
+                "London",
+                "New York",
+                "Cambridge, MA"
+            ],
+            "publish_year": [
+                2016,
+                1998,
+                1990
+            ],
+            "publisher": [
+                "Malor Books",
+                "Macmillan",
+                "St. Martin's Press",
+                "Palgrave Macmillan"
+            ],
+            "seed": [
+                "/books/OL39612861M",
+                "/books/OL27990398M",
+                "/books/OL20690569M",
+                "/books/OL363037M",
+                "/books/OL2225522M",
+                "/works/OL1898792W",
+                "/authors/OL227335A",
+                "/subjects/english_authors",
+                "/subjects/english_literature",
+                "/subjects/history_and_criticism",
+                "/subjects/literature_and_mental_illness",
+                "/subjects/psychoanalysis_and_literature",
+                "/subjects/psychology",
+                "/subjects/psychoses",
+                "/subjects/english_literature_history_and_criticism",
+                "/subjects/authors_psychology",
+                "/subjects/literature",
+                "/subjects/mental_disorders",
+                "/subjects/writing",
+                "/subjects/engels",
+                "/subjects/letterkunde",
+                "/subjects/psychisch_gestoorden",
+                "/subjects/place:great_britain"
+            ],
+            "title": "Sounds from the bell jar",
+            "title_sort": "Sounds from the bell jar",
+            "title_suggest": "Sounds from the bell jar",
+            "type": "work",
+            "id_goodreads": [
+                "839108",
+                "6519",
+                "339651"
+            ],
+            "id_librarything": [
+                "1347079"
+            ],
+            "subject": [
+                "English Authors",
+                "English literature",
+                "History and criticism",
+                "Literature and mental illness",
+                "Psychoanalysis and literature",
+                "Psychology",
+                "Psychoses",
+                "English literature, history and criticism",
+                "Authors, psychology",
+                "Literature",
+                "Mental Disorders",
+                "Writing",
+                "Engels",
+                "Letterkunde",
+                "Psychisch gestoorden"
+            ],
+            "place": [
+                "Great Britain"
+            ],
+            "readinglog_count": 0,
+            "want_to_read_count": 0,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Macmillan",
+                "Malor Books",
+                "Palgrave Macmillan",
+                "St. Martin's Press"
+            ],
+            "place_key": [
+                "great_britain"
+            ],
+            "subject_facet": [
+                "Authors, psychology",
+                "Engels",
+                "English Authors",
+                "English literature",
+                "English literature, history and criticism",
+                "History and criticism",
+                "Letterkunde",
+                "Literature",
+                "Literature and mental illness",
+                "Mental Disorders",
+                "Psychisch gestoorden",
+                "Psychoanalysis and literature",
+                "Psychology",
+                "Psychoses",
+                "Writing"
+            ],
+            "_version_": 1805660890002882600,
+            "place_facet": [
+                "Great Britain"
+            ],
+            "lcc_sort": "PR-0149.00000000.P78 C55 1990b",
+            "author_facet": [
+                "OL227335A Gordon Claridge"
+            ],
+            "subject_key": [
+                "authors_psychology",
+                "engels",
+                "english_authors",
+                "english_literature",
+                "english_literature_history_and_criticism",
+                "history_and_criticism",
+                "letterkunde",
+                "literature",
+                "literature_and_mental_illness",
+                "mental_disorders",
+                "psychisch_gestoorden",
+                "psychoanalysis_and_literature",
+                "psychology",
+                "psychoses",
+                "writing"
+            ],
+            "ddc_sort": "820.9920824"
+        },
+        {
+            "author_key": [
+                "OL2073876A"
+            ],
+            "author_name": [
+                "Dedria Bryfonski"
+            ],
+            "cover_edition_key": "OL25025824M",
+            "cover_i": 9587205,
+            "ddc": [
+                "813.54"
+            ],
+            "ebook_access": "borrowable",
+            "ebook_count_i": 1,
+            "edition_count": 1,
+            "edition_key": [
+                "OL25025824M"
+            ],
+            "first_publish_year": 2012,
+            "has_fulltext": true,
+            "ia": [
+                "depressioninsylv0000unse"
+            ],
+            "ia_collection": [
+                "inlibrary",
+                "internetarchivebooks",
+                "printdisabled",
+                "rochester-ol"
+            ],
+            "ia_collection_s": "inlibrary;internetarchivebooks;printdisabled;rochester-ol",
+            "isbn": [
+                "9780737758061",
+                "0737758058",
+                "0737758066",
+                "9780737758054"
+            ],
+            "key": "/works/OL16142783W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1681169205,
+            "lcc": [
+                "PS-3566.00000000.L27 B4326 2012",
+                "PS-3566.00000000.L27B4326 2012"
+            ],
+            "lccn": [
+                "2011036480"
+            ],
+            "lending_edition_s": "OL25025824M",
+            "lending_identifier_s": "depressioninsylv0000unse",
+            "number_of_pages_median": 224,
+            "oclc": [
+                "744303067"
+            ],
+            "printdisabled_s": "OL25025824M",
+            "public_scan_b": false,
+            "publish_date": [
+                "2012"
+            ],
+            "publish_place": [
+                "Detroit"
+            ],
+            "publish_year": [
+                2012
+            ],
+            "publisher": [
+                "Greenhaven Press"
+            ],
+            "seed": [
+                "/books/OL25025824M",
+                "/works/OL16142783W",
+                "/authors/OL2073876A",
+                "/subjects/depression_mental_in_literature",
+                "/subjects/depression_mental",
+                "/subjects/plath_sylvia_1932-1963",
+                "/subjects/person:sylvia_plath"
+            ],
+            "title": "Depression in Sylvia Plath's The bell jar",
+            "title_suggest": "Depression in Sylvia Plath's The bell jar",
+            "title_sort": "Depression in Sylvia Plath's The bell jar",
+            "type": "work",
+            "subject": [
+                "Depression, Mental, in literature",
+                "Depression, mental",
+                "Plath, sylvia, 1932-1963"
+            ],
+            "person": [
+                "Sylvia Plath"
+            ],
+            "readinglog_count": 5,
+            "want_to_read_count": 5,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Greenhaven Press"
+            ],
+            "person_key": [
+                "sylvia_plath"
+            ],
+            "person_facet": [
+                "Sylvia Plath"
+            ],
+            "subject_facet": [
+                "Depression, Mental, in literature",
+                "Depression, mental",
+                "Plath, sylvia, 1932-1963"
+            ],
+            "_version_": 1795859416635932700,
+            "lcc_sort": "PS-3566.00000000.L27 B4326 2012",
+            "author_facet": [
+                "OL2073876A Dedria Bryfonski"
+            ],
+            "subject_key": [
+                "depression_mental",
+                "depression_mental_in_literature",
+                "plath_sylvia_1932-1963"
+            ],
+            "ddc_sort": "813.54"
+        },
+        {
+            "author_key": [
+                "OL8093558A"
+            ],
+            "author_name": [
+                "Lauren Green"
+            ],
+            "cover_edition_key": "OL51351188M",
+            "cover_i": 14801348,
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 2,
+            "edition_key": [
+                "OL52237108M",
+                "OL51351188M"
+            ],
+            "first_publish_year": 2024,
+            "has_fulltext": false,
+            "isbn": [
+                "9781962202671",
+                "9781962202527",
+                "1962202674",
+                "1962202526"
+            ],
+            "key": "/works/OL37944471W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1724512803,
+            "public_scan_b": false,
+            "publish_date": [
+                "2024"
+            ],
+            "publish_year": [
+                2024
+            ],
+            "publisher": [
+                "Ballast Books"
+            ],
+            "seed": [
+                "/books/OL52237108M",
+                "/books/OL51351188M",
+                "/works/OL37944471W",
+                "/authors/OL8093558A",
+                "/subjects/personal_memoirs",
+                "/subjects/family"
+            ],
+            "title": "Bell Jar Butterfly",
+            "title_sort": "Bell Jar Butterfly",
+            "title_suggest": "Bell Jar Butterfly",
+            "type": "work",
+            "subject": [
+                "Personal memoirs",
+                "Family"
+            ],
+            "readinglog_count": 0,
+            "want_to_read_count": 0,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Ballast Books"
+            ],
+            "subject_facet": [
+                "Family",
+                "Personal memoirs"
+            ],
+            "_version_": 1808282741445230600,
+            "author_facet": [
+                "OL8093558A Lauren Green"
+            ],
+            "subject_key": [
+                "family",
+                "personal_memoirs"
+            ]
+        },
+        {
+            "author_key": [
+                "OL10343741A"
+            ],
+            "author_name": [
+                "( MEI ) PU LA SI ( Plath S. ) YANG JING YI"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 0,
+            "has_fulltext": false,
+            "key": "/works/OL27703411W",
+            "last_modified_i": 1648623265,
+            "public_scan_b": false,
+            "seed": [
+                "/works/OL27703411W",
+                "/authors/OL10343741A"
+            ],
+            "title": "Bell jar",
+            "title_suggest": "Bell jar",
+            "title_sort": "Bell jar",
+            "type": "work",
+            "readinglog_count": 1,
+            "want_to_read_count": 1,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "_version_": 1795893332062240800,
+            "author_facet": [
+                "OL10343741A ( MEI ) PU LA SI ( Plath S. ) YANG JING YI"
+            ]
+        },
+        {
+            "author_key": [
+                "OL10697929A"
+            ],
+            "author_name": [
+                "Sylvia Sylvia Plath"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 0,
+            "has_fulltext": false,
+            "key": "/works/OL35931332W",
+            "last_modified_i": 1687053296,
+            "public_scan_b": false,
+            "seed": [
+                "/works/OL35931332W",
+                "/authors/OL10697929A"
+            ],
+            "title": "Bell Jar",
+            "title_suggest": "Bell Jar",
+            "title_sort": "Bell Jar",
+            "type": "work",
+            "readinglog_count": 1,
+            "want_to_read_count": 1,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "_version_": 1795912080682909700,
+            "author_facet": [
+                "OL10697929A Sylvia Sylvia Plath"
+            ]
+        },
+        {
+            "author_key": [
+                "OL13774920A"
+            ],
+            "author_name": [
+                "Kate Louise Copsey"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL52052881M"
+            ],
+            "first_publish_year": 2015,
+            "has_fulltext": false,
+            "isbn": [
+                "9781320818353",
+                "1320818358"
+            ],
+            "key": "/works/OL38288563W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1718848738,
+            "public_scan_b": false,
+            "publish_date": [
+                "2015"
+            ],
+            "publish_year": [
+                2015
+            ],
+            "publisher": [
+                "Blurb"
+            ],
+            "seed": [
+                "/books/OL52052881M",
+                "/works/OL38288563W",
+                "/authors/OL13774920A"
+            ],
+            "title": "Bell Jar",
+            "title_suggest": "Bell Jar",
+            "title_sort": "Bell Jar",
+            "type": "work",
+            "readinglog_count": 0,
+            "want_to_read_count": 0,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Blurb"
+            ],
+            "_version_": 1802343542142533600,
+            "author_facet": [
+                "OL13774920A Kate Louise Copsey"
+            ]
+        },
+        {
+            "author_key": [
+                "OL7732074A"
+            ],
+            "author_name": [
+                "BookCaps"
+            ],
+            "cover_edition_key": "OL35690863M",
+            "cover_i": 12389965,
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL35690863M"
+            ],
+            "first_publish_year": 2012,
+            "format": [
+                "paperback"
+            ],
+            "has_fulltext": false,
+            "isbn": [
+                "1480201006",
+                "9781480201002"
+            ],
+            "key": "/works/OL26425414W",
+            "last_modified_i": 1638387556,
+            "number_of_pages_median": 70,
+            "public_scan_b": false,
+            "publish_date": [
+                "Oct 26, 2012"
+            ],
+            "publish_year": [
+                2012
+            ],
+            "publisher": [
+                "CreateSpace Independent Publishing Platform"
+            ],
+            "seed": [
+                "/books/OL35690863M",
+                "/works/OL26425414W",
+                "/authors/OL7732074A"
+            ],
+            "title": "The Bell Jar",
+            "title_suggest": "The Bell Jar",
+            "title_sort": "The Bell Jar",
+            "type": "work",
+            "publisher_facet": [
+                "CreateSpace Independent Publishing Platform"
+            ],
+            "_version_": 1795890336741982200,
+            "author_facet": [
+                "OL7732074A BookCaps"
+            ]
+        },
+        {
+            "author_key": [
+                "OL442929A"
+            ],
+            "author_name": [
+                "Janet McCann"
+            ],
+            "cover_i": 7458198,
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL25956925M"
+            ],
+            "first_publish_year": 2011,
+            "has_fulltext": false,
+            "isbn": [
+                "1587658364",
+                "9781587658365"
+            ],
+            "key": "/works/OL17377634W",
+            "last_modified_i": 1670425242,
+            "lcc": [
+                "PS-3566.00000000.L27B4325 2012"
+            ],
+            "osp_count": 1,
+            "public_scan_b": false,
+            "publish_date": [
+                "2011"
+            ],
+            "publish_year": [
+                2011
+            ],
+            "publisher": [
+                "Salem Press"
+            ],
+            "seed": [
+                "/books/OL25956925M",
+                "/works/OL17377634W",
+                "/authors/OL442929A",
+                "/subjects/plath_sylvia_1932-1963"
+            ],
+            "title": "The Bell Jar",
+            "title_suggest": "The Bell Jar",
+            "title_sort": "The Bell Jar",
+            "type": "work",
+            "subject": [
+                "Plath, sylvia, 1932-1963"
+            ],
+            "publisher_facet": [
+                "Salem Press"
+            ],
+            "subject_facet": [
+                "Plath, sylvia, 1932-1963"
+            ],
+            "_version_": 1795862891883135000,
+            "lcc_sort": "PS-3566.00000000.L27B4325 2012",
+            "author_facet": [
+                "OL442929A Janet McCann"
+            ],
+            "subject_key": [
+                "plath_sylvia_1932-1963"
+            ]
+        },
+        {
+            "author_key": [
+                "OL11884949A"
+            ],
+            "author_name": [
+                "Kristian Touborg"
+            ],
+            "contributor": [
+                "Galerie Mikael Andersen"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL44548525M"
+            ],
+            "first_publish_year": 2014,
+            "has_fulltext": false,
+            "key": "/works/OL32729629W",
+            "language": [
+                "dan"
+            ],
+            "last_modified_i": 1671515064,
+            "public_scan_b": false,
+            "publish_date": [
+                "2014"
+            ],
+            "publish_place": [
+                "København"
+            ],
+            "publish_year": [
+                2014
+            ],
+            "publisher": [
+                "Galerie Mikael Andersen"
+            ],
+            "seed": [
+                "/books/OL44548525M",
+                "/works/OL32729629W",
+                "/authors/OL11884949A",
+                "/subjects/catalogs",
+                "/subjects/danish_painting",
+                "/subjects/exhibitions",
+                "/subjects/person:kristian_touborg_(1987-)",
+                "/subjects/time:21st_century"
+            ],
+            "title": "Bell Jar Tourism",
+            "title_suggest": "Bell Jar Tourism",
+            "title_sort": "Bell Jar Tourism",
+            "type": "work",
+            "subject": [
+                "Catalogs",
+                "Danish Painting",
+                "Exhibitions"
+            ],
+            "time": [
+                "21st century"
+            ],
+            "person": [
+                "Kristian Touborg (1987-)"
+            ],
+            "publisher_facet": [
+                "Galerie Mikael Andersen"
+            ],
+            "person_key": [
+                "kristian_touborg_(1987-)"
+            ],
+            "time_facet": [
+                "21st century"
+            ],
+            "person_facet": [
+                "Kristian Touborg (1987-)"
+            ],
+            "subject_facet": [
+                "Catalogs",
+                "Danish Painting",
+                "Exhibitions"
+            ],
+            "_version_": 1795905125023219700,
+            "author_facet": [
+                "OL11884949A Kristian Touborg"
+            ],
+            "subject_key": [
+                "catalogs",
+                "danish_painting",
+                "exhibitions"
+            ],
+            "time_key": [
+                "21st_century"
+            ]
+        },
+        {
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL44791638M"
+            ],
+            "has_fulltext": false,
+            "isbn": [
+                "9781632451842",
+                "1632451840"
+            ],
+            "key": "/works/OL32943025W",
+            "last_modified_i": 1696902246,
+            "public_scan_b": false,
+            "seed": [
+                "/books/OL44791638M",
+                "/works/OL32943025W"
+            ],
+            "title": "The Bell Jar",
+            "title_suggest": "The Bell Jar",
+            "title_sort": "The Bell Jar",
+            "type": "work",
+            "_version_": 1795905390118961200
+        },
+        {
+            "author_key": [
+                "OL13739132A"
+            ],
+            "author_name": [
+                "Gaye McKenney"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL51916146M"
+            ],
+            "first_publish_year": 2012,
+            "has_fulltext": false,
+            "isbn": [
+                "1622290720",
+                "9781622290727"
+            ],
+            "key": "/works/OL38205169W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1718735238,
+            "public_scan_b": false,
+            "publish_date": [
+                "2012"
+            ],
+            "publish_year": [
+                2012
+            ],
+            "publisher": [
+                "FLP Media Group"
+            ],
+            "seed": [
+                "/books/OL51916146M",
+                "/works/OL38205169W",
+                "/authors/OL13739132A",
+                "/subjects/poetry_(poetic_works_by_one_author)"
+            ],
+            "title": "Bell Jar Glass",
+            "title_suggest": "Bell Jar Glass",
+            "title_sort": "Bell Jar Glass",
+            "type": "work",
+            "subject": [
+                "Poetry (poetic works by one author)"
+            ],
+            "readinglog_count": 0,
+            "want_to_read_count": 0,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "FLP Media Group"
+            ],
+            "subject_facet": [
+                "Poetry (poetic works by one author)"
+            ],
+            "_version_": 1802224538443841500,
+            "author_facet": [
+                "OL13739132A Gaye McKenney"
+            ],
+            "subject_key": [
+                "poetry_(poetic_works_by_one_author)"
+            ]
+        },
+        {
+            "author_key": [
+                "OL6421429A"
+            ],
+            "author_name": [
+                "Daniel Russell"
+            ],
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL54558702M"
+            ],
+            "first_publish_year": 2011,
+            "has_fulltext": false,
+            "isbn": [
+                "1458123421",
+                "9781458123428"
+            ],
+            "key": "/works/OL40086370W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1726963823,
+            "public_scan_b": false,
+            "publish_date": [
+                "2011"
+            ],
+            "publish_year": [
+                2011
+            ],
+            "publisher": [
+                "Smashwords"
+            ],
+            "seed": [
+                "/books/OL54558702M",
+                "/works/OL40086370W",
+                "/authors/OL6421429A"
+            ],
+            "title": "Bell Jar Heart",
+            "title_sort": "Bell Jar Heart",
+            "title_suggest": "Bell Jar Heart",
+            "type": "work",
+            "readinglog_count": 0,
+            "want_to_read_count": 0,
+            "currently_reading_count": 0,
+            "already_read_count": 0,
+            "publisher_facet": [
+                "Smashwords"
+            ],
+            "_version_": 1810852824585601000,
+            "author_facet": [
+                "OL6421429A Daniel Russell"
+            ]
+        },
+        {
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 0,
+            "has_fulltext": false,
+            "key": "/works/OL31273192W",
+            "last_modified_i": 1670183867,
+            "public_scan_b": false,
+            "seed": [
+                "/works/OL31273192W"
+            ],
+            "title": "Bell Jar",
+            "title_suggest": "Bell Jar",
+            "title_sort": "Bell Jar",
+            "type": "work",
+            "_version_": 1795901632521699300
+        },
+        {
+            "author_key": [
+                "OL525980A"
+            ],
+            "author_name": [
+                "Kerry McNamara"
+            ],
+            "cover_edition_key": "OL23358673M",
+            "cover_i": 5760972,
+            "ebook_access": "no_ebook",
+            "ebook_count_i": 0,
+            "edition_count": 1,
+            "edition_key": [
+                "OL23358673M"
+            ],
+            "first_publish_year": 2005,
+            "has_fulltext": false,
+            "key": "/works/OL3230049W",
+            "language": [
+                "eng"
+            ],
+            "last_modified_i": 1272443323,
+            "number_of_pages_median": 112,
+            "public_scan_b": false,
+            "publish_date": [
+                "2005"
+            ],
+            "publish_place": [
+                "St. Catharines, Ont"
+            ],
+            "publish_year": [
+                2005
+            ],
+            "publisher": [
+                "Brock University, Faculty of Education"
+            ],
+            "seed": [
+                "/books/OL23358673M",
+                "/works/OL3230049W",
+                "/authors/OL525980A"
+            ],
+            "title": "Emptying the bell jar",
+            "title_suggest": "Emptying the bell jar",
+            "title_sort": "Emptying the bell jar",
+            "type": "work",
+            "publisher_facet": [
+                "Brock University, Faculty of Education"
+            ],
+            "_version_": 1795903999223791600,
+            "author_facet": [
+                "OL525980A Kerry McNamara"
+            ]
+        }
+    ],
+    "num_found": 55,
+    "q": "",
+    "offset": null
+}

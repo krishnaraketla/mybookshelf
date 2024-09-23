@@ -12,134 +12,106 @@ async function loadFetch() {
 const Book = require('../models/work.model');  // Adjust the path as necessary
 
 // Helper function to fetch data from Open Library API
-async function fetchOpenLibraryBooks(url) {
-    await loadFetch();
+async function fetchOpenLibraryData(url) {
+    await loadFetch()
     const response = await fetch(url);
     if (!response.ok) {
-        throw new Error(`Failed to fetch data from Open Library API: ${response.statusText}`);
+        throw new Error(`Open Library API error: ${response.statusText}`);
     }
-    return response.json();
+    return await response.json();
 }
 
-// Function to map Open Library API response to Book schema
-function mapToBookSchema(item) {
-    let description = '';
-    if (item.description) {
-        if (typeof item.description === 'string') {
-            description = item.description;
-        } else if (typeof item.description === 'object' && item.description.value) {
-            description = item.description.value;
-        }
-    }
-    console.log(item.description)
-    return {
-        _id: item.key, // e.g., "/works/OL12345W" @todo: should this be isbn? what if we change api?
-        workKey: item.key,
-        title: item.title || '',
-        description: description,
-        publishers: item.publishers || [],
-        publishedYear: item.first_publish_year || null,
-        authors: item.author_name || [],
-        coverIDs: item.cover_i ? [item.cover_i] : [],
-        subjects: item.subject || [],
-        ISBN_10: item.isbn_10 || [],
-        ISBN_13: item.isbn_13 || [],
-        languages: item.language || [],
-        numberOfPages: item.number_of_pages_median || 0,
-        formats: item.format || [],
-        averageRating: 0, // Placeholder
-        editions: item.edition_key || []
-    };
-}
+// Route to search for books by title, author, or ISBN
+router.get('/', async (req, res) => {
+    const { query, author, isbn } = req.query;
 
-// Function to map Open Library API response to Edition schema
-function mapToEditionSchema(item) {
-    let description = '';
-    console.log("\n\n trying to get description from work: \n")
-    if (item.description) {
-        if (typeof item.description === 'string') {
-            description = item.description;
-            console.log("======= item.description " ,item.description)
-        } else if (typeof item.description === 'object' && item.description.value) {
-            description = item.description.value;
-            console.log("=======" ,item.description.value)
-        }
-    }
-    return {
-        editionKey: item.key.replace('/books/', ''), // e.g., "OL12345M"
-        workKey: item.works && item.works[0] ? item.works[0].key : '',
-        title: item.title || '',
-        description: description,
-        publishers: item.publishers || [],
-        publishDate: item.publish_date || '',
-        numberOfPages: item.number_of_pages || 0,
-        ISBN_10: item.isbn_10 || [],
-        ISBN_13: item.isbn_13 || [],
-        languages: item.languages ? item.languages.map(lang => lang.key) : [],
-        // Add other relevant fields if needed
-    };
-}
-
-// Endpoint to search books by title and return editions
-router.get('/title', async (req, res) => {
-    const { query } = req.query;
-    if (!query) {
-        return res.status(400).json({ message: "Query parameter is required for searching with title." });
-    }
-    try {
-        // Fetch works matching the title
-        const worksUrl = `https://openlibrary.org/search.json?title=${encodeURIComponent(query)}&limit=20`;
-        const worksData = await fetchOpenLibraryBooks(worksUrl);
-
-        // For each work, fetch the first edition
-        const editionsPromises = worksData.docs.map(async (work) => {
-            const workId = work.key.replace('/works/', '');
-            const editionsUrl = `https://openlibrary.org/works/${workId}/editions.json?limit=1`;
-            const editionsData = await fetchOpenLibraryBooks(editionsUrl);
-            const edition = editionsData.entries[0];
-
-            if (edition) {
-                return mapToEditionSchema(edition);
-            }
-            return null;
+    if (!query && !author && !isbn) {
+        return res.status(400).json({
+            message: "At least one of 'query', 'author', or 'isbn' parameters is required for searching."
         });
+    }
 
-        // Wait for all promises to resolve
-        const editions = await Promise.all(editionsPromises);
+    try {
+        let url = `https://openlibrary.org/search.json?limit=20`;
 
-        // Filter out any null editions
-        const filteredEditions = editions.filter(edition => edition !== null);
+        if (query) url += `&title=${encodeURIComponent(query)}`;
+        if (author) url += `&author=${encodeURIComponent(author)}`;
+        if (isbn) url += `&isbn=${encodeURIComponent(isbn)}`;
 
-        res.json(filteredEditions);
+        const data = await fetchOpenLibraryData(url);
+
+        // Map search results to simplified work data
+        const results = data.docs.map(doc => ({
+            workID: doc.key.replace('/works/', ''),
+            title: doc.title,
+            authorNames: doc.author_name || [],
+            firstPublishYear: doc.first_publish_year || null,
+            editionCount: doc.edition_count || 0,
+            coverID: doc.cover_i || null,
+        }));
+
+        res.json(results);
     } catch (error) {
-        console.error('Error searching for editions by title:', error);
-        res.status(500).json({ message: "Error searching for editions by title", error: error.message });
+        console.error('Error searching for books:', error);
+        res.status(500).json({ message: "Error searching for books", error: error.message });
     }
 });
 
-// Endpoint to search books by author
-router.get('/author', async (req, res) => {
-    const { query } = req.query;
-    if (!query) {
-        return res.status(400).json({ message: "Query parameter is required for searching with author." });
-    }
+// Route to get details of a specific work, including cover, description, and editions
+router.get('/works/:workID', async (req, res) => {
+    const { workID } = req.params;
+
     try {
-        const url = `https://openlibrary.org/search.json?author=${encodeURIComponent(query)}&limit=20`; // Adjust limit as needed
-        const data = await fetchOpenLibraryBooks(url);
+        // Fetch work details
+        const workURL = `https://openlibrary.org/works/${workID}.json`;
+        const workData = await fetchOpenLibraryData(workURL);
 
-        const books = data.docs.map(mapToBookSchema);
+        // Fetch editions of the work
+        const editionsURL = `https://openlibrary.org/works/${workID}/editions.json?limit=20`;
+        const editionsData = await fetchOpenLibraryData(editionsURL);
 
-        res.json(books);
+        const authorNames = await Promise.all(workData.authors.map(async (author) => {
+            const authorURL = `https://openlibrary.org${author.author.key}.json`;  // Fetch author details
+            const authorData = await fetchOpenLibraryData(authorURL);
+            return authorData.name;  // Return author name
+        }));
+
+        // Construct response data
+        const response = {
+            workID: workData.key.replace('/works/', ''),
+            title: workData.title,
+            workDescription: workData.description ? (workData.description.value || workData.description) : null,
+            coverIDs: workData.covers || [],
+            authors: workData.authors || [],
+            authorNames: authorNames || [],
+            subjects: workData.subjects || [],
+            firstSentence: workData.first_sentence,
+            firstPublished: workData.first_publish_date,
+            editionCount: workData.edition_count,
+            editions: editionsData.entries.map(edition => ({
+                editionID: edition.key.replace('/books/', ''),
+                title: edition.title,
+                publishers: edition.publishers || [],
+                publishDate: edition.publish_date || null,
+                coverIDs: edition.covers || [],
+                isbn: edition.isbn_10 || edition.isbn_13 || [],
+                editionDescription: edition.description ? (edition.description.value || edition.description) : null,
+            })),
+        };
+
+        res.json(response);
     } catch (error) {
-        console.error('Error searching for books by author:', error);
-        res.status(500).json({ message: "Error searching for books by author", error: error.message });
+        console.error('Error fetching work details:', error);
+        res.status(500).json({ message: "Error fetching work details", error: error.message });
     }
+});
+
+// Route to get cover image by cover ID
+router.get('/covers/:coverID', (req, res) => {
+    const { coverID } = req.params;
+    const size = req.query.size || 'L'; // Available sizes: S, M, L
+    const url = `https://covers.openlibrary.org/b/id/${coverID}-${size}.jpg`;
+    res.redirect(url);
 });
 
 module.exports = router;
-
-// Example Open Library URLs:
-// https://openlibrary.org/works/OL27448W.json
-// https://openlibrary.org/works/OL27448W/editions.json
-// Accessing a specific book:
-// http://localhost:3000/books/OL27448W
