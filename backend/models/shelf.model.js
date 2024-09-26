@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-const bookSchema = require('./work.model');
+const workSchema = require('./work.model');
+const editionSchema = require('./edition.model')
 
 const shelfSchema = new mongoose.Schema({
     name: { type: String, required: true, index: true },  // Names like 'Reading', 'TBR', 'Finished'
     owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    books: [{ type: String, ref: 'Book' }],
+    books: [{ type: String, ref: 'Edition' }],
     isDeletable: { type: Boolean, default: false },
 });
 

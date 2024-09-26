@@ -7,6 +7,7 @@ import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons
 import { faBookmark as faRegularBookmark } from '@fortawesome/free-regular-svg-icons';
 import BookReviewSection from '../components/BookReviewSection';
 import Rating from '@mui/material/Rating';
+import BookCover from '../components/BookCover';
 
 const BookDetail = () => {
     const { id } = useParams();
@@ -23,6 +24,7 @@ const BookDetail = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('token');
+            console.log(token)
             // const bookDetail = localStorage.getItem("bookDetail");
             // if (bookDetail) {
             //     const data = JSON.parse(bookDetail);
@@ -247,8 +249,8 @@ const BookDetail = () => {
             <NavBar showRightLinks="true"/>
             <div className="book-detail-container">
                 <div className="book-detail-image">
-                    <img src={edition?.coverIDs?.length > 0 ? `https://covers.openlibrary.org/b/id/${edition.coverIDs[0]}-M.jpg` : 'https://via.placeholder.com/150'} alt={book.title} />
-                    <div className='book-row-base-full' />
+                <BookCover book={book} edition={edition}/>
+                <div className='book-row-base-full' />
                 </div>
                 <div className="book-detail-info">
                     <div className="book-title">
@@ -273,33 +275,49 @@ const BookDetail = () => {
                         </span> 
                     </div>
                     <div className="book-author">{book.authorNames.join(', ')}</div>
-                    <div className='book-pages-publisher'>{edition?.publishDate ? `Published on ${edition.publishDate}` : 'Unknown publish date'} by {edition?.publishers?.join(', ')}</div>
+                    {/* Editions Dropdown */}
+                    {book.editions.length > 1 && (
+                        <div className="book-editions-dropdown">
+                            <label htmlFor="editions">Select Edition: </label>
+                            <select 
+                                id="editions" 
+                                value={edition?.editionID || ''}
+                                onChange={(e) => handleEditionChange(book.editions.find(ed => ed.editionID === e.target.value))}
+                            >
+                                {book.editions.map(ed => (
+                                    <option key={ed.editionID} value={ed.editionID}>
+                                        {ed.title} ({ed.publishDate} {ed.publishers?.join(', ') || 'Unknown Publisher'})
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    <div className='book-pages-publisher'>{edition?.publishDate ? `Published in ${edition.publishDate}` : 'Unknown publish date'} by {edition?.publishers?.join(', ')}</div>
                     <div className='book-pages-publisher'>ISBN: {edition?.isbn.join(', ') || 'Unknown ISBN'}</div>
                     <div className="book-detail-rating">
                         <Rating name="half-rating-read" defaultValue={book.averageRating} precision={0.5} readOnly />
                         <span style={{ marginLeft: '5px' }}>{book.averageRating} Average rating</span>
                     </div>
-                    <div className="book-description" dangerouslySetInnerHTML={{ __html: book.workDescription }} />
+                    <div className="book-description">
+                        {/* Display work description */}
+                        {book.workDescription && (
+                            <div className="work-description">
+                                <h3>About the Book</h3>
+                                <div dangerouslySetInnerHTML={{ __html: book.workDescription }} />
+                            </div>
+                        )}
+                        {/* Display edition description */}
+                        {edition && edition.editionDescription && (
+                            <div className="edition-description">
+                                <h3>About this Edition</h3>
+                                <div dangerouslySetInnerHTML={{ __html: edition.editionDescription }} />
+                            </div>
+                        )}
+                    </div>
+
                 </div>
             </div>
 
-            {/* Editions Dropdown */}
-            {book.editions.length > 1 && (
-                <div className="book-editions-dropdown">
-                    <label htmlFor="editions">Select Edition: </label>
-                    <select 
-                        id="editions" 
-                        value={edition?.editionID || ''}
-                        onChange={(e) => handleEditionChange(book.editions.find(ed => ed.editionID === e.target.value))}
-                    >
-                        {book.editions.map(ed => (
-                            <option key={ed.editionID} value={ed.editionID}>
-                                {ed.title} ({ed.publishDate || 'Unknown Date'})
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            )}
             <BookReviewSection />
         </div>
     );

@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const workSchema = require('./work.model');
+
 const editionSchema = new mongoose.Schema({
     editionKey: { type: String, unique: true },
     workKey: { type: String, ref: 'Work' },
