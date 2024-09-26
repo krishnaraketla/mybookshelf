@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { faSearch, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/SearchBar.css';
+import BookCover from './BookCover';
 
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');

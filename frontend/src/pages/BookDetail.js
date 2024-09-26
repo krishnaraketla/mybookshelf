@@ -46,6 +46,7 @@ const BookDetail = () => {
                     setBook(data);
                     setEdition(data.editions[0]); // Show the first edition by default
                 } else {
+                    console.log("Book not found")
                     setError("Book not found");
                 }
             }
@@ -209,14 +210,14 @@ const BookDetail = () => {
 
     useEffect(() => {
         fetchBook(id);
-        fetchShelves();
+        // fetchShelves();
     }, [id]);
 
-    useEffect(() => {
-        if (shelves.length > 0 && book) {
-            checkBookInShelves(shelves);
-        }
-    }, [shelves, book]);
+    // useEffect(() => {
+    //     if (shelves.length > 0 && book) {
+    //         checkBookInShelves(shelves);
+    //     }
+    // }, [shelves, book]);
 
     if (loading) {
         return(<div><NavBar showRightLinks="true"/> <div className="book-detail-loading">Loading...</div></div>);
@@ -249,7 +250,7 @@ const BookDetail = () => {
             <NavBar showRightLinks="true"/>
             <div className="book-detail-container">
                 <div className="book-detail-image">
-                <BookCover book={book} edition={edition}/>
+                <BookCover book={book} edition={edition} className="book-cover--large"/>
                 <div className='book-row-base-full' />
                 </div>
                 <div className="book-detail-info">

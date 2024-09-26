@@ -1,5 +1,5 @@
 .book-cover {
-  min-width: 12.5rem;
+  width: var(--book-cover-width, 12.5rem);
   aspect-ratio: 2 / 3;
   position: relative;
   overflow: hidden;
@@ -36,4 +36,20 @@
   font-weight: 600;
   color: #555;
   line-height: 1.4;
+}
+
+
+/* Small size */
+.book-cover--small {
+  --book-cover-width: 6rem;
+}
+
+/* Medium size */
+.book-cover--medium {
+  --book-cover-width: 10rem;
+}
+
+/* Large size */
+.book-cover--large {
+  --book-cover-width: 16rem;
 }

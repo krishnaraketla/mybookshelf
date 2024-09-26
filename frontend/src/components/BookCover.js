@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/BookCover.css';
 
-const BookCover = ({ book, edition }) => {
+const BookCover = ({ book, edition, className }) => {
   const coverAvailable =
     edition?.coverIDs?.length > 0 || (edition?.isbn && edition.isbn.length > 0);
 
@@ -12,7 +12,7 @@ const BookCover = ({ book, edition }) => {
     : null;
 
   return (
-    <div className="book-cover">
+    <div className={`book-cover ${className}`}>
       <div className="placeholder">
         <span>{book.title}</span>
       </div>
